@@ -1,0 +1,29 @@
+.header_style {
+    height: 65px;
+    width:100%;
+    z-index: 999;
+    position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+
+    display: flex;
+    background-color: var(--header-grey);
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    
+    .logo-wrap{
+        display: block;
+        text-align: center;
+        &-icon{
+            margin-bottom: -12px;
+            path {
+                fill: var(--logo-orange);
+            }           
+        }
+        &-name{
+            color: var(--logo-orange);
+        }
+    }
+    
+}
