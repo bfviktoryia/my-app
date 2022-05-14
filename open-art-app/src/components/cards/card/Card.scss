@@ -1,0 +1,24 @@
+.card-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 30%;
+    height: 430px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    :not(:last-child){
+        margin-bottom: 20px;
+
+    }
+
+    border: 1px solid rgb(72, 50, 9);
+
+    .card-elem {
+        .card-elem-name{
+            color: var(--text-black);
+            font-weight: 900;
+            margin-right: 5px;
+        }
+    }
+
+}

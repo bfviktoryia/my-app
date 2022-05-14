@@ -1,0 +1,12 @@
+.navigation-wrap{
+    margin: auto;
+    width: 40%;
+}
+
+.navigation-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    :nth-child(2n){margin-right: 70px;}
+
+}
