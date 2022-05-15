@@ -5,6 +5,8 @@ import Navbar from './components/header/navigation/Navbar';
 import CardsGallery from './components/cardsGallery/CardsGallery';
 
 import './App.css';
+import CardPage from './components/cardPage/CardPage';
+import Login from './components/login/Login';
 
 function App() {
   return (
@@ -17,8 +19,9 @@ function App() {
                 <Routes>
                   <Route path="/gallery" >
                         <Route index element={<CardsGallery/>} />
-                        {/* <Route path=":id" element={<CardPage/>} /> */}
+                        <Route path=":id" element={<CardPage/>} />
                   </Route>   
+                  <Route path="/login" element={<Login/>}/>
                   <Route path="*" element={<Navigate to={"/gallery"}/>} />    
                 </Routes>
              </div>

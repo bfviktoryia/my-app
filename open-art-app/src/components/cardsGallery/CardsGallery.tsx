@@ -1,20 +1,20 @@
 import React from 'react';
-import useData from "../hooks/useData";
+import useGalleryData from '../hooks/useGalleryData';
 import Card from "./card/Card";
 
 import "./CardsGallery.scss";
+const URL = 'https://openaccess-api.clevelandart.org/api/artworks/?limit=20&offset=0';
 
 
 type PropsType = {};
 
 const CardsGallery: React.FC<PropsType> = () => {
 
-    const {cards, loading, error} = useData();
-    // console.log(useData());
+    const {response, loading, error} = useGalleryData();
     
     return (
         <div className="cards-container">
-        {cards.map((item) => (<Card key={item.id} data={item}/>))}
+        {response.data.map((item) => (<Card key={item.id} data={item}/>))}
         {loading && 'Loading...'}
         {error && 'Error '}
     </div>
