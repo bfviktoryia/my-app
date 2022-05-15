@@ -12,6 +12,8 @@ type CardType = {
     culture: string,
     technique: string,
     type: string,
+    fun_fact?: string,
+    wall_description?: string,
     }
     
     

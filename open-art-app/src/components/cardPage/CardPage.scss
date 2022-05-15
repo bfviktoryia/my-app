@@ -1,24 +1,2 @@
-.card-wrap {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 100%;
-    height: 440px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    :not(:last-child){
-        margin-bottom: 5px;
-    }
-        :nth-last-child(1){
-        margin-top: 20px;
-}
-    border: 1px solid rgb(72, 50, 9);
 
-    .card-elem {
-        .card-elem-name{
-            color: var(--text-black);
-            font-weight: 900;
-            margin-right: 5px;
-        }
-    }
-}
+

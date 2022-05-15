@@ -53,8 +53,7 @@ const Card: React.FC<CardsType> = ({ data }) => {
                 {`id: ${data.id}`}
         </div>
     </div>
-  );
-};
+)};
 
 export default Card;
 
