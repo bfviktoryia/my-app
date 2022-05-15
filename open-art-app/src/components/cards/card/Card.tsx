@@ -10,7 +10,8 @@ type CardsType = {
 
 const Card: React.FC<CardsType> = ({ data }) => {
 
-  console.log();
+//  const { images: {web: { url }}} = data;
+
 
   return (
     <div className="card-wrap">
@@ -23,6 +24,11 @@ const Card: React.FC<CardsType> = ({ data }) => {
             >
                 {data.title}
             </h3>
+        <div 
+              className="card-elem culture">
+                <span className="card-elem-name">Creation date:</span>
+                {data.creation_date}
+        </div>
         <div 
               className="card-elem culture">
                 <span className="card-elem-name">Culture:</span>

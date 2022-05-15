@@ -3,14 +3,15 @@
     flex-direction: column;
     padding: 10px;
     width: 30%;
-    height: 430px;
+    height: 440px;
     border-radius: 5px;
     margin-bottom: 15px;
     :not(:last-child){
-        margin-bottom: 20px;
-
+        margin-bottom: 5px;
     }
-
+        :nth-last-child(1){
+        margin-top: 20px;
+}
     border: 1px solid rgb(72, 50, 9);
 
     .card-elem {

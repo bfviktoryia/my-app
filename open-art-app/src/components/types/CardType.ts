@@ -2,11 +2,11 @@
 
 type CardType = {
     images: string,
-    web: string,
+    web:string,
     url: string,
     title: string,
     creators: string,
-    creation_date: string,
+    creation_date: number | string,
     culture: string,
     technique: string,
     type: string,
