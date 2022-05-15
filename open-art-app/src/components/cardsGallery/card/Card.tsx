@@ -11,14 +11,11 @@ type CardsType = {
 
 const Card: React.FC<CardsType> = ({ data }) => {
 
-//  const { images: {web: { url }}} = data;
-
 
   return (
     <div className="card-wrap">
       
-        <Image src={data.images}/>
-{/* как достать картинку объект в объекте*/}
+        <Image src={data.images?.web.url}/>
         <Link to={`/gallery/${data.id}`}>
               <h3 
                 className="card-elem title"

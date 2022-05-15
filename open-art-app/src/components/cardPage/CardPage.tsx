@@ -1,9 +1,7 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
 import useCardData from '../hooks/useCardData';
-
-
-const URL = "https://openaccess-api.clevelandart.org/api/artworks/";
+import Image from '../image/Image';
 
 const CardPage: React.FC = () => {
 
@@ -32,7 +30,7 @@ const CardPage: React.FC = () => {
     <div className="card">        
         <div className="card-wrap">
         
-                    {/* <Image src={response.data.images}/> */}
+                <Image src={response.data.images?.web.url}/>
                 <h3 
                     className="card-elem title"
                     >

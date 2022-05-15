@@ -1,23 +1,29 @@
-import { useState, useEffect} from "react";
 import CardType from "../types/CardType";
 import useDataRequest from "./useDataRequest";
 
-const URL = 'https://openaccess-api.clevelandart.org/api/artworks/?limit=20&offset=0';
+const URL = 'https://openaccess-api.clevelandart.org/api/artworks/?limit=10';
+
+// let total = {response: {info: {total}}}
+
+type DataInfoType = {
+      total: number,
+}
 
 type DataResponse = {
-      info?: {},
-      data: CardType[]
+      info: DataInfoType,
+      data: CardType[],
 }
 
 const defValue: DataResponse = {
-      info: {},
+      info: {total: 1},
       data: []
 }
 
-const useGalleryData = () => {
+const useGalleryData = (page: number) => {
+      const offset = 10 * (page - 1);
+      const url = `${URL}&offset=${offset}`;
 
-  const { response, loading, error } = useDataRequest<DataResponse>(defValue, URL)
+  return useDataRequest<DataResponse>(defValue, url);
 
-    return {response, loading, error};
 }
 export default useGalleryData;

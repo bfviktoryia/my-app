@@ -4,7 +4,8 @@ import { ReactComponent as PlaceholderIcon} from "../../assets/logo.svg";
 import "../image/Image.scss"
 
 type PropsType = {
-  src?: string;
+  src?: string,
+  className?: string,
 };
 
 const Image: React.FC<PropsType> = ({ src }) => {
@@ -20,6 +21,7 @@ return (
          <div>
             {!!src && !error 
             ? 
+            <div className="image-wrap">
                 <img
                 className="image"
                 onError={onError}
@@ -27,6 +29,7 @@ return (
                 alt="card image"
                 >
                 </img>
+            </div>    
             : 
                 <div className="image image-placeholder">
                   <PlaceholderIcon/>

@@ -1,11 +1,13 @@
+//data.images.web.url
 
+type ImagesType = {
+    web: {url: string}
+}
 
 type CardType = {
-    data:CardType,
+    data: CardType,
     id: number,
-    images?: string,
-    web?:string,
-    url?: string,
+    images?: ImagesType,
     title: string,
     creators: string,
     creation_date: number | string,

@@ -1,23 +1,33 @@
-import React from 'react';
+import { Pagination } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import useGalleryData from '../hooks/useGalleryData';
 import Card from "./card/Card";
 
 import "./CardsGallery.scss";
-const URL = 'https://openaccess-api.clevelandart.org/api/artworks/?limit=20&offset=0';
-
 
 type PropsType = {};
 
 const CardsGallery: React.FC<PropsType> = () => {
+    const [ page, setPage] = useState(1);
+    const {response, loading, error} = useGalleryData(page);
 
-    const {response, loading, error} = useGalleryData();
     
     return (
-        <div className="cards-container">
-        {response.data.map((item) => (<Card key={item.id} data={item}/>))}
-        {loading && 'Loading...'}
-        {error && 'Error '}
-    </div>
+        <React.Fragment>
+            <Pagination 
+            className="pagination"
+            showFirstButton 
+            showLastButton
+            page={page}
+            onChange={(event, value: number) => setPage(value)}
+            count={Math.ceil(response.info.total / 10)} 
+            />
+                <div className="cards-container">
+                    {response.data.map((item) => (<Card key={item.id} data={item}/>))}
+                    {loading && 'Loading...'}
+                    {error && 'Error '}
+                </div>
+        </React.Fragment>
     )
 }
 
