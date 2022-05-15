@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Image from '../../image/Image';
 import CardType from '../../types/CardType';
 import './Card.scss';
@@ -18,12 +19,13 @@ const Card: React.FC<CardsType> = ({ data }) => {
       
         <Image src={data.images}/>
 {/* как достать картинку объект в объекте*/}
-
-            <h3 
-              className="card-elem title"
-            >
-                {data.title}
-            </h3>
+        <Link to={`/gallery/${data.id}`}>
+              <h3 
+                className="card-elem title"
+              >
+                  {data.title}
+              </h3>
+        </Link>
         <div 
               className="card-elem culture">
                 <span className="card-elem-name">Creation date:</span>

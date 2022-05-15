@@ -1,21 +1,29 @@
 import React from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
+import Navbar from './components/header/navigation/Navbar';
+import CardsGallery from './components/cardsGallery/CardsGallery';
 
 import './App.css';
-import GalleryCards from './components/cards/GalleryCards';
-import Navbar from './components/header/navigation/Navbar';
-
 
 function App() {
   return (
-    <div className="app">
-          <Header>
-            <Navbar/>
-          </Header>    
-      <div className="app-body">
-        <GalleryCards/>
-      </div>
-    </div>
+      <BrowserRouter>
+        <div className="app">
+             <Header>
+                   <Navbar/>
+             </Header>    
+             <div className="app-body">
+                <Routes>
+                  <Route path="/gallery" >
+                        <Route index element={<CardsGallery/>} />
+                        {/* <Route path=":id" element={<CardPage/>} /> */}
+                  </Route>   
+                  <Route path="*" element={<Navigate to={"/gallery"}/>} />    
+                </Routes>
+             </div>
+        </div>
+      </BrowserRouter> 
   );
 }
 
