@@ -19,8 +19,8 @@ const defValue: DataResponse = {
       data: []
 }
 
-const useGalleryData = (page: number) => {
-      const offset = 10 * (page - 1);
+const useGalleryData = (page: number, limit: number) => {
+      const offset = limit * (page - 1);
       const url = `${URL}&offset=${offset}`;
 
   return useDataRequest<DataResponse>(defValue, url);

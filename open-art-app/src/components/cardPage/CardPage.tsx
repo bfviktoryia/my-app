@@ -29,7 +29,6 @@ const CardPage: React.FC = () => {
         return (
     <div className="card">        
         <div className="card-wrap">
-        
                 <Image src={response.data.images?.web.url}/>
                 <h3 
                     className="card-elem title"

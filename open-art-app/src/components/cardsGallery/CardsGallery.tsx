@@ -7,9 +7,11 @@ import "./CardsGallery.scss";
 
 type PropsType = {};
 
+const limit = 10;
+
 const CardsGallery: React.FC<PropsType> = () => {
     const [ page, setPage] = useState(1);
-    const {response, loading, error} = useGalleryData(page);
+    const {response, loading, error} = useGalleryData(page, limit);
 
     
     return (
@@ -20,7 +22,7 @@ const CardsGallery: React.FC<PropsType> = () => {
             showLastButton
             page={page}
             onChange={(event, value: number) => setPage(value)}
-            count={Math.ceil(response.info.total / 10)} 
+            count={Math.ceil(response.info.total / limit)} 
             />
                 <div className="cards-container">
                     {response.data.map((item) => (<Card key={item.id} data={item}/>))}
