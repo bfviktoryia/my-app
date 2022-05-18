@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Image from '../../image/Image';
 import CardType from '../../types/CardType';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import { IconButton } from '@mui/material';
+import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+import { useActions } from '../../hooks/useActions';
+import { useSelector } from 'react-redux';
+
+
 import './Card.scss';
+
 
 
 type CardsType = {
@@ -10,19 +18,38 @@ type CardsType = {
 };
 
 const Card: React.FC<CardsType> = ({ data }) => {
+  // const dispatch = useDispatch();
+  // const favouriteCard = dispatch(actions.favouriteCard);
 
+  const {favouriteCard} = useActions();
+  const favourites = useSelector((state: any) => state.posts.favourite);
+  const isFavourite = favourites.includes(data.id);
+  const handleClickFavourite = () => favouriteCard(data.id);
 
   return (
     <div className="card-wrap">
       
         <Image src={data.images?.web.url}/>
-        <Link to={`/gallery/${data.id}`}>
+        <div className="bookmarks-wrap">
+            <IconButton
+                      onClick={handleClickFavourite}
+                >
+                      <BookmarkIcon
+                          className={`icon-favourite ${isFavourite ? "marked" : ""}`}
+                    />
+              </IconButton>
+              <Link className="icon-info"to={`/gallery/${data.id}`}
+                >
+                      <MenuBookOutlinedIcon
+                          className="info"
+                    />
+              </Link>
+        </div>
               <h3 
                 className="card-elem title"
               >
                   {data.title}
               </h3>
-        </Link>
         <div 
               className="card-elem culture">
                 <span className="card-elem-name">Creation date:</span>
@@ -49,9 +76,14 @@ const Card: React.FC<CardsType> = ({ data }) => {
           >
                 {`id: ${data.id}`}
         </div>
+
     </div>
 )};
 
 export default Card;
 
+
+function state(state: any, arg1: (state: any) => any) {
+  throw new Error('Function not implemented.');
+}
 
