@@ -5,11 +5,13 @@ import Storage from "../../helpers/storage";
 
 export type StoreType = {
     data: CardType[],
+    // info: DataInfoType,
     favourite: number[],
 }
 
 const initialState: StoreType = {
     data: [],
+    // info: {total: 0},
     favourite: Storage.getFromStorage("favourite", []),
 }
 
@@ -28,14 +30,11 @@ const CardsGallerySlice = createSlice ({
 
         }
       },
-   
-
-    });
-
+});
 
 
     export const CardsGalleryReducer = CardsGallerySlice.reducer;
 
     export const CardsGalleryActions = {
-        ...CardsGallerySlice.actions,   
+        ...CardsGallerySlice.actions, 
     }

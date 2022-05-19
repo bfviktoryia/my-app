@@ -4,19 +4,24 @@ type ImagesType = {
     web: {url: string}
 }
 
+type CreatorsType = {
+    description: string
+}
+
 type CardType = {
-    data: CardType,
     id: number,
     images?: ImagesType,
     title: string,
-    creators: string,
     creation_date: number | string,
     culture: string,
     technique: string,
     type: string,
     fun_fact?: string,
     wall_description?: string,
+    // exhibitions: 
+    creators: CreatorsType[]
     }
+
     
     
     export default CardType;

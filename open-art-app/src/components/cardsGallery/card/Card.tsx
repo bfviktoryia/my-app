@@ -45,16 +45,22 @@ const Card: React.FC<CardsType> = ({ data }) => {
                     />
               </Link>
         </div>
-              <h3 
+        <h3 
                 className="card-elem title"
               >
                   {data.title}
-              </h3>
+        </h3>
+        <div 
+              className="card-elem creators">
+                <span className="card-elem-name">Creator:</span>
+                {data.creators[0].description}
+        </div>
         <div 
               className="card-elem culture">
                 <span className="card-elem-name">Creation date:</span>
                 {data.creation_date}
-        </div>
+        </div>        
+        
         <div 
               className="card-elem culture">
                 <span className="card-elem-name">Culture:</span>

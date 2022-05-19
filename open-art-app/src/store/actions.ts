@@ -2,7 +2,7 @@ import { CardsGalleryActions } from "./posts/CardsGallerySlice";
 
 
 const actions = {
-...CardsGalleryActions
+...CardsGalleryActions,
 }
 
 export default actions;

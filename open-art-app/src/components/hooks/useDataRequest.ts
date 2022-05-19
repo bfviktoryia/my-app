@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import CardType from '../types/CardType';
 
 const useDataRequest = <T>(defValue: T, url: string) => {
 

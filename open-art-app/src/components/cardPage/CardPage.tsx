@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useCardData from '../hooks/useCardData';
 import Image from '../image/Image';
 
+
 const CardPage: React.FC = () => {
 
     const { id } = useParams();
@@ -35,6 +36,11 @@ const CardPage: React.FC = () => {
                     >
                         {response.data.title}
                 </h3>
+                <div 
+              className="card-elem creators">
+                <span className="card-elem-name">Creator:</span>
+                {response.data.creators[0].description}
+              </div>
                 <div 
                     className="card-elem culture">
                         <span className="card-elem-name">Creation date:</span>

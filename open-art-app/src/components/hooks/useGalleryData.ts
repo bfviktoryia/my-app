@@ -3,8 +3,6 @@ import useDataRequest from "./useDataRequest";
 
 const URL = 'https://openaccess-api.clevelandart.org/api/artworks/?limit=10';
 
-// let total = {response: {info: {total}}}
-
 type DataInfoType = {
       total: number,
 }
@@ -15,8 +13,8 @@ type DataResponse = {
 }
 
 const defValue: DataResponse = {
-      info: {total: 1},
-      data: []
+      info: {total: 0},
+      data: [],
 }
 
 const useGalleryData = (page: number, limit: number) => {
