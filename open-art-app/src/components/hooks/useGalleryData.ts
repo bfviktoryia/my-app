@@ -1,3 +1,4 @@
+import { CardsOrder } from "../cardsGallery/GalleryFilterType";
 import CardType from "../types/CardType";
 import useDataRequest from "./useDataRequest";
 
@@ -19,9 +20,9 @@ const defValue: DataResponse = {
       data: [],
 }
 
-const useGalleryData = (page: number, limit: number) => {
+const useGalleryData = (page: number, limit: number, ordering: CardsOrder) => {
       const skip = limit * (page - 1);
-      const url = `${URL}&skip=${skip}`;
+      const url = `${URL}&skip=${skip}&ordering${ordering}`;
 
   return useDataRequest<DataResponse>(defValue, url);
 

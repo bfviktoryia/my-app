@@ -1,21 +1,19 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { CardsOrder } from "../../components/cardsGallery/GalleryFilterType";
 import CardType from "../../components/types/CardType";
 import Storage from "../../helpers/storage";
 
 
 export type StoreType = {
     data: CardType[],
-    // info: DataInfoType,
     favourite: number[],
-    title: string,
+    ordering: CardsOrder
 }
 
 const initialState: StoreType = {
     data: [],
-    // info: {total: 0},
     favourite: Storage.getFromStorage("favourite", []),
-    title: "",
-
+    ordering: CardsOrder.idAsc
 }
 
 const CardsGallerySlice = createSlice ({
@@ -32,11 +30,18 @@ const CardsGallerySlice = createSlice ({
             Storage.setToStorage("favourite", state.favourite);   
 
         },
-    //     searchTitle: (state: {title: string,} , {payload: })
+        cardsOrder: (state: {ordering: CardsOrder} , {payload: value}: PayloadAction<CardsOrder>) => {
+            // event.target.value as CardsOrder  
+            // state.ordering = value as CardsOrder    
+            if(state.ordering === CardsOrder.idAsc){
+                state.ordering = CardsOrder.idDesc
+            }
+            else{state.ordering = CardsOrder.idAsc}
+        }
 
-    //   },
+      }
     }
-});
+);
 
 
     export const CardsGalleryReducer = CardsGallerySlice.reducer;
