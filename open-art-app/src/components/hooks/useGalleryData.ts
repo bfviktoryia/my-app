@@ -13,13 +13,15 @@ type DataResponse = {
 }
 
 const defValue: DataResponse = {
-      info: {total: 0},
+      info: {
+            total: 0,
+      },
       data: [],
 }
 
 const useGalleryData = (page: number, limit: number) => {
-      const offset = limit * (page - 1);
-      const url = `${URL}&offset=${offset}`;
+      const skip = limit * (page - 1);
+      const url = `${URL}&skip=${skip}`;
 
   return useDataRequest<DataResponse>(defValue, url);
 

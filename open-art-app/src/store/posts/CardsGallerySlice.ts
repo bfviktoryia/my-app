@@ -7,12 +7,15 @@ export type StoreType = {
     data: CardType[],
     // info: DataInfoType,
     favourite: number[],
+    title: string,
 }
 
 const initialState: StoreType = {
     data: [],
     // info: {total: 0},
     favourite: Storage.getFromStorage("favourite", []),
+    title: "",
+
 }
 
 const CardsGallerySlice = createSlice ({
@@ -28,8 +31,11 @@ const CardsGallerySlice = createSlice ({
             }
             Storage.setToStorage("favourite", state.favourite);   
 
-        }
-      },
+        },
+    //     searchTitle: (state: {title: string,} , {payload: })
+
+    //   },
+    }
 });
 
 

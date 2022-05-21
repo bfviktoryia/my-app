@@ -8,9 +8,7 @@ import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import { useActions } from '../../hooks/useActions';
 import { useSelector } from 'react-redux';
 
-
 import './Card.scss';
-
 
 
 type CardsType = {
@@ -31,25 +29,31 @@ const Card: React.FC<CardsType> = ({ data }) => {
       
         <Image src={data.images?.web.url}/>
         <div className="bookmarks-wrap">
-            <IconButton
+            <IconButton className="icon-button"
                       onClick={handleClickFavourite}
                 >
                       <BookmarkIcon
                           className={`icon-favourite ${isFavourite ? "marked" : ""}`}
                     />
               </IconButton>
-              <Link className="icon-info"to={`/gallery/${data.id}`}
-                >
-                      <MenuBookOutlinedIcon
-                          className="info"
-                    />
-              </Link>
-        </div>
+       </div>
+
+<div className="test">
         <h3 
                 className="card-elem title"
               >
                   {data.title}
         </h3>
+        <Link className="icon-info"to={`/gallery/${data.id}`}
+                >
+                      <MenuBookOutlinedIcon
+                          className="info"
+                    />
+       </Link>
+</div>
+
+
+
         <div 
               className="card-elem creators">
                 <span className="card-elem-name">Creator:</span>
@@ -89,7 +93,7 @@ const Card: React.FC<CardsType> = ({ data }) => {
 export default Card;
 
 
-function state(state: any, arg1: (state: any) => any) {
-  throw new Error('Function not implemented.');
-}
+// function state(state: any, arg1: (state: any) => any) {
+//   throw new Error('Function not implemented.');
+// }
 
