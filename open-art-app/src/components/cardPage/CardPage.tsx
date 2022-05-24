@@ -36,11 +36,11 @@ const CardPage: React.FC = () => {
                     >
                         {response.data.title}
                 </h3>
-                <div 
+                {/* <div 
               className="card-elem creators">
                 <span className="card-elem-name">Creator:</span>
                 {response.data.creators[0].description}
-              </div>
+              </div> */}
                 <div 
                     className="card-elem culture">
                         <span className="card-elem-name">Creation date:</span>

@@ -37,9 +37,7 @@
                     }               
               }
         }
-.test{
-display: f;
-
+.card-title-wrap{
         .info-icon {
             width: 10px;
             height: 10px;
@@ -58,11 +56,10 @@ display: f;
     font-weight: 900;
     margin-right: 5px;
 }
-
 .card{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     .card-additional-info {
         &.fun-fact{

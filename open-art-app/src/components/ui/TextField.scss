@@ -1,0 +1,27 @@
+.input-field-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    width: 90%;
+
+    .input-field{
+        height: 30px;
+        border: 1px solid rgba(109, 108, 108, 0.63);
+        border-radius: 5px;
+        padding: 5px;
+        &:not(last-child) {
+            margin-bottom: 15px; 
+        }
+
+        &:hover {
+            border: 1px solid rgba(175, 14, 55, 0.801);;
+        }
+        &:active {
+            outline: 1px solid rgba(34, 28, 30, 0.801);
+        }
+    }
+
+    .input-field-label {
+        margin-bottom: 10px;
+    }
+}

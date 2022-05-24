@@ -1,0 +1,20 @@
+.cards-filter-wrap{
+    max-width: 300px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    label{ margin-bottom: 10px;}
+    
+    .select-limit-wrap{
+        display: flex;
+        flex-direction: column;
+        .select-limit{
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
-import { CardsGalleryReducer } from "../store/posts/CardsGallerySlice";
+import { CardsGalleryReducer } from "./cards/CardsGallerySlice";
 
 const reducer = {
-        posts: CardsGalleryReducer,
+        cards: CardsGalleryReducer,
 };
 
 export default reducer;
