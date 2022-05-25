@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect, useReducer } from 'react';
+import { useSelector } from 'react-redux';
 import { useParams } from "react-router-dom";
-import useCardData from '../hooks/useCardData';
+import { useActions } from '../hooks/useActions';
 import Image from '../image/Image';
 
 
 const CardPage: React.FC = () => {
-
+    
     const { id } = useParams();
-    const { response, loading, error } = useCardData(id);
+    const { fetchCard } = useActions();
+    
+    const response = useSelector((state: any)  => state.card.response);
+    const loading = useSelector((state: any)  => state.card.loading);
+    const error = useSelector((state: any)  => state.card.error);
+  
+    useEffect(() => {
+        fetchCard(id)
+    }, [id])
 
     if (loading) {
         return (
@@ -39,8 +48,8 @@ const CardPage: React.FC = () => {
                 {/* <div 
               className="card-elem creators">
                 <span className="card-elem-name">Creator:</span>
-                {response.data.creators[0].description}
-              </div> */}
+                {data.creators[0].description}
+              </div>  */}
                 <div 
                     className="card-elem culture">
                         <span className="card-elem-name">Creation date:</span>

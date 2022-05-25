@@ -44,17 +44,17 @@ const Card: React.FC<CardsType> = ({ data }) => {
             </h3>
             <Link className="icon-info"to={`/gallery/${data.id}`}
                   >
-                        <MenuBookOutlinedIcon
+                        <MenuBookOutlinedIcon htmlColor="grey"
                               className="info"
                         />
             </Link>
       </div>
       <div className="card-info-wrap">
-        {/* <div 
-              className="card-elem creators">
-                <span className="card-elem-name">Creator:</span>
-                {data.creators[0].description}
-        </div> */}
+            {/* <div 
+                  className="card-elem creators">
+                  <span className="card-elem-name">Creator:</span>
+                  {data.creators[0].description}
+            </div> */}
             <div 
                   className="card-elem culture">
                   <span className="card-elem-name">Creation date:</span>

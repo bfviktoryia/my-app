@@ -1,12 +1,14 @@
 .navigation-wrap{
     margin: auto;
-    width: 40%;
+    width: 90%;
 }
 
 .navigation-list{
+    margin-left: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    :nth-child(2n){margin-right: 70px;}
-
+    justify-content: space-evenly;
+    :nth-child(2n){margin-right: 25%;}
+    :nth-child(3n){margin-right: -10%;}
+    :nth-child(4n){margin-right: 1%;}
 }

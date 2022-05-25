@@ -8,8 +8,6 @@ export enum CardsFilterActionTypes {
     SET_LIMIT_TYPE = "SET_LIMIT_TYPE",
     SET_ORDER_TYPE = "SET_ORDER_TYPE",
     SET_TITLE_TYPE = "SET_TITLE_TYPE",
-
-
 }
 type CardsFilterType = {
     page: number,

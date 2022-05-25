@@ -1,7 +1,7 @@
 import { Pagination } from "@mui/material";
-import ResponseInfoType from "../types/ResponseInfoType";
-import { SetPage } from "./CardsFilterActionCreators";
-import CardsFilterType from "./GalleryFilterType";
+import ResponseInfoType from "../../types/ResponseInfoType";
+import { SetPage } from "../CardsFilter/CardsFilterActionCreators";
+import CardsFilterType from "../CardsFilter/GalleryFilterType";
 
 import "./GalleryPagination.scss"
 
@@ -18,7 +18,6 @@ const GalleryPagination: React.FC<CardType> = ({info, state, dispatch}) => {
 
     return (
       <div className="cards-pagination-wrap">
-
             <Pagination 
                 className="pagination"
                 size="small"

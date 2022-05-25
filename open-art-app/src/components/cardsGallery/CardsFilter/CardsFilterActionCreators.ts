@@ -1,4 +1,4 @@
-import { CardsFilterAction, CardsFilterActionTypes, CardsOrder } from "./GalleryFilterType";
+import { CardsFilterAction, CardsFilterActionTypes, CardsOrder } from "../CardsFilter/GalleryFilterType";
 
 export  const SetPage = (value: number): CardsFilterAction => ({
     type: CardsFilterActionTypes.SET_PAGE_TYPE, 

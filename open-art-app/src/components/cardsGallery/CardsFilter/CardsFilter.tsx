@@ -1,10 +1,8 @@
-import { MenuItem, Pagination, SelectChangeEvent } from '@mui/material';
 import React from 'react';
-import ResponseInfoType from '../types/ResponseInfoType';
-import TextField from "../ui/TextField"
+import ResponseInfoType from '../../types/ResponseInfoType';
+import TextField from "../../ui/TextField"
 import { setLimit, setTitle } from './CardsFilterActionCreators';
 import CardsFilterType, { CardsOrder } from './GalleryFilterType';
-import Select from "../ui/Select"
 
 import "./CardsFilter.scss"
 
@@ -17,21 +15,9 @@ type CardType = {
 
 const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
 
-  // const handleChangeLimit = (event: [SelectChangeEvent]) => {
-  //   dispatch(setLimit(+event.target.value))
-  // }
   const handleChangeLimit = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setLimit(+event.target.value))
   }
-
-  // const handleChangeOrdering = (event: SelectChangeEvent) => {
-  //   dispatch(setOrder(event.target.value as CardsOrder))
-  // }
-  
-  // const handleChangePage = (event: React.ChangeEvent<unknown>, value: number) => {
-  //   dispatch(SetPage(value))
-  // }
-
   const searchTitle = (value: string) => {
     dispatch(setTitle(value)); 
 }  

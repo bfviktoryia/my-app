@@ -2,15 +2,12 @@ import React, { useEffect, useReducer, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useActions } from '../hooks/useActions';
 import Card from "./card/Card";
-import CardsFilter from './CardsFilter';
+import CardsFilter from './CardsFilter/CardsFilter';
+import { CardsFilterReduser, initialState } from './CardsFilter/CardsFilterReducers';
+import GalleryPagination from './CardsPagination/GalleryPagination';
 
 import "./CardsGallery.scss";
-import { CardsFilterReduser, initialState } from './CardsFilterReducers';
-import ResponseInfoType from '../types/ResponseInfoType';
-import CardsFilterType from './GalleryFilterType';
-import { SetPage } from './CardsFilterActionCreators';
-import { Pagination } from '@mui/material';
-import GalleryPagination from './GalleryPagination';
+
 
 type PropsType = {};
 
@@ -36,14 +33,13 @@ const CardsGallery: React.FC<PropsType> = () => {
 
 
     return (
-<React.Fragment>
+    <React.Fragment>
         <CardsFilter
                 info={total}
                 state={state}
                 dispatch={dispatch}
         />
         <div className="cards-container">
-                        {/* {data.data.map((item) => (<Card key={item.id} data={item}/>))} */}
                         {data.map((item: any) => (<Card key={item.id} data={item}/>))}
                         {loading && 'Loading...'}
                         {error && 'Error '}
@@ -53,7 +49,7 @@ const CardsGallery: React.FC<PropsType> = () => {
                         dispatch={dispatch} 
                         state={state}
         />
-</React.Fragment>
+    </React.Fragment>
     )
     }
 

@@ -1,9 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import CardsFilterType from '../../components/cardsGallery/GalleryFilterType';
+import CardsFilterType from '../../components/cardsGallery/CardsFilter/GalleryFilterType';
 import CardType from '../../components/types/CardType';
 import ResponseInfoType from '../../components/types/ResponseInfoType';
 import api from '../../helpers/api';
-
 
 
 type DataResponseType = {

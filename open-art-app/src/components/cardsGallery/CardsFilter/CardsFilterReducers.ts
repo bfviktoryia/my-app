@@ -1,4 +1,4 @@
-import CardsFilterType, { CardsFilterAction, CardsFilterActionTypes, CardsOrder } from "./GalleryFilterType";
+import CardsFilterType, { CardsFilterAction, CardsFilterActionTypes, CardsOrder } from "../CardsFilter/GalleryFilterType";
 
 
 export const initialState: CardsFilterType = {
@@ -20,18 +20,7 @@ export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAc
                 page: 1, 
                 limit: action.payload 
             }
-        // case CardsFilterActionTypes.SET_ORDER_TYPE:
-        //     return { 
-        //         ...state, 
-        //         ordering: action.payload
-        //         }
         case CardsFilterActionTypes.SET_TITLE_TYPE: {
-            // const numValue = action.payload;
-
-            // if (isNaN(numValue)) {
-            //     return state;
-            // }
-            // const title = numValue.length > 0 ? numValue : undefined;
             return { 
                 ...state, 
                 title: action.payload

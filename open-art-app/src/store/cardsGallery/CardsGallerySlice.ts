@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import CardType from "../../components/types/CardType";
 import ResponseInfoType from "../../components/types/ResponseInfoType";
 import Storage from "../../helpers/storage";
-import { fetchCards } from "./CardsThunk";
+import { fetchCards } from "./CardsGalleryThunk";
 
 
 export type StoreType = {
@@ -72,6 +72,7 @@ const CardsGallerySlice = createSlice ({
     
             });
 
+
     }}
 );
 
@@ -81,4 +82,4 @@ const CardsGallerySlice = createSlice ({
     export const CardsGalleryActions = {
         ...CardsGallerySlice.actions,
         fetchCards,
-        }
+            }

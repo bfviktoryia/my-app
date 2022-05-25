@@ -1,8 +1,11 @@
-import { CardsGalleryActions } from "./cards/CardsGallerySlice";
+import { CardsGalleryActions } from "./cardsGallery/CardsGallerySlice";
+import * as cardActions from "./cardPage/actionCreators";
+
 
 
 const actions = {
 ...CardsGalleryActions,
+...cardActions
 
 }
 
