@@ -1,43 +1,32 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
-import "./TextField.scss";
+import "./SearchField.scss";
 
 type PropsType = {
-    autofocus?: boolean
     label: string
     type?: string
     value?: string
     setValue: (value: string) => void
 }
 
-const TextField: React.FC<PropsType> = ({
-        autofocus,
+const SearchField: React.FC<PropsType> = ({
         label,
         type="text",
         value,
         setValue
     }) => {
     
-    // const nameRef = useRef<HTMLInputElement>(null);
-    
-    // useEffect(() => {
-    //     if (autofocus) {
-    //         nameRef.current?.focus();
-    //     }
-    // }, []);
-
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValue(event.target.value);
     }
 
     return (
-        <div className="input-field-container">
-            <div className="input-field-label">
+        <div className="search-field-container">
+            <div className="search-field-label">
                 {label}
             </div>
             <input 
-                className="input-field"
-                // ref={nameRef}
+                className="search-field-input"
                 value={value || ""}
                 onChange={handleChange}
                 type={type}
@@ -46,4 +35,4 @@ const TextField: React.FC<PropsType> = ({
     )
 }
 
-export default TextField;
+export default SearchField;

@@ -3,10 +3,12 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
 import Navbar from './components/header/navigation/Navbar';
 import CardsGallery from './components/cardsGallery/CardsGallery';
-
-import './App.css';
 import CardPage from './components/cardPage/CardPage';
 import Login from './components/login/Login';
+
+import './App.css';
+import Registration from './components/registration/Registration';
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
                         <Route path=":id" element={<CardPage/>} />
                   </Route>   
                   <Route path="/login" element={<Login/>}/>
+                  <Route path="/registration" element={<Registration/>}/>
                   <Route path="*" element={<Navigate to={"/gallery"}/>} />    
                 </Routes>
              </div>

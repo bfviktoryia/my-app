@@ -18,7 +18,7 @@ return (
                   <Link to="/#">Favourites</Link>
             </li>
             <li className="navigation-list-item navigation_registration">
-                  <Link to="/#">Registration</Link>
+                  <Link to="/registration">Registration</Link>
             </li>
             <li className="navigation-list-item navigation_login">
                    <Link to="/login">Login</Link>

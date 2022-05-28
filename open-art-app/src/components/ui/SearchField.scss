@@ -1,0 +1,21 @@
+.search-field-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    width: 100%;
+
+    .search-field-input{
+        font-size: 0.9rem;
+        height: 40px;
+        border: 1px solid transparent;
+        padding: 5px;
+        outline: none;
+        &:not(last-child) {
+            margin-bottom: 15px; 
+        }
+    }
+
+    .search-field-label {
+        margin-bottom: 10px;
+    }
+}

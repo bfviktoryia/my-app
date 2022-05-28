@@ -1,10 +1,10 @@
 import React from 'react';
 import ResponseInfoType from '../../types/ResponseInfoType';
-import TextField from "../../ui/TextField"
 import { setLimit, setTitle } from './CardsFilterActionCreators';
 import CardsFilterType, { CardsOrder } from './GalleryFilterType';
 
 import "./CardsFilter.scss"
+import SearchField from '../../ui/SearchField';
 
 
 type CardType = {
@@ -37,7 +37,7 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
                       <option value={30}>Thirty</option>
               </select>
           </div>
-          <TextField
+          <SearchField
               label="Title"
               value={state.title}
               setValue={searchTitle}
