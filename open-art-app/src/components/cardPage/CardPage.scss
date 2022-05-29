@@ -1,0 +1,13 @@
+.card-page{
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-evenly;
+    // align-items: center;
+
+
+    .card-additional-info {
+        &.fun-fact{
+            margin-bottom: 20px;
+        }
+
+}}

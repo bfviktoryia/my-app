@@ -1,0 +1,67 @@
+
+.card-wrap {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            width: 350px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            :not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+            .card-elem {
+                &.title{        
+                    font-size: 1.2rem;
+                    color:var(--logo-orange);
+}
+        }
+            .card-elem-name{
+                color: var(--text-black);
+                font-weight: 800;
+                margin-right: 5px;
+            }
+        .bookmarks-wrap {  
+                .icon-favourite {
+                    font-size: 2.4rem;
+                    transition: 0.8s;
+                    position: absolute;
+                    top: -170%;
+                    left: 1700%;
+                    &:hover{
+                         transform: scale(1.2);;
+                        }
+                    &.marked{
+                        path {fill : rgb(255, 192, 82)};
+                      }
+                    }               
+              }
+
+        .card-title-wrap{
+                display: flex;
+                 gap: 10%;
+                    .info-icon {
+                        width: 10px;
+                        height: 10px;
+                    .info{
+                        height: 10px;
+                        }}
+                }
+
+        .card-additional-info_wrap{
+            width: 40%;
+        }
+
+        .card{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            .card-additional-info {
+                &.fun-fact{
+                    margin-bottom: 20px;
+                }
+            }
+
+        }

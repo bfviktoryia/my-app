@@ -1,9 +1,17 @@
 
 * {
-  --logo-orange: rgba(190, 50, 11, 0.973);
-  --header-grey: rgba(233, 232, 232, 0.967);;
-  --text-color: rgb(240, 255, 255);
-  --main-bg-color: rgba(14, 13, 13, 0.961);
+  --primary-200: rgba(247, 175, 155, 0.973);
+  --primary-700: rgba(248, 107, 69, 0.973);
+  --primary-800:rgba(240, 70, 23, 0.973);
+  --primary-1000: rgba(190, 50, 11, 0.973);
+  --secondary-50: rgb(255, 252, 252);
+  --secondary-100: rgba(252, 248, 248, 0.41);
+  --secondary-200: rgb(223, 222, 222);
+  --secondary-300: rgba(228, 228, 232, 0.694);
+  --secondary-400: rgb(143, 142, 142);
+  --secondary-1000: rgba(13, 13, 14, 0.912);
+  --main-bg-color: rgba(237, 237, 241, 0.912);
+  --image-placeholder: rgba(29, 29, 34, 0.113);
 }
 
 .app{
@@ -11,6 +19,13 @@
   min-height: 100vh;
   width: 100%;
   background-color: var(--main-bg-color);
-
 }
+
+  .app-body{
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 100px auto;
+  }
+
+
 
