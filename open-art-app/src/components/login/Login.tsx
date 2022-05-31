@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { isValidEmail, isValidPassword } from "../../helpers/validfations";
 import FormValuesType from "../types/FormValuesType";
 import Button from "../ui/Button";
 import FormTextField from "../ui/FormTextField";
@@ -8,12 +9,25 @@ import "./Login.scss"
 
 const Login: React.FC = () => {
 
+    const [values, setInputValues] = useState<FormValuesType>({});
+    const [validationError, setValidationError] = useState("");
+    const error = validationError;
+
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        console.log("button clicked");
-      };
-      const [values, setValues] = useState<FormValuesType>({});
+        const validationError = isValidEmail(values.email) || isValidPassword(values.password);
 
+        if (validationError){
+            setValidationError (validationError);
+            return;
+        }
+
+      };
+
+      const setValues = (callback: (prevValue: FormValuesType) => FormValuesType) => {
+        setInputValues(callback)
+        setValidationError("")
+      }
 
     return (
         <form className="form-login"> 
@@ -32,6 +46,11 @@ const Login: React.FC = () => {
                     values={values}
                     setValues={setValues}            
             />
+                    {validationError &&
+            <div className="form-error">
+              {error}      
+            </div>}  
+
             <Button
                 color="orange"
                 onClick={handleSubmit}
