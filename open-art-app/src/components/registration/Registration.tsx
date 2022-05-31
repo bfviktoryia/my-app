@@ -1,15 +1,40 @@
 import { useState } from "react";
+import { isValidEmail, isValidName, isValidPassword } from "../../helpers/validfations";
 import FormValuesType from "../types/FormValuesType";
 import Button from "../ui/Button";
 import FormTextField from "../ui/FormTextField";
 import "./Registration.scss"
 
 const Registration: React.FC = () => {
+
+    const [values, setInputValues] = useState<FormValuesType>({});
+    const [validationError, setValidationError] = useState("");
+    const error = validationError;
+
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        console.log("button clicked");
+        
+        const isConfirmedPassword = (_: string): string => {
+            return values.password !== values.confirm_password ? "Password is not confirmed" : "";
+            }
+
+        const validationError = 
+        isValidEmail(values.email) 
+        || isValidPassword(values.password)
+        || isValidName(values.name)
+        || isConfirmedPassword(values.confirm_password)
+
+        if (validationError){
+            setValidationError (validationError);
+            return;
+        }
+
       };
-      const [values, setValues] = useState<FormValuesType>({});
+
+        const setValues = (callback: (prevValue: FormValuesType) => FormValuesType) => {
+            setInputValues(callback)
+            setValidationError("")
+        }
 
     return (
         <form className="form-registration">
@@ -38,10 +63,15 @@ const Registration: React.FC = () => {
             <FormTextField
                     label={"registration.confirm.password"}
                     type="password"
-                    name="confirm-password"
+                    name="confirm_password"
                     values={values}
                     setValues={setValues}   
                 />
+            {validationError &&
+            <div className="form-error">
+              {error}      
+            </div>}  
+
             <Button
                 color="orange"
                 onClick={handleSubmit}
