@@ -8,12 +8,15 @@ export enum CardsFilterActionTypes {
     SET_LIMIT_TYPE = "SET_LIMIT_TYPE",
     SET_ORDER_TYPE = "SET_ORDER_TYPE",
     SET_TITLE_TYPE = "SET_TITLE_TYPE",
+    SET_SEARCH_TYPE = "SET_SEARCH_TYPE",
+
 }
 type CardsFilterType = {
     page: number,
     limit: number,
     ordering: CardsOrder
     title?: string,
+    q: string
 }
 
 type SetPageAction = {
@@ -36,12 +39,18 @@ type SetTitleAction = {
     payload: string,
 }
 
+type SetSearchAction = {
+    type: CardsFilterActionTypes.SET_SEARCH_TYPE,
+    payload: string,
+}
+
 
 export type CardsFilterAction = 
     SetPageAction 
     | SetLimitAction 
     | SetOrderAction 
     | SetTitleAction
+    | SetSearchAction
 
 
 

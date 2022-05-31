@@ -4,7 +4,8 @@ import CardsFilterType, { CardsFilterAction, CardsFilterActionTypes, CardsOrder 
 export const initialState: CardsFilterType = {
     page: 1,
     limit: 10,
-    ordering: CardsOrder.idAsc
+    ordering: CardsOrder.idAsc,
+    q: ""
 }
 
 export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAction): CardsFilterType => {
@@ -26,6 +27,12 @@ export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAc
                 title: action.payload
                     }   
             }
+        case CardsFilterActionTypes.SET_SEARCH_TYPE: {
+            return { 
+                ...state, 
+                q: action.payload
+                        }   
+                }
 
         default: return state;
     }
