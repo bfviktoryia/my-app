@@ -15,14 +15,12 @@ export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { 
     async ({ page, limit, title, q }, thunkApi) => {
 
         const skip = limit * (page - 1);
-        const search = q;
 
-        let url = `?q=${search}&limit=${limit}&skip=${skip}`;
+        let url = `?q=${q}&limit=${limit}&skip=${skip}`;
 
         if (title) {
             url += `&title=${title}`;
         }
-
         try {
             const response = await api.get(url);
             return {
