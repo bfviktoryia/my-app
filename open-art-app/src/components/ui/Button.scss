@@ -13,23 +13,20 @@
 
   
     &:hover {
-        // background-color: var(--primary-800);
-        background-color: red;
-
-    //   box-shadow: 0.7px 1px 4px 5px var(--secondary-200);
-      transition: 0.2s;
+        background-color: var(--primary-800);
+        transition: 0.2s;
     }
     
     &._orange {
-      background-color: var(--primary-700);
+        background-color: var(--primary-700);
     }
     &._grey {
-      background-color: rgb(90, 95, 98);
+        background-color: rgb(90, 95, 98);
     }
   
     &:active {
-      box-shadow: inset 1.5px 1px 5px;
-      transition: 0.2s;
-      color: var(--text-black);
+        box-shadow: inset 1.5px 1px 5px;
+        transition: 0.2s;
+        color: var(--text-black);
     }
   }
