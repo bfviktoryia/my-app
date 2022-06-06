@@ -5,22 +5,22 @@ import ResponseInfoType from '../../components/types/ResponseInfoType';
 import api from '../../helpers/api';
 
 
+
 type DataResponseType = {
     info: ResponseInfoType,
     data: CardType[],
 }
 export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { rejectValue: string }>(
     "posts/fetchGallery",
-    async ({ page, limit, title }, thunkApi) => {
+    async ({ page, limit, title, q }, thunkApi) => {
 
         const skip = limit * (page - 1);
-        let url = `?limit=${limit}&skip=${skip}`;
+
+        let url = `?q=${q}&limit=${limit}&skip=${skip}`;
 
         if (title) {
             url += `&title=${title}`;
         }
-
-    
         try {
             const response = await api.get(url);
             return {

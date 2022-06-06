@@ -1,29 +1,42 @@
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "../navigation/Navbar.scss"
 
 type NavigationType = {
-    
 }
+
+const GalleryLinks = [
+    {url: "gallery", textId: "navbar.gallery"},
+    {url: "#", textId: "navbar.favourites"},
+]
+const AuthLinks = [
+    {url: "registration", textId: "navbar.registration"},
+    {url: "login", textId: "navbar.login"},
+]
 
 const Navbar: React.FC<NavigationType> = () => {
 return (
     <div className="navigation-wrap">
-        <ul className="navigation-list">    
-            <li className="navigation-list-item navigation_gallery">
-                  <Link to="/gallery">Gallery</Link>
-            </li>
-            <li className="navigation-list-item navigation_favourites">
-                  <Link to="/#">Favourites</Link>
-            </li>
-            <li className="navigation-list-item navigation_registration">
-                  <Link to="/registration">Registration</Link>
-            </li>
-            <li className="navigation-list-item navigation_login">
-                   <Link to="/login">Login</Link>
-            </li>
-        </ul>
+            <ul className="navigation-list gallery">
+                    {GalleryLinks.map(({ url, textId}) =>
+                        <li key={url}>
+                            <NavLink to={url} className={({ isActive }) => (`gallery-navigation-link ${isActive ? "active-gallery" : ""}`)}>
+                                {textId}
+                            </NavLink>
+                        </li>
+                )}
+            </ul> 
+
+            <ul className="navigation-list auth">
+                        {AuthLinks.map(({ url, textId}) =>
+                            <li key={url}>
+                            <NavLink to={url} className={({ isActive }) => (`auth-navigation-link ${isActive ? "active-auth" : ""}`)}>
+                                {textId}
+                            </NavLink>
+                        </li>
+                )}
+            </ul> 
     </div>
 )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ResponseInfoType from '../../types/ResponseInfoType';
-import { setLimit, setTitle } from './CardsFilterActionCreators';
+import { setLimit, setSearchValue, setTitle } from './CardsFilterActionCreators';
 import CardsFilterType, { CardsOrder } from './GalleryFilterType';
 
 import "./CardsFilter.scss"
@@ -20,6 +20,9 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
   }
   const searchTitle = (value: string) => {
     dispatch(setTitle(value)); 
+}  
+  const searchField = (value: string) => {
+    dispatch(setSearchValue(value)); 
 }  
 
   return (
@@ -41,6 +44,11 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
               label="Title"
               value={state.title}
               setValue={searchTitle}
+          />
+          <SearchField
+              label="Search"
+              value={state.q}
+              setValue={searchField}
           />
           {/* <Select
             label="Ordering"
