@@ -11,17 +11,16 @@ const Header = ({
      children 
     }: HeaderType) => {
 
-    // const { lang, setLang } = useTranslate();
 
   return (
     <header className="header_style">
-      <div className="logo-wrap">
-          <LogoIcon className="logo-wrap-icon"/>
-          <div className="logo-wrap-name">
-              Open art                
-          </div>
-      </div>
-      {children}
+        <div className="logo-wrap">
+            <LogoIcon className="logo-wrap-icon"/>
+            <div className="logo-wrap-name">
+                Open art                
+            </div>
+        </div>
+        {children}
     </header>
   );
 };

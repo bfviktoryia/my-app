@@ -1,11 +1,10 @@
 import { CardsGalleryActions } from "./cardsGallery/CardsGallerySlice";
-import * as cardActions from "./cardPage/actionCreators";
-
+import { CardActions } from "./cardPage/CardSlice";
 
 
 const actions = {
 ...CardsGalleryActions,
-...cardActions
+...CardActions,
 
 }
 

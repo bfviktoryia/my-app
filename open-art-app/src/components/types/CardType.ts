@@ -1,10 +1,10 @@
 //data.images.web.url
 
-type ImagesType = {
+export type ImagesType = {
     web: {url: string}
 }
 
-type CreatorsType = {
+export type CreatorsType = {
     description: string
 }
 

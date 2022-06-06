@@ -13,7 +13,7 @@ const getFromStorage = <MarksType>(name: string, def: MarksType): MarksType  => 
     }
     catch {
     }
-}
+};
 
 const Storage = {
     setToStorage,

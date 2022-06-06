@@ -27,4 +27,15 @@
         }
     }
     
+    .logout-icon{
+        path {
+            fill: var(--primary-1000);
+        }
+        width: 18px;
+        margin-left: -50%;
+        cursor: pointer;
+    }
+
+    
 }
+

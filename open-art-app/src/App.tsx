@@ -8,9 +8,12 @@ import Login from './components/login/Login';
 
 import './App.css';
 import Registration from './components/registration/Registration';
+import { useSelector } from 'react-redux';
 
 
 function App() {
+
+  const logged = useSelector((state: any) => state.auth.logged);
   return (
       <BrowserRouter>
         <div className="app">
@@ -22,7 +25,7 @@ function App() {
                   <Route path="/gallery" >
                         <Route index element={<CardsGallery/>} />
                         <Route path=":id" element={<CardPage/>} />
-                  </Route>   
+                  </Route>  
                   <Route path="/login" element={<Login/>}/>
                   <Route path="/registration" element={<Registration/>}/>
                   <Route path="*" element={<Navigate to={"/gallery"}/>} />    

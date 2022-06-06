@@ -9,7 +9,7 @@ import { fetchCards } from "./CardsGalleryThunk";
 export type StoreType = {
     data: CardType[],
     favourite: number[],
-    info: ResponseInfoType
+    info: ResponseInfoType,
     loading: boolean,
     error: string | undefined,
 }

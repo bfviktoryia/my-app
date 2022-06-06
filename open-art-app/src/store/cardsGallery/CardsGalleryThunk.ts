@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import CardsFilterType from '../../components/cardsGallery/CardsFilter/GalleryFilterType';
 import CardType from '../../components/types/CardType';
 import ResponseInfoType from '../../components/types/ResponseInfoType';
-import api from '../../helpers/api';
+import api from '../../helpers/galleryApi';
 
 
 type DataResponseType = {
@@ -25,7 +25,7 @@ export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { 
             const response = await api.get(url);
             return {
                 data: response.data.data as CardType[],
-                info: response.data.info as ResponseInfoType,
+                info: response.data.info.total as ResponseInfoType,
             }
         } catch {
             return thunkApi.rejectWithValue("Server response error");
