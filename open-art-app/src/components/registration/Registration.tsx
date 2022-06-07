@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { isValidEmail, isValidName, isValidPassword } from "../../helpers/validfations";
+import { isConfirmedPassword, isValidEmail, isValidName, isValidPassword } from "../../helpers/validfations";
 import FormValuesType from "../types/FormValuesType";
 import Button from "../ui/Button";
 import FormTextField from "../ui/FormTextField";
@@ -14,15 +14,12 @@ const Registration: React.FC = () => {
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         
-        const isConfirmedPassword = (_: string): string => {
-            return values.password !== values.confirm_password ? "Password is not confirmed" : "";
-            }
 
         const validationError = 
         isValidEmail(values.email) 
         || isValidPassword(values.password)
         || isValidName(values.name)
-        || isConfirmedPassword(values.confirm_password)
+        || isConfirmedPassword(values.password, values.confirm_password)
 
         if (validationError){
             setValidationError (validationError);

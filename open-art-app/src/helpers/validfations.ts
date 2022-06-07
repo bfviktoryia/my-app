@@ -1,3 +1,5 @@
+import { inputAdornmentClasses } from "@mui/material";
+
 export const isValidEmail = (value: string): string => {
 return !value.match(/^\w+@\w+\.\w+$/) ? "Email is not valid. Try again" : "";
 }
@@ -10,3 +12,6 @@ export const isValidName = (value: string): string => {
     return value.length < 3 ? "Name is too short " : "";
     }
 
+export const isConfirmedPassword = (value: string, _value: string): string => {
+        return value !== _value ? "Password is not confirmed" : "";
+        }
