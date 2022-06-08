@@ -3,8 +3,11 @@
 max-width: 1000px;
 display: flex;
 flex-wrap: wrap;
-justify-content: center;
+justify-content:flex-end;
 margin: auto;
 padding: 0 -15px;
+}
 
+.cards-loading-error{
+    margin: auto;
 }

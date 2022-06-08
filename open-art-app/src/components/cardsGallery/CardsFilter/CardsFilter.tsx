@@ -35,9 +35,9 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
                   value={state.limit.toString()}
                   onChange={handleChangeLimit}
               >
-                      <option value={10}>Ten</option>
-                      <option value={20}>Twenty</option>
-                      <option value={30}>Thirty</option>
+                      <option value={10}>10</option>
+                      <option value={20}>20</option>
+                      <option value={30}>30</option>
               </select>
           </div>
           <SearchField

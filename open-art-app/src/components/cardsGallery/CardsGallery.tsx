@@ -41,9 +41,12 @@ const CardsGallery: React.FC<PropsType> = () => {
         />
         <div className="cards-container">
                         {data.map((item: any) => (<Card key={item.id} data={item}/>))}
-                        {loading && 'Loading...'}
-                        {error && 'Error '}
+                <div className="cards-loading-error">
+                            {loading && 'Loading...'}
+                            {error && 'Error '}
+                </div>
         </div>
+
         <GalleryPagination 
                         info={total} 
                         dispatch={dispatch} 
