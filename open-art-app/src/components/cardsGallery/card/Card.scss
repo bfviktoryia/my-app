@@ -3,7 +3,7 @@
             display: flex;
             flex-direction: column;
             padding: 10px;
-            width: 350px;
+            width: 420px;
             height: auto;
             border-radius: 5px;
             margin-bottom: 15px;
@@ -28,7 +28,7 @@
                     transition: 0.8s;
                     position: absolute;
                     top: -170%;
-                    left: 1700%;
+                    left: 1950%;
                     &:hover{
                          transform: scale(1.2);;
                         }

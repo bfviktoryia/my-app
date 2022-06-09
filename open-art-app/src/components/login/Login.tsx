@@ -6,11 +6,12 @@ import FormTextField from "../ui/FormTextField";
 
 import "./Login.scss"
 
-
 const Login: React.FC = () => {
 
     const [values, setInputValues] = useState<FormValuesType>({});
     const [validationError, setValidationError] = useState("");
+    const [login, setLogin] = useState("");
+
     const error = validationError;
 
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -24,7 +25,7 @@ const Login: React.FC = () => {
 
       };
 
-      const setValues = (callback: (prevValue: FormValuesType) => FormValuesType) => {
+    const setValues = (callback: (prevValue: FormValuesType) => FormValuesType) => {
         setInputValues(callback)
         setValidationError("")
       }
