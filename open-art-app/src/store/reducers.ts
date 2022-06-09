@@ -5,7 +5,7 @@ import { cardReducer } from "./cardPage/reducer";
 
 const reducer = {
         cards: CardsGalleryReducer,
-        card: cardReducer
+        card: cardReducer,
 };
 
 export default reducer;

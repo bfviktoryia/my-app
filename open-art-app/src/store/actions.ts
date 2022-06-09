@@ -5,7 +5,7 @@ import * as cardActions from "./cardPage/actionCreators";
 
 const actions = {
 ...CardsGalleryActions,
-...cardActions
+...cardActions,
 
 }
 

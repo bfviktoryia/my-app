@@ -65,9 +65,9 @@ const Registration: React.FC = () => {
                     setValues={setValues}   
                 />
             {validationError &&
-            <div className="form-error">
-              {error}      
-            </div>}  
+                <div className="form-error">
+                    {error}      
+                </div>}  
 
             <Button
                 color="orange"
