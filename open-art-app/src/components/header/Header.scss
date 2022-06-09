@@ -25,5 +25,14 @@
             color: var(--primary-1000);
         }
     }
+
+    button {
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+        font-size: 1rem;
+        position: relative;
+        top: 23.5%;
+    }
     
 }

@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { isValidEmail, isValidPassword } from "../../helpers/validfations";
+import useTranslate from "../hooks/useTranslate";
 import FormValuesType from "../types/FormValuesType";
 import Button from "../ui/Button";
+import Form from "../ui/Form";
 import FormTextField from "../ui/FormTextField";
 
 import "./Login.scss"
 
 const Login: React.FC = () => {
 
+    const { t } = useTranslate();
     const [values, setInputValues] = useState<FormValuesType>({});
     const [validationError, setValidationError] = useState("");
-    const [login, setLogin] = useState("");
 
     const error = validationError;
 
@@ -31,17 +33,17 @@ const Login: React.FC = () => {
       }
 
     return (
-        <form className="form-login"> 
+        <Form header={t("login.header")}> 
             <FormTextField
                     autofocus={true}
-                    label={"login.email"}
+                    label={t("login.email")}
                     type="email"
                     name="email"
                     values={values}
                     setValues={setValues}            
             />
             <FormTextField
-                    label={"login.password"}
+                    label={t("login.password")}
                     type="password"
                     name="password"
                     values={values}
@@ -56,10 +58,10 @@ const Login: React.FC = () => {
                 color="orange"
                 onClick={handleSubmit}
                 >
-                    {"login.submit"}     
+                    {t("login.submit")}     
             </Button>        
                 
-        </form>
+        </Form>
     )
 }
 

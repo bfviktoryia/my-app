@@ -1,6 +1,6 @@
 .navigation-wrap{
     margin: auto;
-    width: 90%;
+    width: 88%;
     height: 30px;
     display: flex;
     align-items: center;
@@ -18,7 +18,8 @@
     }
     &.auth{
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
     }
     .auth-navigation-link{
@@ -42,6 +43,8 @@
     }
 
     .gallery-navigation-link{
+        font-size: 1.1rem;
+
         color: var(--secondary-1000);
         text-decoration: none;
         transition: 0.2s;

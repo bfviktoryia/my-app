@@ -25,7 +25,7 @@ const GalleryPagination: React.FC<CardType> = ({info, state, dispatch}) => {
                 showFirstButton 
                 showLastButton
                 // count={Math.ceil(info.total / state.limit)}
-                count={Math.ceil(200/ state.limit)}
+                count={Math.ceil(300/ state.limit)}
                 page={state.page}
                 onChange={handleChangePage}
             /> 
