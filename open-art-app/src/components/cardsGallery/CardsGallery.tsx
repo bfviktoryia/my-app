@@ -39,7 +39,7 @@ const CardsGallery: React.FC<PropsType> = () => {
         />
         <div className="cards-container">
                     <div className="cards-loading-error">
-                                {loading && 'Loading...'}
+                                {loading && <div className="loader"></div>}
                                 {error && 'Error '}
                     </div>
                 {data.map((item: any) => (<Card key={item.id} data={item}/>))}
