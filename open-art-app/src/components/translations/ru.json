@@ -1,0 +1,21 @@
+{
+    "login.header": "Вход",
+    "login.email": "Email",
+    "login.password": "Пароль",
+    "login.submit": "Войти",
+    "registration.header": "Регистрация",
+    "registration.name": "Имя",
+    "registration.email": "Email",
+    "registration.password": "Пароль",
+    "registration.confirm.password": "Подтвердите пароль",
+    "registration.submit": "Зарегистрироваться",
+    "navbar.gallery": "Галерея",
+    "navbar.favourites": "Избранное",
+    "navbar.registration": "Регистрация",
+    "navbar.login": "Вход",
+    "select.per.page": "Элементов на странице",
+    "search.title": "Поиск по названию",
+    "search.any.word": "Расширенный поиск"
+
+
+}

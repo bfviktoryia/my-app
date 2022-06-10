@@ -1,0 +1,17 @@
+.form-wrap{
+    // border: 1px solid red;
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--secondary-50);
+}
+.form-error{
+    margin: 20px 20px;
+    color: var(--primary-800);
+}
+.form-header{
+font-size: 1.3rem;
+}

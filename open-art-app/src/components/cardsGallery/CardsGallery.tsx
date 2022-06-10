@@ -13,8 +13,6 @@ type PropsType = {};
 
 const CardsGallery: React.FC<PropsType> = () => {
 
-    // const [ page, setPage] = useState(1);
-    // const {response, loading, error} = useGalleryData(page, limit);
     // const { cardsOrder } = useActions();
     // const order = useSelector((state: any) => state.cards.ordering);
     // const handleChangeOrdering = () => cardsOrder(order);
@@ -41,7 +39,7 @@ const CardsGallery: React.FC<PropsType> = () => {
         />
         <div className="cards-container">
                     <div className="cards-loading-error">
-                                {loading && 'Loading...'}
+                                {loading && <div className="loader"></div>}
                                 {error && 'Error '}
                     </div>
                 {data.map((item: any) => (<Card key={item.id} data={item}/>))}

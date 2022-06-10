@@ -1,11 +1,11 @@
 import React from 'react';
 import ResponseInfoType from '../../types/ResponseInfoType';
 import { setLimit, setSearchValue, setTitle } from './CardsFilterActionCreators';
-import CardsFilterType, { CardsOrder } from './GalleryFilterType';
+import CardsFilterType from './GalleryFilterType';
+import SearchField from '../../ui/SearchField';
+import useTranslate from '../../hooks/useTranslate';
 
 import "./CardsFilter.scss"
-import SearchField from '../../ui/SearchField';
-
 
 type CardType = {
     info: ResponseInfoType,
@@ -14,6 +14,8 @@ type CardType = {
 };
 
 const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
+
+  const { t } = useTranslate();
 
   const handleChangeLimit = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setLimit(+event.target.value))
@@ -28,7 +30,7 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
   return (
     <aside className="cards-filter-wrap">
           <div className="select-limit-wrap">
-              <label htmlFor="select-limit">Items per page</label>
+              <label htmlFor="select-limit">{t("select.per.page")}</label>
               <select 
                   className="select-limit" 
                   id="select-limit"
@@ -41,12 +43,12 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
               </select>
           </div>
           <SearchField
-              label="Title"
+              label={t("search.title")}
               value={state.title}
               setValue={searchTitle}
           />
           <SearchField
-              label="Search"
+              label={t("search.any.word")}
               value={state.q}
               setValue={searchField}
           />

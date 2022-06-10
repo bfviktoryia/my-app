@@ -1,5 +1,6 @@
 
 import { NavLink } from "react-router-dom";
+import useTranslate from "../../hooks/useTranslate";
 
 import "../navigation/Navbar.scss"
 
@@ -16,28 +17,31 @@ const AuthLinks = [
 ]
 
 const Navbar: React.FC<NavigationType> = () => {
-return (
-    <div className="navigation-wrap">
-            <ul className="navigation-list gallery">
-                    {GalleryLinks.map(({ url, textId}) =>
-                        <li key={url}>
-                            <NavLink to={url} className={({ isActive }) => (`gallery-navigation-link ${isActive ? "active-gallery" : ""}`)}>
-                                {textId}
-                            </NavLink>
-                        </li>
-                )}
-            </ul> 
 
-            <ul className="navigation-list auth">
-                        {AuthLinks.map(({ url, textId}) =>
-                            <li key={url}>
-                            <NavLink to={url} className={({ isActive }) => (`auth-navigation-link ${isActive ? "active-auth" : ""}`)}>
-                                {textId}
-                            </NavLink>
-                        </li>
-                )}
-            </ul> 
-    </div>
+    const { t } = useTranslate();
+
+        return (
+            <div className="navigation-wrap">
+                    <ul className="navigation-list gallery">
+                            {GalleryLinks.map(({ url, textId}) =>
+                                <li key={url}>
+                                    <NavLink to={url} className={({ isActive }) => (`gallery-navigation-link ${isActive ? "active-gallery" : ""}`)}>
+                                        {t(textId)}
+                                    </NavLink>
+                                </li>
+                        )}
+                    </ul> 
+
+                    <ul className="navigation-list auth">
+                                {AuthLinks.map(({ url, textId}) =>
+                                    <li key={url}>
+                                    <NavLink to={url} className={({ isActive }) => (`auth-navigation-link ${isActive ? "active-auth" : ""}`)}>
+                                        {t(textId)}
+                                    </NavLink>
+                                </li>
+                        )}
+                    </ul> 
+            </div>
 )
 }
 

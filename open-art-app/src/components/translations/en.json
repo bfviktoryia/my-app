@@ -1,0 +1,20 @@
+{
+    "login.header": "Sign in",
+    "login.email": "Email",
+    "login.password": "Password",
+    "login.submit": "Login",
+    "registration.header": "Sign up",
+    "registration.name": "Name",
+    "registration.email": "Email",
+    "registration.password": "Password",
+    "registration.confirm.password": "Confirm password",
+    "registration.submit": "Register",
+    "navbar.gallery": "Gallery",
+    "navbar.favourites": "Favourites",
+    "navbar.registration": "Sign up",
+    "navbar.login": "Sign in",
+    "select.per.page": "Items per page",
+    "search.title": "Search by Title",
+    "search.any.word": "Search by any keyword"
+
+}

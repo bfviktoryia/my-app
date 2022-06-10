@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { isConfirmedPassword, isValidEmail, isValidName, isValidPassword } from "../../helpers/validfations";
+import useTranslate from "../hooks/useTranslate";
 import FormValuesType from "../types/FormValuesType";
 import Button from "../ui/Button";
+import Form from "../ui/Form";
 import FormTextField from "../ui/FormTextField";
 import "./Registration.scss"
 
 const Registration: React.FC = () => {
-
+    const { t } = useTranslate();
     const [values, setInputValues] = useState<FormValuesType>({});
     const [validationError, setValidationError] = useState("");
     const error = validationError;
@@ -34,31 +36,31 @@ const Registration: React.FC = () => {
         }
 
     return (
-        <form className="form-registration">
+        <Form header={t("registration.header")}> 
             <FormTextField
                     autofocus={true}
-                    label={"registration.name"}
+                    label={t("registration.name")}
                     type="text"
                     name="name"
                     values={values}
                     setValues={setValues}   
                 />
             <FormTextField
-                    label={"registration.email"}
+                    label={t("registration.email")}
                     type="email"
                     name="email"
                     values={values}
                     setValues={setValues}   
                 />
             <FormTextField
-                    label={"registration.password"}
+                    label={t("registration.password")}
                     type="password"
                     name="password"
                     values={values}
                     setValues={setValues}   
                 />
             <FormTextField
-                    label={"registration.confirm.password"}
+                    label={t("registration.confirm.password")}
                     type="password"
                     name="confirm_password"
                     values={values}
@@ -73,9 +75,9 @@ const Registration: React.FC = () => {
                 color="orange"
                 onClick={handleSubmit}
                 >
-                    {"registration.submit"} 
+                    {t("registration.submit")} 
              </Button>
-        </form>
+        </Form>
     )
 }
 
