@@ -1,20 +1,22 @@
 import React from 'react';
+
 import './Button.scss';
 
 type PropsType = {
-  color: string,
+  style: string,
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void,
   children: React.ReactNode
 };
 
 const Button: React.FC<PropsType> = ({ 
-  color, 
+  style, 
   onClick, 
   children 
 }) => {
   
   return (
-    <button className={`button-style _${color}`} 
+    <button 
+    className={`button-style _${style}`} 
     onClick={onClick}
     >
       {children}

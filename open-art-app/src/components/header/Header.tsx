@@ -4,6 +4,7 @@ import useTranslate from '../hooks/useTranslate';
 import Button from '../ui/Button';
 
 import './Header.scss';
+import Theme from './theme/Theme';
 
 type HeaderType = {
   children: React.ReactNode;
@@ -18,23 +19,25 @@ const Header = ({
 
   return (
     <header className="header_style">
-      <div className="logo-wrap">
-          <LogoIcon className="logo-wrap-icon"/>
-          <div className="logo-wrap-name">
-              Open art                
-          </div>
-      </div>
-      {children}
-      {lang === "en" 
-              ?
-              <Button color="grey" onClick={() => setLang("ru")}>
-                    ru        
-              </Button> 
-              :
-              <Button color="grey" onClick={() => setLang("en")}>
-                    en      
-            </Button>
-      }
+        <div className="logo-wrap">
+            <LogoIcon className="logo-wrap-icon"/>
+            <div className="logo-wrap-name">
+                Open art                
+            </div>
+        </div>
+        {children}
+        {lang === "en" 
+                ?
+                <Button style="yellow" onClick={() => setLang("ru")}>
+                      ru        
+                </Button> 
+                :
+                <Button style="yellow" onClick={() => setLang("en")}>
+                      en      
+              </Button>
+          }
+        <Theme/>
+      
     </header>
   );
 };

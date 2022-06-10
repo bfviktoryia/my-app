@@ -12,6 +12,7 @@ export type StoreType = {
     info: ResponseInfoType
     loading: boolean,
     error: string | undefined,
+    theme?: string
 }
 
 const initialState: StoreType = {
@@ -20,12 +21,18 @@ const initialState: StoreType = {
     info: {total: 0},
     loading: true,
     error: undefined,
+    theme: Storage.getFromStorage("theme", undefined)
 }
 
 const CardsGallerySlice = createSlice ({
     name: "gallery/cards",
     initialState,
     reducers: {
+        toggleTheme: (state: any) => {
+            state.theme = state.theme !== "dark" ? "dark" : "bright";
+            document.body.dataset.theme = state.theme;
+            Storage.setToStorage("theme", state.theme);
+        },
         setPosts: (state: { data: CardType[]; }, { payload }: PayloadAction<CardType[]>) => {
             state.data = payload;
         },
