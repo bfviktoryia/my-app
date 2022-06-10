@@ -18,6 +18,6 @@ export const isValidName = (value: string): string => {
     }
 
 export const isConfirmedPassword = (value: string, _value: string): string => {
-    return value !== _value ? "Password is not confirmed" : "";
+    return value != _value ? "Password is not confirmed" : "";
 }
 
