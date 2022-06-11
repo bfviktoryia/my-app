@@ -1,7 +1,7 @@
 import React from 'react';
 import ResponseInfoType from '../../types/ResponseInfoType';
-import { setLimit, setSearchValue, setTitle } from './CardsFilterActionCreators';
-import CardsFilterType from './GalleryFilterType';
+import { setLimit, setOrderingByImage, setSearchValue, setTitle } from './CardsFilterActionCreators';
+import CardsFilterType, { CardImage } from './GalleryFilterType';
 import SearchField from '../../ui/SearchField';
 import useTranslate from '../../hooks/useTranslate';
 
@@ -22,10 +22,13 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
   }
   const searchTitle = (value: string) => {
     dispatch(setTitle(value)); 
-}  
+  }  
   const searchField = (value: string) => {
     dispatch(setSearchValue(value)); 
-}  
+  }  
+  const setCardsWithImage = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch(setOrderingByImage(event.target.value as CardImage)); 
+  }  
 
   return (
     <aside className="cards-filter-wrap">
@@ -52,14 +55,19 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
               value={state.q}
               setValue={searchField}
           />
-          {/* <Select
-            label="Ordering"
-            value={state.ordering}
-            onChange={handleChangeOrdering}
-          >
-            <MenuItem value={CardsOrder.idAsc}>ASC id</MenuItem>
-            <MenuItem value={CardsOrder.idDesc}>DSC id</MenuItem>
-          </Select> */}
+
+          <div className="select-has_image-wrap">
+              <label htmlFor="select-image">{"select.with.image"}</label>
+              <select 
+                  className="select-image" 
+                  id="select-limit"
+                  value={state.has_image.toString()}
+                  onChange={setCardsWithImage}
+              >
+                      <option value={CardImage.HAS_IMAGE}>With image</option>
+                      <option value={CardImage.NO_IMAGE}>All</option>
+              </select>
+          </div>
 
     </aside>
   );

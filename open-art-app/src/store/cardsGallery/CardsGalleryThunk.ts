@@ -12,11 +12,11 @@ type DataResponseType = {
 }
 export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { rejectValue: string }>(
     "posts/fetchGallery",
-    async ({ page, limit, title, q }, thunkApi) => {
+    async ({ page, limit, title, q, has_image }, thunkApi) => {
 
         const skip = limit * (page - 1);
 
-        let url = `?q=${q}&limit=${limit}&skip=${skip}`;
+        let url = `?q=${q}&has_image=${has_image}&limit=${limit}&skip=${skip}`;
 
         if (title) {
             url += `&title=${title}`;
