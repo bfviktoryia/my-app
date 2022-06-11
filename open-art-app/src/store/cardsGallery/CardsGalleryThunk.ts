@@ -32,3 +32,22 @@ export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { 
         }
     }
 )
+
+
+export const fetchFavourites = createAsyncThunk<DataResponseType, undefined, { rejectValue: string }>(
+    "cards/fetchFavourites",
+    async (_,  thunkApi) => {
+        
+        let url = `?limit=${50}`;
+
+        try {
+            const response = await api.get(url);
+            return {
+                data: response.data.data as CardType[],
+                info: response.data.info as ResponseInfoType,
+            }
+        } catch {
+            return thunkApi.rejectWithValue("Server response error");
+        }
+    }
+)

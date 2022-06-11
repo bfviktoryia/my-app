@@ -1,6 +1,7 @@
+import ResponseInfoType from "../../types/ResponseInfoType";
 import { CardsFilterAction, CardsFilterActionTypes, CardsOrder } from "../CardsFilter/GalleryFilterType";
 
-export  const SetPage = (value: number): CardsFilterAction => ({
+  export  const SetPage = (value: number): CardsFilterAction => ({
     type: CardsFilterActionTypes.SET_PAGE_TYPE, 
     payload: value 
   })

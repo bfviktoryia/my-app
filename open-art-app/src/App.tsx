@@ -8,6 +8,7 @@ import Login from './components/login/Login';
 
 import './App.css';
 import Registration from './components/registration/Registration';
+import Favourite from './components/favourite/Favourite';
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
                   <Route path="/gallery" >
                         <Route index element={<CardsGallery/>} />
                         <Route path=":id" element={<CardPage/>} />
-                  </Route>   
+                  </Route>  
+                  <Route path="/favourite" element={<Favourite/>}/> 
                   <Route path="/login" element={<Login/>}/>
                   <Route path="/registration" element={<Registration/>}/>
                   <Route path="*" element={<Navigate to={"/gallery"}/>} />    
