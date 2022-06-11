@@ -12,6 +12,7 @@ type CardType = {
     state: CardsFilterType,
 };
 const GalleryPagination: React.FC<CardType> = ({info, state, dispatch}) => {
+  
     const total = useSelector((state: any)  => state.cards.info.total);
 
     const handleChangePage = (event: React.ChangeEvent<unknown>, value: number) => {

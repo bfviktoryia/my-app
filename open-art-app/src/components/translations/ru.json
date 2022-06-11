@@ -15,7 +15,8 @@
     "navbar.login": "Вход",
     "select.per.page": "Элементов на странице",
     "search.title": "Поиск по названию",
-    "search.any.word": "Расширенный поиск"
+    "search.any.word": "Расширенный поиск",
+    "select.by.image": "Сортировка"
 
 
 }

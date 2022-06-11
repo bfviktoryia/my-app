@@ -26,6 +26,7 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
   const searchField = (value: string) => {
     dispatch(setSearchValue(value)); 
   }  
+
   const setCardsWithImage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setOrderingByImage(event.target.value as CardImage)); 
   }  
@@ -56,10 +57,10 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
               setValue={searchField}
           />
 
-          <div className="select-has_image-wrap">
-              <label htmlFor="select-image">{"select.with.image"}</label>
+          <div className="sort-image-wrap">
+              <label htmlFor="sort-image">{t("select.by.image")}</label>
               <select 
-                  className="select-image" 
+                  className="sort-image" 
                   id="select-limit"
                   value={state.has_image.toString()}
                   onChange={setCardsWithImage}
