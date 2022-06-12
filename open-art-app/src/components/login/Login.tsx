@@ -32,6 +32,7 @@ const Login: React.FC = () => {
         setValidationError("")
       }
 
+
     return (
         <Form header={t("login.header")}> 
             <FormTextField
@@ -55,7 +56,7 @@ const Login: React.FC = () => {
             </div>}  
 
             <Button
-                color="orange"
+                style="orange"
                 onClick={handleSubmit}
                 >
                     {t("login.submit")}     

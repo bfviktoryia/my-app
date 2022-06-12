@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import CardType from "../../components/types/CardType";
 import ResponseInfoType from "../../components/types/ResponseInfoType";
 import Storage from "../../helpers/storage";
-import { fetchCards } from "./CardsGalleryThunk";
+import { fetchCards, fetchFavourites } from "./CardsGalleryThunk";
 
 
 export type StoreType = {
@@ -12,6 +12,7 @@ export type StoreType = {
     info: ResponseInfoType
     loading: boolean,
     error: string | undefined,
+    theme?: string
 }
 
 const initialState: StoreType = {
@@ -20,12 +21,18 @@ const initialState: StoreType = {
     info: {total: 0},
     loading: true,
     error: undefined,
+    theme: Storage.getFromStorage("theme", undefined)
 }
 
 const CardsGallerySlice = createSlice ({
     name: "gallery/cards",
     initialState,
     reducers: {
+        toggleTheme: (state: any) => {
+            state.theme = state.theme !== "dark" ? "dark" : "bright";
+            document.body.dataset.theme = state.theme;
+            Storage.setToStorage("theme", state.theme);
+        },
         setPosts: (state: { data: CardType[]; }, { payload }: PayloadAction<CardType[]>) => {
             state.data = payload;
         },
@@ -46,7 +53,7 @@ const CardsGallerySlice = createSlice ({
             }
             Storage.setToStorage("favourite", state.favourite);   
 
-        }
+        },
     },
         // cardsOrder: (state: {ordering: string} , {payload: value}: PayloadAction<string>) => {
         //     if(state.ordering === "id"){
@@ -73,6 +80,25 @@ const CardsGallerySlice = createSlice ({
             });
 
 
+
+            builder.addCase(fetchFavourites.pending, (state, { payload }) => {
+                state.loading = true;
+                state.error = undefined;
+                state.data = [];
+    
+            });
+            builder.addCase(fetchFavourites.rejected, (state, { payload }) => {
+                state.loading = false;
+                state.error = payload;
+            });
+            builder.addCase(fetchFavourites.fulfilled, (state, { payload }) => {
+                state.loading = false;
+                state.data = payload.data;
+                state.info.total = payload.info.total;
+    
+            });
+
+
     }}
 );
 
@@ -82,4 +108,5 @@ const CardsGallerySlice = createSlice ({
     export const CardsGalleryActions = {
         ...CardsGallerySlice.actions,
         fetchCards,
+        fetchFavourites,
             }

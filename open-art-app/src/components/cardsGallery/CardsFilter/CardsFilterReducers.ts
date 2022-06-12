@@ -1,11 +1,11 @@
-import CardsFilterType, { CardsFilterAction, CardsFilterActionTypes, CardsOrder } from "../CardsFilter/GalleryFilterType";
+import CardsFilterType, { CardImage, CardsFilterAction, CardsFilterActionTypes } from "../CardsFilter/GalleryFilterType";
 
 
 export const initialState: CardsFilterType = {
     page: 1,
     limit: 10,
-    ordering: CardsOrder.idAsc,
-    q: ""
+    q: "",
+    has_image: CardImage.HAS_IMAGE
 }
 
 export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAction): CardsFilterType => {
@@ -33,6 +33,13 @@ export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAc
                 q: action.payload
                         }   
                 }
+        case CardsFilterActionTypes.SET_IMAGE_TYPE: {
+            return { 
+                ...state, 
+                has_image: action.payload
+                        }   
+                }
+        
 
         default: return state;
     }

@@ -12,15 +12,34 @@ type DataResponseType = {
 }
 export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { rejectValue: string }>(
     "posts/fetchGallery",
-    async ({ page, limit, title, q }, thunkApi) => {
+    async ({ page, limit, title, q, has_image }, thunkApi) => {
 
         const skip = limit * (page - 1);
 
-        let url = `?q=${q}&limit=${limit}&skip=${skip}`;
+        let url = `?q=${q}&has_image=${has_image}&limit=${limit}&skip=${skip}`;
 
         if (title) {
             url += `&title=${title}`;
         }
+        try {
+            const response = await api.get(url);
+            return {
+                data: response.data.data as CardType[],
+                info: response.data.info as ResponseInfoType,
+            }
+        } catch {
+            return thunkApi.rejectWithValue("Server response error");
+        }
+    }
+)
+
+
+export const fetchFavourites = createAsyncThunk<DataResponseType, undefined, { rejectValue: string }>(
+    "cards/fetchFavourites",
+    async (_,  thunkApi) => {
+        
+        let url = `?limit=${50}`;
+
         try {
             const response = await api.get(url);
             return {

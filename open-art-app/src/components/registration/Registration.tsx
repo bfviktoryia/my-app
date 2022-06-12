@@ -72,7 +72,7 @@ const Registration: React.FC = () => {
                 </div>}  
 
             <Button
-                color="orange"
+                style="orange"
                 onClick={handleSubmit}
                 >
                     {t("registration.submit")} 

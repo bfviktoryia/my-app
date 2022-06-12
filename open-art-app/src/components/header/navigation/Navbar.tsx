@@ -9,7 +9,7 @@ type NavigationType = {
 
 const GalleryLinks = [
     {url: "gallery", textId: "navbar.gallery"},
-    {url: "#", textId: "navbar.favourites"},
+    {url: "favourite", textId: "navbar.favourites"},
 ]
 const AuthLinks = [
     {url: "registration", textId: "navbar.registration"},

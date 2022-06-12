@@ -1,6 +1,7 @@
-import { CardsFilterAction, CardsFilterActionTypes, CardsOrder } from "../CardsFilter/GalleryFilterType";
+import ResponseInfoType from "../../types/ResponseInfoType";
+import { CardImage, CardsFilterAction, CardsFilterActionTypes } from "../CardsFilter/GalleryFilterType";
 
-export  const SetPage = (value: number): CardsFilterAction => ({
+  export  const SetPage = (value: number): CardsFilterAction => ({
     type: CardsFilterActionTypes.SET_PAGE_TYPE, 
     payload: value 
   })
@@ -10,16 +11,16 @@ export  const SetPage = (value: number): CardsFilterAction => ({
     payload: value 
   })
 
-  // export  const setOrder = (value: CardsOrder): CardsFilterAction => ({
-  //   type: CardsFilterActionTypes.SET_ORDER_TYPE, 
-  //   payload: value 
-  // })
-
   export  const setTitle = (value: string): CardsFilterAction => ({
           type: CardsFilterActionTypes.SET_TITLE_TYPE, 
           payload: value,
   })
   export  const setSearchValue = (value: string): CardsFilterAction => ({
     type: CardsFilterActionTypes.SET_SEARCH_TYPE, 
+    payload: value,
+})
+
+  export  const setOrderingByImage = (value: CardImage): CardsFilterAction => ({
+    type: CardsFilterActionTypes.SET_IMAGE_TYPE, 
     payload: value,
 })

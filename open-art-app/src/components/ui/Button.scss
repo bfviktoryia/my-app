@@ -18,10 +18,19 @@
     }
     
     &._orange {
+        width: 100%;
+        height: 40px;
         background-color: var(--primary-700);
     }
+    &._yellow {
+        width: 30px;
+        height: 30px;
+        background-color: var(--primary-100);
+    }
     &._grey {
-        background-color: var(--secondary-350);
+        width: 43px;
+        height: 30px;
+        background-color: var(--secondary-300);
     }
   
     &:active {

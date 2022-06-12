@@ -13,10 +13,6 @@ type PropsType = {};
 
 const CardsGallery: React.FC<PropsType> = () => {
 
-    // const { cardsOrder } = useActions();
-    // const order = useSelector((state: any) => state.cards.ordering);
-    // const handleChangeOrdering = () => cardsOrder(order);
-
     const [state, dispatch] = useReducer(CardsFilterReduser, initialState);
     const { fetchCards } = useActions();
   
