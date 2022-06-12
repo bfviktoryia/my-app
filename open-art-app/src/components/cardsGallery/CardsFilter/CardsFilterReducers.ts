@@ -1,11 +1,12 @@
-import CardsFilterType, { CardImage, CardsFilterAction, CardsFilterActionTypes } from "../CardsFilter/GalleryFilterType";
+import CardsFilterType, { CardsFilterAction, CardsFilterActionTypes } from "../CardsFilter/GalleryFilterType";
+import { CardsWithImage } from '../../../enums/CardsWithImage';
 
 
 export const initialState: CardsFilterType = {
     page: 1,
     limit: 10,
     q: "",
-    has_image: CardImage.HAS_IMAGE
+    has_image: CardsWithImage.HAS_IMAGE
 }
 
 export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAction): CardsFilterType => {

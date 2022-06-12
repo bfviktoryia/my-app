@@ -1,5 +1,6 @@
-import ResponseInfoType from "../../types/ResponseInfoType";
-import { CardImage, CardsFilterAction, CardsFilterActionTypes } from "../CardsFilter/GalleryFilterType";
+import { CardsFilterAction, CardsFilterActionTypes } from "../CardsFilter/GalleryFilterType";
+import { CardsWithImage } from '../../../enums/CardsWithImage';
+
 
   export  const SetPage = (value: number): CardsFilterAction => ({
     type: CardsFilterActionTypes.SET_PAGE_TYPE, 
@@ -20,7 +21,7 @@ import { CardImage, CardsFilterAction, CardsFilterActionTypes } from "../CardsFi
     payload: value,
 })
 
-  export  const setOrderingByImage = (value: CardImage): CardsFilterAction => ({
+  export  const setOrderingByImage = (value: CardsWithImage): CardsFilterAction => ({
     type: CardsFilterActionTypes.SET_IMAGE_TYPE, 
     payload: value,
 })

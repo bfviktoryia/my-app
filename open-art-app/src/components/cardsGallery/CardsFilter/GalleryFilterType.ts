@@ -1,23 +1,19 @@
-export enum CardImage {
-    HAS_IMAGE = "1",
-    NO_IMAGE = "0"
-}
+import { CardsWithImage } from '../../../enums/CardsWithImage';
 
 export enum CardsFilterActionTypes {
     SET_PAGE_TYPE = "SET_PAGE_TYPE",
     SET_LIMIT_TYPE = "SET_LIMIT_TYPE",
-    SET_ORDER_TYPE = "SET_ORDER_TYPE",
     SET_TITLE_TYPE = "SET_TITLE_TYPE",
     SET_SEARCH_TYPE = "SET_SEARCH_TYPE",
     SET_IMAGE_TYPE = "SET_IMAGE_TYPE",
-
 }
+
 type CardsFilterType = {
     page: number,
     limit: number,
     title?: string,
     q: string,
-    has_image: CardImage,
+    has_image: CardsWithImage,
 }
 
 type SetPageAction = {
@@ -42,7 +38,7 @@ type SetSearchAction = {
 
 type SetHasImageAction = {
     type: CardsFilterActionTypes.SET_IMAGE_TYPE,
-    payload: CardImage,
+    payload: CardsWithImage,
 }
 
 

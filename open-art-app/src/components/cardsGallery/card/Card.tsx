@@ -50,11 +50,6 @@ const Card: React.FC<CardsType> = ({ data }) => {
             </Link>
       </div>
       <div className="card-info-wrap">
-            {/* <div 
-                  className="card-elem creators">
-                  <span className="card-elem-name">Creator:</span>
-                  {data.creators[0].description}
-            </div> */}
             <div 
                   className="card-elem culture">
                   <span className="card-elem-name">Creation date:</span>

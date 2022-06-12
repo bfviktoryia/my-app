@@ -1,6 +1,7 @@
 body{
-  --primary-100: rgba(250, 216, 206, 0.973);
+  --primary-100: rgba(221, 207, 191, 0.665);
   --primary-200: rgba(247, 175, 155, 0.973);
+  --primary-250: rgba(253, 178, 97, 0.651);
   --primary-700: rgba(248, 107, 69, 0.973);
   --primary-800:rgba(240, 70, 23, 0.973);
   --primary-1000: rgba(190, 50, 11, 0.973);
@@ -16,7 +17,7 @@ body{
 }
 
 body[data-theme="dark"] {
-  --primary-100: rgba(248, 213, 203, 0.642);
+  --primary-100: rgba(248, 226, 203, 0.642);
   --primary-200: rgba(247, 175, 155, 0.973);
   --primary-700: rgba(167, 97, 77, 0.89);
   --primary-800:rgba(255, 255, 255, 0.973);

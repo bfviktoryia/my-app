@@ -5,6 +5,7 @@ import FormValuesType from "../types/FormValuesType";
 import Button from "../ui/Button";
 import Form from "../ui/Form";
 import FormTextField from "../ui/FormTextField";
+
 import "./Registration.scss"
 
 const Registration: React.FC = () => {

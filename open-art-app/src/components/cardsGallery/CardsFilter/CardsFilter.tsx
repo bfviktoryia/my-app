@@ -1,7 +1,8 @@
 import React from 'react';
 import ResponseInfoType from '../../types/ResponseInfoType';
 import { setLimit, setOrderingByImage, setSearchValue, setTitle } from './CardsFilterActionCreators';
-import CardsFilterType, { CardImage } from './GalleryFilterType';
+import CardsFilterType from './GalleryFilterType';
+import { CardsWithImage } from '../../../enums/CardsWithImage';
 import SearchField from '../../ui/SearchField';
 import useTranslate from '../../hooks/useTranslate';
 
@@ -13,7 +14,7 @@ type CardType = {
     state: CardsFilterType,
 };
 
-const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
+const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
 
   const { t } = useTranslate();
 
@@ -28,7 +29,7 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
   }  
 
   const setCardsWithImage = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(setOrderingByImage(event.target.value as CardImage)); 
+    dispatch(setOrderingByImage(event.target.value as CardsWithImage)); 
   }  
 
   return (
@@ -40,7 +41,7 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
                   id="select-limit"
                   value={state.limit.toString()}
                   onChange={handleChangeLimit}
-              >
+                >
                       <option value={10}>10</option>
                       <option value={20}>20</option>
                       <option value={30}>30</option>
@@ -50,12 +51,12 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
               label={t("search.title")}
               value={state.title}
               setValue={searchTitle}
-          />
+            />
           <SearchField
               label={t("search.any.word")}
               value={state.q}
               setValue={searchField}
-          />
+            />
 
           <div className="sort-image-wrap">
               <label htmlFor="sort-image">{t("select.by.image")}</label>
@@ -64,9 +65,9 @@ const CardsFilter: React.FC<CardType> = ({info, state, dispatch}) => {
                   id="select-limit"
                   value={state.has_image.toString()}
                   onChange={setCardsWithImage}
-              >
-                      <option value={CardImage.HAS_IMAGE}>With image</option>
-                      <option value={CardImage.NO_IMAGE}>All</option>
+                >
+                      <option value={CardsWithImage.HAS_IMAGE}>{t("select.items.with.image")}</option>
+                      <option value={CardsWithImage.ALL_ITEMS}>{t("select.all.items")}</option>
               </select>
           </div>
 

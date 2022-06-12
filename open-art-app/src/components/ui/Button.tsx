@@ -16,10 +16,10 @@ const Button: React.FC<PropsType> = ({
   
   return (
     <button 
-    className={`button-style _${style}`} 
-    onClick={onClick}
-    >
-      {children}
+        className={`button-style _${style}`} 
+        onClick={onClick}
+        >
+          {children}
     </button>
   );
 };

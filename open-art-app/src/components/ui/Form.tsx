@@ -5,6 +5,8 @@ type FormType = {
   className?: string,
   children: React.ReactNode;
 };
+
+
 const Form: React.FC<FormType> = ({ header, children }) => {
   return (
     <form className="form-wrap">

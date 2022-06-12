@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// import { CardsOrder } from "../../components/cardsGallery/GalleryFilterType";
 import CardType from "../../components/types/CardType";
 import ResponseInfoType from "../../components/types/ResponseInfoType";
 import Storage from "../../helpers/storage";
@@ -55,12 +54,7 @@ const CardsGallerySlice = createSlice ({
 
         },
     },
-        // cardsOrder: (state: {ordering: string} , {payload: value}: PayloadAction<string>) => {
-        //     if(state.ordering === "id"){
-        //         state.ordering = "-id"
-        //     }
-        //     else{state.ordering = "id"}
-        // }
+
         extraReducers: builder => {
             builder.addCase(fetchCards.pending, (state, { payload }) => {
                 state.loading = true;
@@ -78,8 +72,6 @@ const CardsGallerySlice = createSlice ({
                 state.info.total = payload.info.total;
     
             });
-
-
 
             builder.addCase(fetchFavourites.pending, (state, { payload }) => {
                 state.loading = true;
