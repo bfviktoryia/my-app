@@ -16,7 +16,9 @@
     "select.per.page": "Items per page",
     "search.title": "Search by Title",
     "search.any.word": "Search by any keyword",
-    "select.by.image": "Sort items"
+    "select.by.image": "Sort items",
+    "select.items.with.image": "With image",
+    "select.all.items": "All"
 
 
 }

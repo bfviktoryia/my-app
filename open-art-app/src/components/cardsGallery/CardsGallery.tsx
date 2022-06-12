@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { useSelector } from 'react-redux';
 import { useActions } from '../hooks/useActions';
 import Card from "./card/Card";
@@ -32,7 +32,7 @@ const CardsGallery: React.FC<PropsType> = () => {
                 info={total}
                 state={state}
                 dispatch={dispatch}
-        />
+            />
         <div className="cards-container">
                     <div className="cards-loading-error">
                                 {loading && <div className="loader"></div>}
@@ -46,7 +46,7 @@ const CardsGallery: React.FC<PropsType> = () => {
                         info={total} 
                         dispatch={dispatch} 
                         state={state}
-        />
+            />
     </React.Fragment>
     )
     }

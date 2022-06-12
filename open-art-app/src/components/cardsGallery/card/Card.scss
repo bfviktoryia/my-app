@@ -35,7 +35,8 @@
                          transform: scale(1.2);;
                         }
                     &.marked{
-                        path {fill : rgb(255, 192, 82)};
+                        path {fill : var(--primary-250)};
+
                       }
                     }               
               }

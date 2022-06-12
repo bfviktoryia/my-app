@@ -9,7 +9,7 @@ const getFromStorage = <MarksType>(name: string, def: MarksType): MarksType  => 
 
  const setToStorage = (name: string, data: any) => {
     try {
-   localStorage.setItem(name, JSON.stringify(data))
+        localStorage.setItem(name, JSON.stringify(data))
     }
     catch {
     }

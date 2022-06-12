@@ -6,7 +6,6 @@ import Button from "../ui/Button";
 import Form from "../ui/Form";
 import FormTextField from "../ui/FormTextField";
 
-import "./Login.scss"
 
 const Login: React.FC = () => {
 

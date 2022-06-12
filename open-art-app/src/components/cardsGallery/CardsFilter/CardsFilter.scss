@@ -25,8 +25,7 @@
     .sort-image-wrap{
         display: flex;
         flex-direction: column;
-    }
-    .sort-image{
+        .sort-image{
             background-color: var(--secondary-350);
             border: 1px solid transparent;
             height: 40px;
@@ -36,4 +35,5 @@
             outline: none;
             margin-bottom: 15px;
         }
+    }
 }

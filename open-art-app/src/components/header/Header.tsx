@@ -1,10 +1,10 @@
 import React from 'react';
 import { ReactComponent as LogoIcon} from "../../assets/logo.svg";
 import useTranslate from '../hooks/useTranslate';
+import Theme from './theme/Theme';
 import Button from '../ui/Button';
 
 import './Header.scss';
-import Theme from './theme/Theme';
 
 type HeaderType = {
   children: React.ReactNode;

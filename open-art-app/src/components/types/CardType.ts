@@ -1,4 +1,3 @@
-//data.images.web.url
 
 type ImagesType = {
     web: {url: string}
@@ -18,7 +17,6 @@ type CardType = {
     type: string,
     fun_fact?: string,
     wall_description?: string,
-    // exhibitions: 
     creators: CreatorsType[]
     }
 

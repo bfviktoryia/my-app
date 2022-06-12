@@ -16,7 +16,7 @@
     "select.per.page": "Элементов на странице",
     "search.title": "Поиск по названию",
     "search.any.word": "Расширенный поиск",
-    "select.by.image": "Сортировка"
-
-
+    "select.by.image": "Сортировка",
+    "select.items.with.image": "С изображением",
+    "select.all.items": "Все"
 }
