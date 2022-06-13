@@ -15,14 +15,10 @@ const getFromStorage = <MarksType>(name: string, def: MarksType): MarksType  => 
     }
 }
 
-const removeFromStorage = (key: string) => {
-    localStorage.removeItem(key);
-    };
 
 const Storage = {
     setToStorage,
     getFromStorage,
-    removeFromStorage
 }
 
 export default Storage;
