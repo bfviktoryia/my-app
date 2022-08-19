@@ -2,7 +2,7 @@
             display: flex;
             flex-direction: column;
             padding: 10px;
-            width: 420px;
+            width: 46%;
             height: auto;
             border-radius: 5px;
             margin-bottom: 15px;
@@ -45,6 +45,7 @@
         .card-title-wrap{
                 display: flex;
                  gap: 10%;
+                //  position: relative;
                     .info-icon {
                         width: 10px;
                         height: 10px;
