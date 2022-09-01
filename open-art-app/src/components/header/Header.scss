@@ -16,8 +16,12 @@
     .logo-wrap{
         display: block;
         text-align: center;
+        height: 85px;
+        width: 85px;
+        margin: -0.4% auto;
+        background: var(--primary-700);
         &-icon{
-            margin-bottom: -12px;
+            margin-top: 9%;
             path {
                 fill: var(--primary-1000);
             }           
