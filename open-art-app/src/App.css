@@ -4,9 +4,9 @@ body{
   --primary-250: rgba(253, 178, 97, 0.651);
   --primary-700: rgba(248, 107, 69, 0.973);
   --primary-800:rgba(240, 70, 23, 0.973);
-  --primary-1000: rgb(246, 243, 242);
+  --primary-1000: rgba(246, 243, 242, 0.973);
   --secondary-50: rgb(255, 252, 252);
-  --secondary-100: rgba(32,178,170, 1);
+  --secondary-100: rgb(33, 213, 204);
   --secondary-200: rgb(223, 222, 222);
   --secondary-300: rgba(228, 228, 232, 0.694);
   --secondary-350: rgba(254, 254, 255, 0.893);
