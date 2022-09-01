@@ -44,7 +44,7 @@ body[data-theme="dark"] {
 }
 
   .app-body{
-    max-width: 1170px;
+    width: 100%;
     padding: 0 15px;
     margin: 100px auto;
   }

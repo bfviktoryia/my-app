@@ -24,9 +24,9 @@ const SearchField: React.FC<PropsType> = ({
 
     return (
         <div className="search-field-container">
-            <div className="search-field-label">
+            <label className="search-field-label" htmlFor="search-field-input">
                 {label}
-            </div>
+            </label>
             <input 
                 className="search-field-input"
                 placeholder={placeholder}
