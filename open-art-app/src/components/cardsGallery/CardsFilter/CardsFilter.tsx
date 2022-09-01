@@ -33,7 +33,8 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
   }  
 
   return (
-    <aside className="cards-filter-wrap">
+    <div className="cards-filter-wrap">
+
           <div className="select-limit-wrap">
               <label htmlFor="select-limit">{t("select.per.page")}</label>
               <select 
@@ -47,16 +48,6 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
                       <option value={30}>30</option>
               </select>
           </div>
-          <SearchField
-              label={t("search.title")}
-              value={state.title}
-              setValue={searchTitle}
-            />
-          <SearchField
-              label={t("search.any.word")}
-              value={state.q}
-              setValue={searchField}
-            />
 
           <div className="sort-image-wrap">
               <label htmlFor="sort-image">{t("select.by.image")}</label>
@@ -69,9 +60,16 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
                       <option value={CardsWithImage.HAS_IMAGE}>{t("select.items.with.image")}</option>
                       <option value={CardsWithImage.ALL_ITEMS}>{t("select.all.items")}</option>
               </select>
-          </div>
+          </div> 
 
-    </aside>
+          <SearchField
+              label={t("search.any.word")}
+              value={state.q}
+              setValue={searchField}
+              placeholder={t("search.any.word.placeholder")}
+          /> 
+
+    </div>
   );
 };
 

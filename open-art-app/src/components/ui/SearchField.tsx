@@ -4,6 +4,7 @@ import "./SearchField.scss";
 
 type PropsType = {
     label: string
+    placeholder?:string
     type?: string
     value?: string
     setValue: (value: string) => void
@@ -11,6 +12,7 @@ type PropsType = {
 
 const SearchField: React.FC<PropsType> = ({
         label,
+        placeholder,
         type="text",
         value,
         setValue
@@ -27,6 +29,7 @@ const SearchField: React.FC<PropsType> = ({
             </div>
             <input 
                 className="search-field-input"
+                placeholder={placeholder}
                 value={value || ""}
                 onChange={handleChange}
                 type={type}

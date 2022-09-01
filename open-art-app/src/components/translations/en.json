@@ -13,10 +13,12 @@
     "navbar.favourites": "Favourites",
     "navbar.registration": "Sign up",
     "navbar.login": "Sign in",
-    "select.per.page": "Items per page",
+    "select.per.page": "Per page",
     "search.title": "Search by Title",
     "search.any.word": "Search by any keyword",
-    "select.by.image": "Sort items",
+    "search.title.placeholder": "Type your search title",
+    "search.any.word.placeholder": "Type your search",
+    "select.by.image": "Filter",
     "select.items.with.image": "With image",
     "select.all.items": "All"
 

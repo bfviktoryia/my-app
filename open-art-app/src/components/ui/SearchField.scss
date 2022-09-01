@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column; 
-    width: 15%;
+    width: 35%;
     input{
         background-color: var(--secondary-350);
     }
@@ -11,8 +11,10 @@
         font-size: 0.9rem;
         height: 40px;
         border: 1px solid transparent;
+        border-radius: 0.3rem;
         padding: 5px;
         outline: none;
+        font-size: 1rem;
         &:not(last-child) {
             margin-bottom: 15px; 
         }
@@ -20,7 +22,10 @@
     }
 
     .search-field-label {
-        margin-bottom: 10px;
-        
+        margin-bottom: 5px;
+    }
+
+    .search-field-placeholder{
+        color: grey;
     }
 }
