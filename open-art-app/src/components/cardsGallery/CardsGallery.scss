@@ -3,12 +3,12 @@
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-margin: 0 -15px;
+margin: 80px -15px;
 }
 
 
 .cards-loading-error{
-    margin: auto;
+    margin-left: -150px;
     .loader{
             color: var(--primary-1000);
             font-size: 30px;
