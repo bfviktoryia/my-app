@@ -19,7 +19,7 @@ const GalleryPagination: React.FC<CardType> = ({info, state, dispatch}) => {
       dispatch(SetPage(value))
     }
 
-    return (
+    return ( 
       <div className="cards-pagination-wrap">
             <Pagination 
                 className="pagination"

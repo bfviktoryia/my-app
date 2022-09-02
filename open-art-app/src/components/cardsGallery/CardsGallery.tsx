@@ -41,7 +41,6 @@ const CardsGallery: React.FC<PropsType> = () => {
                 {data.map((item: any) => (<Card key={item.id} data={item}/>))}
 
         </div>
-
         <GalleryPagination 
                         info={total} 
                         dispatch={dispatch} 
