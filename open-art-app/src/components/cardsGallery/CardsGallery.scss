@@ -1,14 +1,16 @@
 
 .cards-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-margin: 80px -15px;
+        max-width: 1440px;
+        margin: 80px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    // margin: 80px -15px;
 }
 
 
 .cards-loading-error{
-    margin-left: -3.3%;;
+    margin-left: -3.4%;;
     .loader{
             color: var(--primary-1000);
             font-size: 30px;
