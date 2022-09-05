@@ -24,8 +24,12 @@ const Card: React.FC<CardsType> = ({ data }) => {
 
   return (
     <div className="card-wrap">
-      
-      <Image src={data.images?.web.url}/>
+      <Link className="icon-info"to={`/gallery/${data.id}`}
+      >
+            <Image src={data.images?.web.url}/>
+
+      </Link>
+
       <div className="bookmarks-wrap">
             <IconButton className="icon-button"
                       onClick={handleClickFavourite}
@@ -42,12 +46,6 @@ const Card: React.FC<CardsType> = ({ data }) => {
                   >
                         {data.title}
             </h3>
-            <Link className="icon-info"to={`/gallery/${data.id}`}
-                  >
-                        <MenuBookOutlinedIcon htmlColor="grey"
-                              className="info"
-                        />
-            </Link>
       </div>
       <div className="card-info-wrap">
             <div 
@@ -78,7 +76,9 @@ const Card: React.FC<CardsType> = ({ data }) => {
                   {`id: ${data.id}`}
             </div>
       </div>
+
     </div>
+
 )};
 
 export default Card;
