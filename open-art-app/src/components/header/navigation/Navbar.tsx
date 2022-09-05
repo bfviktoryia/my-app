@@ -10,6 +10,8 @@ type NavigationType = {
 const GalleryLinks = [
     {url: "gallery", textId: "navbar.gallery"},
     {url: "favourite", textId: "navbar.favourites"},
+    {url: "login", textId: "navbar.login"},
+    {url: "registration", textId: "navbar.registration"},
 ]
 const AuthLinks = [
     {url: "registration", textId: "navbar.registration"},
@@ -32,7 +34,7 @@ const Navbar: React.FC<NavigationType> = () => {
                         )}
                     </ul> 
 
-                    <ul className="navigation-list auth">
+                    {/* <ul className="navigation-list auth">
                                 {AuthLinks.map(({ url, textId}) =>
                                     <li key={url}>
                                     <NavLink to={url} className={({ isActive }) => (`auth-navigation-link ${isActive ? "active-auth" : ""}`)}>
@@ -40,7 +42,7 @@ const Navbar: React.FC<NavigationType> = () => {
                                     </NavLink>
                                 </li>
                         )}
-                    </ul> 
+                    </ul>  */}
             </div>
 )
 }
