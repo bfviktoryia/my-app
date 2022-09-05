@@ -1,10 +1,12 @@
-.card-page{
-    display: flex;
-    flex-wrap: wrap;
+.card{
 
-    .card-additional-info {
-        &.fun-fact{
-            margin-bottom: 20px;
+   .card-wrap{
+       
+        .card-additional-info {
+             &.fun-fact{
+                margin-bottom: 20px;
+            }
+
         }
-
-}}
+    }
+}
