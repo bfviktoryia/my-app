@@ -13,7 +13,7 @@
     "navbar.favourites": "Избранное",
     "navbar.registration": "Регистрация",
     "navbar.login": "Вход",
-    "select.per.page": "Элементов на странице",
+    "select.per.page": "Вывод на страницу",
     "search.title": "Поиск по названию",
     "search.any.word": "Поиск",
     "search.title.placeholder": "Введите название",

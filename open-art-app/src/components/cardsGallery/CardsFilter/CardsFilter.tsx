@@ -21,9 +21,9 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
   const handleChangeLimit = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setLimit(+event.target.value))
   }
-  const searchTitle = (value: string) => {
-    dispatch(setTitle(value)); 
-  }  
+  // const searchTitle = (value: string) => {
+  //   dispatch(setTitle(value)); 
+  // }  
   const searchField = (value: string) => {
     dispatch(setSearchValue(value)); 
   }  

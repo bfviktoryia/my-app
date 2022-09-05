@@ -13,10 +13,10 @@ const GalleryLinks = [
     {url: "login", textId: "navbar.login"},
     {url: "registration", textId: "navbar.registration"},
 ]
-const AuthLinks = [
-    {url: "registration", textId: "navbar.registration"},
-    {url: "login", textId: "navbar.login"},
-]
+// const AuthLinks = [
+//     {url: "registration", textId: "navbar.registration"},
+//     {url: "login", textId: "navbar.login"},
+// ]
 
 const Navbar: React.FC<NavigationType> = () => {
 
