@@ -7,6 +7,7 @@
     background-color: var(--secondary-100);
     font-size: 1.2rem;
     padding: 5px 15px;
+    border-bottom: 1px solid #e6eaea;
 
     @media (max-width: 1280px) {
         height: 90px;
@@ -16,8 +17,8 @@
     .logo-wrap{
         display: block;
         text-align: center;
-        height: 85px;
-        width: 85px;
+        height: 180%;
+        width: 7%;
         margin: -0.4% auto;
         background: var(--primary-700);
         &-icon{
