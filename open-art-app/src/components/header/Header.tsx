@@ -28,11 +28,11 @@ const Header = ({
         {children}
         {lang === "en" 
                 ?
-                <Button style="yellow" onClick={() => setLang("ru")}>
+                <Button style="transparent" onClick={() => setLang("ru")}>
                       RU        
                 </Button> 
                 :
-                <Button style="yellow" onClick={() => setLang("en")}>
+                <Button style="transparent" onClick={() => setLang("en")}>
                       EN      
               </Button>
           }

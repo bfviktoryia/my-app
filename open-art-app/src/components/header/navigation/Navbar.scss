@@ -24,6 +24,11 @@
                     text-align: center;
                     background-color: var(--secondary-1000);
                 }
+                
+                a{
+                    font-size: 0.95rem;
+                    text-transform: uppercase;
+                }
 
                 li:nth-child(4n){ 
                     a {

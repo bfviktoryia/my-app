@@ -4,7 +4,7 @@ import Image from '../../image/Image';
 import CardType from '../../types/CardType';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { IconButton } from '@mui/material';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+// import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import { useActions } from '../../hooks/useActions';
 import { useSelector } from 'react-redux';
 
