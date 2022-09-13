@@ -51,29 +51,28 @@ const Card: React.FC<CardsType> = ({ data }) => {
             <div 
                   className="card-elem culture">
                   <span className="card-elem-name">Creation date:</span>
-                  {data.creation_date}
+                        <span className="card-elem-text">{data.creation_date}</span> 
             </div>        
             
             <div 
                   className="card-elem culture">
                   <span className="card-elem-name">Culture:</span>
-                  {data.culture}
+                        <span className="card-elem-text">{data.culture}</span> 
             </div>
             <div 
                   className="card-elem type">
                   <span className="card-elem-name">Type:</span>
-                  {data.type}
+                        <span className="card-elem-text">{data.type}</span>
             </div>
             <div 
                   className="card-elem technique">
                   <span className="card-elem-name">Technique:</span>
-
-                  {data.technique}
+                        <span className="card-elem-text">{data.technique}</span>
             </div>
             <div 
                   className="card-elem id"
             >
-                  {`id: ${data.id}`}
+                        <span className="card-elem-text"> {`id: ${data.id}`}</span>
             </div>
       </div>
 

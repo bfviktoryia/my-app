@@ -8,23 +8,24 @@
             margin-bottom: 15px;
             color: var(--secondary-text-color);
             background: var(--secondary-50);
-            :not(:last-child){
-                margin-bottom: 5px;
-            }
+                :not(:last-child){
+                    margin-bottom: 2px;
+                }
             transition: 0.3s;
-            &:hover{
-                box-shadow: 3px 5px 25px 3px var(--box-shadow-card);
-                // transform: translate(0px, -12px);
-                transition: 0.3s;
+                &:hover{
+                    box-shadow: 3px 5px 25px 3px var(--box-shadow-card);
+                    // transform: translate(0px, -12px);
+                    transition: 0.3s;
 
-               }
-               
+                }               
         }
             .card-elem {
                 &.title{        
-                    font-size: 1.15rem;
-                    font-style: italic;
-                    font-weight: 700;
+                    text-align: center;
+                    font-size: 1.1rem;
+                    letter-spacing:0.1rem;
+                    // font-style: italic;
+                    font-weight: 600;
                     color: var(--text-black);
                     width: 100%;
                     border-bottom: 1px solid;
@@ -33,8 +34,14 @@
         }
                 .card-elem-name{
                     color: var(--text-black);
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                    margin-right: 5px;
+                 }
+                 .card-elem-text{
+                    color: var(--text-black);
                     font-weight: 300;
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                     margin-right: 5px;
                  }
                  
