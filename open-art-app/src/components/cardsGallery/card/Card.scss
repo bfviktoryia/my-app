@@ -14,7 +14,6 @@
             transition: 0.3s;
                 &:hover{
                     box-shadow: 3px 5px 25px 3px var(--box-shadow-card);
-                    // transform: translate(0px, -12px);
                     transition: 0.3s;
 
                 }               
@@ -23,14 +22,14 @@
                 &.title{        
                     text-align: center;
                     font-size: 1.1rem;
-                    letter-spacing:0.1rem;
-                    // font-style: italic;
+                    letter-spacing:0.07rem;
                     font-weight: 600;
-                    color: var(--text-black);
+                    color: var(--text-color);
                     width: 100%;
                     margin-bottom: 15px;
-                    border-bottom: 1px solid;
+                    // border-bottom: 1px solid;
                     border-color: var(--text-black);
+                    position: relative;
 }
         }
                 .card-elem-name{
@@ -47,17 +46,20 @@
                  }
                  
         .bookmarks-wrap {  
+            position: absolute;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
                 .icon-favourite {
-                    font-size: 2.3rem;
+                    font-size: 1.5rem;
                     transition: 0.3s;
-                    position: absolute;
-                    // top: -170%;
-                    // left: 1950%;
+                    path {fill : var(--primary-1000)};
                     &:hover{
                          transform: scale(1.1);;
                         }
                     &.marked{
-                        path {fill : var(--primary-250)};
+                        path {fill : var(--primary-850)};
 
                       }
                     }               

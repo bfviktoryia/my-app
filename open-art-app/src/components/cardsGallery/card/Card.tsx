@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from '../../image/Image';
 import CardType from '../../types/CardType';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
+// import BookmarkIcon from '@mui/icons-material/Bookmark';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { IconButton } from '@mui/material';
 // import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import { useActions } from '../../hooks/useActions';
@@ -34,7 +35,7 @@ const Card: React.FC<CardsType> = ({ data }) => {
             <IconButton className="icon-button"
                       onClick={handleClickFavourite}
                 >
-                      <BookmarkIcon
+                      <FavoriteBorderIcon
                           className={`icon-favourite ${isFavourite ? "marked" : ""}`}
                     />
               </IconButton>

@@ -6,6 +6,7 @@
     align-items: center;
     margin-right: 2%;
     border-right: 1px solid #e6eaea;
+    //заменить цвет на общий
 
         input{
             background-color: var(--secondary-350);
@@ -19,6 +20,9 @@
             color: var(--text-color);
 
         }
+        ::-webkit-input-placeholder {
+            color:    var(--secondary-400);
+        }
     .search-field-input{
         font-size: 0.9rem;
         width: 100%;
@@ -28,10 +32,6 @@
         padding: 5px;
         outline: none;
         font-size: 1rem;
-
     }
 
-    .search-field-placeholder{
-        color: grey;
-    }
 }

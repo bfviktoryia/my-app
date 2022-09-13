@@ -1,4 +1,4 @@
-import { Pagination } from "@mui/material";
+import { colors, Pagination } from "@mui/material";
 import { useSelector } from "react-redux";
 import ResponseInfoType from "../../types/ResponseInfoType";
 import { SetPage } from "../CardsFilter/CardsFilterActionCreators";
