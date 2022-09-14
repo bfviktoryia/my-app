@@ -43,9 +43,9 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
                   value={state.limit.toString()}
                   onChange={handleChangeLimit}
                 >
-                      <option value={10}>10</option>
-                      <option value={20}>20</option>
                       <option value={30}>30</option>
+                      <option value={50}>50</option>
+                      <option value={60}>60</option>
               </select>
           </div>
 
