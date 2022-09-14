@@ -28,7 +28,7 @@ const CardsGallerySlice = createSlice ({
     initialState,
     reducers: {
         toggleTheme: (state: any) => {
-            state.theme = state.theme !== "dark" ? "dark" : "bright";
+            state.theme = state.theme !== "dark" ? "dark" : "light";
             document.body.dataset.theme = state.theme;
             Storage.setToStorage("theme", state.theme);
         },

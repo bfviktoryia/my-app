@@ -29,11 +29,11 @@ const Header = ({
         {lang === "en" 
                 ?
                 <Button style="transparent" onClick={() => setLang("ru")}>
-                      RU        
+                      ru        
                 </Button> 
                 :
                 <Button style="transparent" onClick={() => setLang("en")}>
-                      EN      
+                      en      
               </Button>
           }
         <Theme/>

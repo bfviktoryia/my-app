@@ -34,15 +34,17 @@ button {
             &._transparent {
                 width: 30px;
                 height: 30px;
-                background-color: var(--main-bg-color);
+                background-color: var(--secondary-100);
                 border-radius: 0px;
+                text-transform: uppercase;
 
             }
-            &._grey {
+            &._transparent-theme {
                 width: 100%;
                 height: 30px;
-                background-color: var(--secondary-300);
+                background-color: var(--secondary-100);
                 border-radius: 0px;
+                text-transform: uppercase;
             }
         
             &:active {
