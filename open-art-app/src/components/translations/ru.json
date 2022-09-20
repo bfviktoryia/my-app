@@ -20,5 +20,7 @@
     "search.any.word.placeholder": "Начните поиск",
     "select.by.image": "Фильтр",
     "select.items.with.image": "С изображением",
-    "select.all.items": "Все"
+    "select.all.items": "Все",
+    "button.back.to.gallery": "назад в галерею"
+
 }

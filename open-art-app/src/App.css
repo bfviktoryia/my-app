@@ -10,6 +10,7 @@ body{
   --secondary-50: rgb(255, 252, 252);
   --secondary-60:rgb(230,234,234);
   /* --secondary-100: rgb(24, 224, 214); */
+  --secondary-10:rgba(13, 13, 14, 0);;
   --secondary-100: rgb(244,247,246);
   --secondary-200: rgb(223, 222, 222);
   --secondary-300: rgba(228, 228, 232, 0.694);
