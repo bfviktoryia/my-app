@@ -3,7 +3,6 @@ max-width: 1440px;
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
-// margin: -10px auto;
 
     .favourite-cards{
         display: flex;
@@ -29,6 +28,12 @@ justify-content: space-between;
                 width: 35%;
                 height: 35%;
         }
+    }
+
+    .cards-loading-error{
+        margin-left: 50%;
+        margin-top: 1%;
+        
     }
 }
     
