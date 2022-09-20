@@ -1,13 +1,10 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { ReactComponent as BackToGalleryIcon} from "../../assets/arrow-thin-left-icon.svg";
-import Button from '../ui/Button';
 import Card from '../cardsGallery/card/Card';
 import { useActions } from '../hooks/useActions';
-
+import BackToGalleryButton from '../ui/BackToGalleryButton';
 
 import "./Favourite.scss"
-import useTranslate from '../hooks/useTranslate';
 
 type PropsType = {};
 
@@ -24,27 +21,20 @@ const Favourite: React.FC<PropsType> = () => {
             fetchFavourites();
         }, [])
 
-    const { t } = useTranslate();
-
     return (
-    <React.Fragment>
-        <div className="favourite-container">
-                    <div className="cards-button-wrap">
-                        <Button style="transparent">
-                                <BackToGalleryIcon className="back-arrow-icon"/>
-                                {t("button.back.to.gallery")}
-                        </Button>
-                    </div>
-                    <div className="cards-loading-error">
-                                {loading && <div className="loader"></div>}
-                                {error && 'Error '}
-                    </div>
-                    <div className="favourite-cards">
-                        {filterdata.map((item: any) => (<Card key={item.id} data={item}/>))}
-                    </div>
-        </div>
-    </React.Fragment>
-    )
+            <React.Fragment>
+                <div className="favourite-container">
+                            <BackToGalleryButton/>
+                            <div className="cards-loading-error">
+                                        {loading && <div className="loader"></div>}
+                                        {error && 'Error '}
+                            </div>
+                            <div className="favourite-cards">
+                                {filterdata.map((item: any) => (<Card key={item.id} data={item}/>))}
+                            </div>
+                </div>
+            </React.Fragment>
+        )
     }
 
 export default Favourite;

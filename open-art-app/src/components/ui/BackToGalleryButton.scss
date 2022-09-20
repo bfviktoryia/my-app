@@ -1,0 +1,14 @@
+  .cards-button-wrap{
+    width: 7%;
+    height: 7%;
+    position: fixed;
+    margin: 4% 2% 2% 2%;
+
+        .back-arrow-icon{
+            path{
+                fill: var(--text-color);
+            }        
+            width: 35%;
+            height: 35%;
+    }
+}
