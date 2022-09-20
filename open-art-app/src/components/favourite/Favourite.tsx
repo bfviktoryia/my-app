@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import { useSelector } from 'react-redux';
-import { ReactComponent as BackToGalleryIcon} from "../../assets/arrow-left.svg";
+import { ReactComponent as BackToGalleryIcon} from "../../assets/arrow-thin-left-icon.svg";
 import Button from '../ui/Button';
 import Card from '../cardsGallery/card/Card';
 import { useActions } from '../hooks/useActions';

@@ -21,12 +21,13 @@ justify-content: space-between;
         height: 7%;
         position: fixed;
         margin: 4% 2% 2% 2%;
-        .back-arrow-icon{
+
+            .back-arrow-icon{
                 path{
-                    fill: var(--primary-700)
+                    fill: var(--text-color);
                 }        
-        width: 60%;
-        height: 60%;
+                width: 35%;
+                height: 35%;
         }
     }
 }
