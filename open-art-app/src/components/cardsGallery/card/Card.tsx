@@ -24,8 +24,8 @@ const Card: React.FC<CardsType> = ({ data }) => {
   const handleClickFavourite = () => favouriteCard(data.id);
 
   return (
-    <div className="card-wrap">
-      <Link className="icon-info"to={`/gallery/${data.id}`}
+    <div className="card-main-info-wrap">
+      <Link className="icon-info" to={`/gallery/${data.id}`}
       >
             <Image src={data.images?.web.url}/>
 

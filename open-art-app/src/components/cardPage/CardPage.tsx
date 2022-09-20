@@ -51,7 +51,7 @@ const CardPage: React.FC = () => {
     
     
         return (
-        <div className='card-page-wrap'>
+        <div className='card-page-content'>
                            <div className="card-button-wrap">
                                 <Button style="transparent"
                                         onClick={handleClick}
@@ -62,7 +62,7 @@ const CardPage: React.FC = () => {
                             </div>
 
             <div className="card"> 
-                <div className="card-wrap">
+                <div className="card-main-info-wrap">
                         <Image src={response.data.images?.web.url}/>
                         <h3 
                             className="card-elem title"
@@ -72,27 +72,27 @@ const CardPage: React.FC = () => {
                         <div 
                             className="card-elem culture">
                                 <span className="card-elem-name">Creation date:</span>
-                                {response.data.creation_date}
+                                <span className="card-elem-text"> {response.data.creation_date}</span>
                         </div>
                         <div 
                             className="card-elem culture">
                                 <span className="card-elem-name">Culture:</span>
-                                {response.data.culture}
+                                <span className="card-elem-text"> {response.data.culture}</span>
                         </div>
                         <div 
                             className="card-elem type">
                                 <span className="card-elem-name">Type:</span>
-                                {response.data.type}
+                                <span className="card-elem-text">{response.data.type}</span>
                         </div>
                         <div 
                             className="card-elem technique">
                                 <span className="card-elem-name">Technique:</span>
-                                {response.data.technique}
+                                <span className="card-elem-text"> {response.data.technique}</span>
                         </div>
                         <div 
                             className="card-elem id"
                         >
-                                {`id: ${response.data.id}`}
+                                <span className="card-elem-text">{`id: ${response.data.id}`}</span>
                         </div>
                 </div>
 
@@ -102,13 +102,13 @@ const CardPage: React.FC = () => {
                             className="card-additional-info fun-fact"
                         >
                                 <span className="card-elem-name">Fun fact:</span>
-                                {response.data.fun_fact}
+                                <span className="card-elem-text">{response.data.fun_fact}</span>
                         </div>
                         <div 
                             className="card-additional-info description"
                         >
                                 <span className="card-elem-name">Description:</span>
-                                {response.data.wall_description}
+                                <span className="card-elem-text">{response.data.wall_description}</span>
                         </div>
                 </div>
             </div> 

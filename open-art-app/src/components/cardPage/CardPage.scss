@@ -1,4 +1,4 @@
-.card-page-wrap{
+.card-page-content{
         .card-button-wrap{
                 width: 7%;
                 height: 7%;
@@ -14,15 +14,37 @@
                     }
         }
 
+        .card{
+            width: 97%;
+            margin: auto;
 
-        .card-wrap{
-                    
-            .card-additional-info {
-                    &.fun-fact{
-                         margin-bottom: 20px;
-                    }
-
+            .card-main-info-wrap{
+                 width:40%;    
+                 margin-right: -5%;   
+                    &:hover{
+                        box-shadow: none; 
+                    }    
             }
+
+            .card-additional-info_wrap {
+                font-family: 'Poppins', sans-serif;
+                    .card-elem{
+                        font-family: 'Poppins', sans-serif;
+                        .card-elem-name{
+                            color: var(--text-black);
+                            font-weight: 400;
+                            font-size: 0.9rem;
+                            margin-right: 5px;
+                        }
+                        .card-elem-text{
+                            color: var(--text-black);
+                            font-weight: 300;
+                            font-size: 0.9rem;
+                            margin-right: 5px;
+                        }
+                    }
+            }
+
         }
 }
 
