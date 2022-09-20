@@ -6,7 +6,9 @@ import useTranslate from "../hooks/useTranslate";
 import "./BackToGalleryButton.scss"
 
 
-type PropsType = {};
+type PropsType = {
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void,
+};
 
  const BackToGallery: React.FC<PropsType> = () => {
 
@@ -25,7 +27,7 @@ type PropsType = {};
                         onClick={handleClick}
                 >
                         <BackToGalleryIcon className="back-arrow-icon"/>
-                        {t("button.back.to.gallery")}
+                        {t("back.to.gallery")}
                 </Button>
             </div>
         )

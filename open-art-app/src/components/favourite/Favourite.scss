@@ -1,40 +1,40 @@
 .favourite-container {
-max-width: 1440px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
+    max-width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    .favourite-cards{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 2% auto 0 9.7%;
+            .favourite-cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 2% auto 0 9.7%;
 
-            .card-wrap{
-                width: 24%;
+                    .card-wrap{
+                        width: 24%;
+                    }
             }
-    }
 
-    .cards-button-wrap{
-        width: 7%;
-        height: 7%;
-        position: fixed;
-        margin: 4% 2% 2% 2%;
+            .cards-button-wrap{
+                width: 7%;
+                height: 7%;
+                position: fixed;
+                margin: 4% 2% 2% 2%;
 
-            .back-arrow-icon{
-                path{
-                    fill: var(--text-color);
-                }        
-                width: 35%;
-                height: 35%;
-        }
-    }
+                    .back-arrow-icon{
+                        path{
+                            fill: var(--text-color);
+                        }        
+                        width: 35%;
+                        height: 35%;
+                }
+            }
 
-    .cards-loading-error{
-        margin-left: 50%;
-        margin-top: 1%;
-        
-    }
+            .cards-loading-error{
+                margin-left: 50%;
+                margin-top: 1%;
+                
+            }
 }
     
 

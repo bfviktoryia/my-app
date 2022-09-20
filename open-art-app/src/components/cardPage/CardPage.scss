@@ -1,12 +1,30 @@
-.card{
+.card-page-wrap{
+        .card-button-wrap{
+                width: 7%;
+                height: 7%;
+                position: fixed;
+                margin: 4% 2% 2% 2%;
 
-   .card-wrap{
-       
-        .card-additional-info {
-             &.fun-fact{
-                margin-bottom: 20px;
-            }
-
+                    .back-arrow-icon{
+                        path{
+                            fill: var(--text-color);
+                        }        
+                        width: 35%;
+                        height: 35%;
+                    }
         }
-    }
+
+
+        .card-wrap{
+                    
+            .card-additional-info {
+                    &.fun-fact{
+                         margin-bottom: 20px;
+                    }
+
+            }
+        }
 }
+
+
+

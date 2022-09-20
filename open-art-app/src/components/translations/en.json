@@ -21,6 +21,8 @@
     "select.by.image": "Filter",
     "select.items.with.image": "With image",
     "select.all.items": "All",
-    "button.back.to.gallery": "back to gallery"
+    "back.to.gallery": "back to gallery",
+    "back.to.previous.page": "back"
+
 
 }

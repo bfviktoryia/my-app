@@ -2,7 +2,10 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Card from '../cardsGallery/card/Card';
 import { useActions } from '../hooks/useActions';
-import BackToGalleryButton from '../ui/BackToGalleryButton';
+import Button from '../ui/Button';
+import { ReactComponent as BackToGalleryIcon} from "../../assets/arrow-thin-left-icon.svg";
+import { useNavigate } from "react-router-dom";
+import useTranslate from "../hooks/useTranslate";
 
 import "./Favourite.scss"
 
@@ -21,10 +24,24 @@ const Favourite: React.FC<PropsType> = () => {
             fetchFavourites();
         }, [])
 
+    const { t } = useTranslate();
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+            navigate("/gallery");
+    }
+
     return (
             <React.Fragment>
                 <div className="favourite-container">
-                            <BackToGalleryButton/>
+                            <div className="cards-button-wrap">
+                                <Button style="transparent"
+                                        onClick={handleClick}
+                                >
+                                        <BackToGalleryIcon className="back-arrow-icon"/>
+                                        {t("back.to.gallery")}
+                                </Button>
+                            </div>
                             <div className="cards-loading-error">
                                         {loading && <div className="loader"></div>}
                                         {error && 'Error '}

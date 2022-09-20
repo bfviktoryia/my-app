@@ -21,6 +21,9 @@
     "select.by.image": "Фильтр",
     "select.items.with.image": "С изображением",
     "select.all.items": "Все",
-    "button.back.to.gallery": "назад в галерею"
+    "back.to.gallery": "назад в галерею",
+    "back.to.previous.page": "назад"
+
+    
 
 }
