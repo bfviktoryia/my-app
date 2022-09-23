@@ -5,11 +5,10 @@ import Navbar from './components/header/navigation/Navbar';
 import CardsGallery from './components/cardsGallery/CardsGallery';
 import CardPage from './components/cardPage/CardPage';
 import Login from './components/login/Login';
+import Registration from './components/registration/Registration';
+import Favourite from './components/favourite/FavouritePage';
 
 import './App.css';
-import Registration from './components/registration/Registration';
-import Favourite from './components/favourite/Favourite';
-
 
 function App() {
   return (

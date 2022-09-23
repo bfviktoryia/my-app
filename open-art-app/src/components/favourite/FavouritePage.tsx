@@ -7,7 +7,7 @@ import { ReactComponent as BackToGalleryIcon} from "../../assets/arrow-thin-left
 import { useNavigate } from "react-router-dom";
 import useTranslate from "../hooks/useTranslate";
 
-import "./Favourite.scss"
+import "./FavouritePage.scss"
 
 type PropsType = {};
 
