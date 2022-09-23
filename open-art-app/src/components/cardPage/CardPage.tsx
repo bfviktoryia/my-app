@@ -38,7 +38,7 @@ const CardPage: React.FC = () => {
     } else if (error) {
         return (
             <div className="error">
-                Error
+                error
             </div>
         )
     }
@@ -58,12 +58,6 @@ const CardPage: React.FC = () => {
                                         {t("back.to.previous.page")}
                                 </Button>
                             </div>
-
-                            <div className="cards-loading-error">
-                                        {loading && <div className="loader"></div>}
-                                        {error && 'Error '}
-                            </div>                       
-
             <div className="card"> 
                 <div className="card-main-info-wrap">
                         <Image src={response.data.images?.web.url}/>
