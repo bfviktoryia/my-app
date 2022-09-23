@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { fetchCards } from "../../store/cardsGallery/CardsGalleryThunk";
+import CardsFilterType from "../cardsGallery/CardsFilter/GalleryFilterType";
 
 import "./SearchField.scss";
 
@@ -15,12 +17,22 @@ const SearchField: React.FC<PropsType> = ({
         placeholder,
         type="text",
         value,
-        setValue
+        setValue,
     }) => {
     
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValue(event.target.value);
     }
+
+    // useEffect(() => {
+    //     const timeoutId = 
+    //     setTimeout(() => 
+    //     {console.log(`I can see you're not typing. I can use "${value}" now!`);
+    // }
+    //     , 3000);
+    //     return () => clearTimeout(timeoutId);
+    //   }, [value || ""]);
 
     return (
         <div className="search-field-container">

@@ -11,7 +11,7 @@ type DataResponseType = {
     data: CardType[],
 }
 export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { rejectValue: string }>(
-    "posts/fetchGallery",
+    "cards/fetchGallery",
     async ({ page, limit, title, q, has_image }, thunkApi) => {
 
         const skip = limit * (page - 1);

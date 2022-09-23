@@ -18,14 +18,14 @@ const CardPage: React.FC = () => {
     const response = useSelector((state: any)  => state.card.response);
     const loading = useSelector((state: any)  => state.card.loading);
     const error = useSelector((state: any)  => state.card.error);
-  
+
     useEffect(() => {
-        fetchCard(id)
+        fetchCard(id);
     }, [id])
 
     const { t } = useTranslate();
-
     const navigate = useNavigate();
+
     const handleClick = () => {
         // console.log("clicked back");
         navigate(-1);
@@ -33,13 +33,12 @@ const CardPage: React.FC = () => {
 
     if (loading) {
         return (
-            <div>
-                Loading...
+            <div className="loader">
             </div>
         )
     } else if (error) {
         return (
-            <div>
+            <div className="error">
                 Error
             </div>
         )
@@ -60,6 +59,11 @@ const CardPage: React.FC = () => {
                                         {t("back.to.previous.page")}
                                 </Button>
                             </div>
+
+                            <div className="cards-loading-error">
+                                        {loading && <div className="loader"></div>}
+                                        {error && 'Error '}
+                            </div>                       
 
             <div className="card"> 
                 <div className="card-main-info-wrap">

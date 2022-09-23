@@ -26,10 +26,10 @@ type SetLimitAction = {
     payload: number,
 }
 
-type SetTitleAction = {
-    type: CardsFilterActionTypes.SET_TITLE_TYPE,
-    payload: string,
-}
+// type SetTitleAction = {
+//     type: CardsFilterActionTypes.SET_TITLE_TYPE,
+//     payload: string,
+// }
 
 type SetSearchAction = {
     type: CardsFilterActionTypes.SET_SEARCH_TYPE,
@@ -46,7 +46,7 @@ type SetHasImageAction = {
 export type CardsFilterAction = 
     SetPageAction 
     | SetLimitAction 
-    | SetTitleAction
+    // | SetTitleAction
     | SetSearchAction
     | SetHasImageAction
 

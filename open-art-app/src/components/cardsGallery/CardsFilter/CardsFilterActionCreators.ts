@@ -12,10 +12,10 @@ import { CardsWithImage } from '../../../enums/CardsWithImage';
     payload: value 
   })
 
-  export  const setTitle = (value: string): CardsFilterAction => ({
-          type: CardsFilterActionTypes.SET_TITLE_TYPE, 
-          payload: value,
-  })
+  // export  const setTitle = (value: string): CardsFilterAction => ({
+  //         type: CardsFilterActionTypes.SET_TITLE_TYPE, 
+  //         payload: value,
+  // })
   export  const setSearchValue = (value: string): CardsFilterAction => ({
     type: CardsFilterActionTypes.SET_SEARCH_TYPE, 
     payload: value,

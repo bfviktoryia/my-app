@@ -22,12 +22,12 @@ export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAc
                 page: 1, 
                 limit: action.payload 
             }
-        case CardsFilterActionTypes.SET_TITLE_TYPE: {
-            return { 
-                ...state, 
-                title: action.payload
-                    }   
-            }
+        // case CardsFilterActionTypes.SET_TITLE_TYPE: {
+        //     return { 
+        //         ...state, 
+        //         title: action.payload
+        //             }   
+        //     }
         case CardsFilterActionTypes.SET_SEARCH_TYPE: {
             return { 
                 ...state, 
@@ -37,6 +37,7 @@ export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAc
         case CardsFilterActionTypes.SET_IMAGE_TYPE: {
             return { 
                 ...state, 
+                page: 1, 
                 has_image: action.payload
                         }   
                 }
