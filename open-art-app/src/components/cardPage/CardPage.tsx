@@ -27,7 +27,6 @@ const CardPage: React.FC = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        // console.log("clicked back");
         navigate(-1);
     }
 
