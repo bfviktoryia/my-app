@@ -1,12 +1,14 @@
 .header_style {
-    height: 85px;
+    height: 60px;
     width:100%;
-    z-index: 999;
+    z-index: 998;
     position: fixed;
     display: flex;
     background-color: var(--secondary-100);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 400;
     padding: 5px 15px;
+    border-bottom: 1px solid var(--secondary-60);
 
     @media (max-width: 1280px) {
         height: 90px;
@@ -16,8 +18,12 @@
     .logo-wrap{
         display: block;
         text-align: center;
+        height: 180%;
+        width: 7%;
+        margin: -0.4% auto;
+        background: var(--primary-700);
         &-icon{
-            margin-bottom: -12px;
+            margin-top: 9%;
             path {
                 fill: var(--primary-1000);
             }           

@@ -13,12 +13,17 @@
     "navbar.favourites": "Избранное",
     "navbar.registration": "Регистрация",
     "navbar.login": "Вход",
-    "select.per.page": "Элементов на странице",
+    "select.per.page": "Выводить по",
     "search.title": "Поиск по названию",
-    "search.any.word": "Расширенный поиск",
+    "search.any.word": "Поиск",
     "search.title.placeholder": "Введите название",
     "search.any.word.placeholder": "Начните поиск",
     "select.by.image": "Фильтр",
     "select.items.with.image": "С изображением",
-    "select.all.items": "Все"
+    "select.all.items": "Все",
+    "back.to.gallery": "назад в галерею",
+    "back.to.previous.page": "назад"
+
+    
+
 }

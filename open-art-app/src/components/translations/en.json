@@ -3,7 +3,7 @@
     "login.email": "Email",
     "login.password": "Password",
     "login.submit": "Login",
-    "registration.header": "Sign up",
+    "registration.header": "Registration",
     "registration.name": "Name",
     "registration.email": "Email",
     "registration.password": "Password",
@@ -11,16 +11,18 @@
     "registration.submit": "Register",
     "navbar.gallery": "Gallery",
     "navbar.favourites": "Favourites",
-    "navbar.registration": "Sign up",
-    "navbar.login": "Sign in",
+    "navbar.registration": "Join us now",
+    "navbar.login": "Login",
     "select.per.page": "Per page",
     "search.title": "Search by Title",
-    "search.any.word": "Search by any keyword",
+    "search.any.word": "Search",
     "search.title.placeholder": "Type your search title",
     "search.any.word.placeholder": "Type your search",
     "select.by.image": "Filter",
     "select.items.with.image": "With image",
-    "select.all.items": "All"
+    "select.all.items": "All",
+    "back.to.gallery": "back to gallery",
+    "back.to.previous.page": "back"
 
 
 }

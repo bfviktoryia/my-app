@@ -1,49 +1,62 @@
-.button-style {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 40px;
-    color: var(--text-black);
-    border: 1px solid transparent;
-    border-radius: 5px 5px;
-    cursor: pointer;
-    transition: 0.2s;
+button {
+    padding: 2px;
     font-size: 1rem;
+    position: relative;
+    top: 23.5%;
+    margin-left: 6px;
+}
 
-  
-    &:hover {
-        background-color: var(--primary-800);
-        transition: 0.2s;
-    }
-    
-    &._orange {
-        width: 100%;
-        height: 40px;
-        background-color: var(--primary-700);
-    }
-    &._yellow {
-        width: 30px;
-        height: 30px;
-        background-color: var(--primary-100);
-    }
-    &._grey {
-        width: 43px;
-        height: 30px;
-        background-color: var(--secondary-300);
-    }
-  
-    &:active {
-        box-shadow: inset 1.5px 1px 5px;
-        transition: 0.2s;
-        color: var(--text-black);
-    }
-  }
-
-        button {
-            padding: 2px;
+        .button-style {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 40px;
+            color: var(--text-black);
+            border: 1px solid transparent;
+            border-radius: 5px 5px;
+            cursor: pointer;
+            transition: 0.2s;
             font-size: 1rem;
-            position: relative;
-            top: 23.5%;
-            margin-left: 6px;
-    }
+            font-family: 'DM Sans', sans-serif;
+
+        
+            &:hover {
+                background-color: var(--primary-800);
+                transition: 0.2s;
+            }
+            
+            &._orange {
+                width: 100%;
+                height: 40px;
+                background-color: var(--primary-700);
+            }
+            &._transparent-lang {
+                width: 30px;
+                height: 30px;
+                background-color: var(--secondary-10);
+                border-radius: 0px;
+                text-transform: uppercase;
+                font-size: 0.85rem;
+            }
+            &._transparent-theme {
+                width: 100%;
+                height: 30px;
+                background-color: var(--secondary-10);
+                border-radius: 0px;
+                text-transform: uppercase;
+                font-size: 0.85rem;
+            }
+            &._transparent {
+                background-color: var(--secondary-10);
+                border-radius: 0px;
+                text-transform: uppercase;
+                font-size: 0.85rem;
+            }
+        
+            &:active {
+                border: 1px solid;
+                transition: 0.2s;
+                color: var(--text-black);
+            }
+        }

@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from '../../image/Image';
 import CardType from '../../types/CardType';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
+// import BookmarkIcon from '@mui/icons-material/Bookmark';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { IconButton } from '@mui/material';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+// import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import { useActions } from '../../hooks/useActions';
 import { useSelector } from 'react-redux';
 
@@ -23,14 +24,18 @@ const Card: React.FC<CardsType> = ({ data }) => {
   const handleClickFavourite = () => favouriteCard(data.id);
 
   return (
-    <div className="card-wrap">
-      
-      <Image src={data.images?.web.url}/>
+    <div className="card-main-info-wrap">
+      <Link className="icon-info" to={`/gallery/${data.id}`}
+      >
+            <Image src={data.images?.web.url}/>
+
+      </Link>
+
       <div className="bookmarks-wrap">
             <IconButton className="icon-button"
                       onClick={handleClickFavourite}
                 >
-                      <BookmarkIcon
+                      <FavoriteBorderIcon
                           className={`icon-favourite ${isFavourite ? "marked" : ""}`}
                     />
               </IconButton>
@@ -42,43 +47,38 @@ const Card: React.FC<CardsType> = ({ data }) => {
                   >
                         {data.title}
             </h3>
-            <Link className="icon-info"to={`/gallery/${data.id}`}
-                  >
-                        <MenuBookOutlinedIcon htmlColor="grey"
-                              className="info"
-                        />
-            </Link>
       </div>
       <div className="card-info-wrap">
             <div 
                   className="card-elem culture">
                   <span className="card-elem-name">Creation date:</span>
-                  {data.creation_date}
+                        <span className="card-elem-text">{data.creation_date}</span> 
             </div>        
             
             <div 
                   className="card-elem culture">
                   <span className="card-elem-name">Culture:</span>
-                  {data.culture}
+                        <span className="card-elem-text">{data.culture}</span> 
             </div>
             <div 
                   className="card-elem type">
                   <span className="card-elem-name">Type:</span>
-                  {data.type}
+                        <span className="card-elem-text">{data.type}</span>
             </div>
             <div 
                   className="card-elem technique">
                   <span className="card-elem-name">Technique:</span>
-
-                  {data.technique}
+                        <span className="card-elem-text">{data.technique}</span>
             </div>
             <div 
                   className="card-elem id"
             >
-                  {`id: ${data.id}`}
+                        <span className="card-elem-text"> {`id: ${data.id}`}</span>
             </div>
       </div>
+
     </div>
+
 )};
 
 export default Card;

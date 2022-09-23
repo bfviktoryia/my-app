@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { ReactComponent as ThemeToggleIcon} from "../../../assets/circle-half-stroke-solid.svg";
 import Storage  from "../../../helpers/storage"
 import { useActions } from "../../hooks/useActions";
 import Button from "../../ui/Button";
 
-import "../navigation/Navbar.scss";
+// import "../navigation/Navbar.scss";
+import "../theme/Theme.scss";
 
 
 const Theme: React.FC = () => {
@@ -28,9 +30,11 @@ const Theme: React.FC = () => {
         return (
             <div className="theme-button-wrap">
                 <Button 
-                    style="grey" 
+                    style="transparent-theme" 
                     onClick={handleClick}>
                         {theme}
+                        <ThemeToggleIcon className="toggle-theme-icon"/>
+
                 </Button>
             </div>
 

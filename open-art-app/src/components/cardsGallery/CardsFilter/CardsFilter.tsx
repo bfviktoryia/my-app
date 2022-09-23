@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ResponseInfoType from '../../types/ResponseInfoType';
-import { setLimit, setOrderingByImage, setSearchValue, setTitle } from './CardsFilterActionCreators';
+import { setLimit, setOrderingByImage, setSearchValue } from './CardsFilterActionCreators';
 import CardsFilterType from './GalleryFilterType';
 import { CardsWithImage } from '../../../enums/CardsWithImage';
 import SearchField from '../../ui/SearchField';
 import useTranslate from '../../hooks/useTranslate';
 
 import "./CardsFilter.scss"
+import store from '../../../store/store';
 
 type CardType = {
     info: ResponseInfoType,
@@ -21,16 +22,30 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
   const handleChangeLimit = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setLimit(+event.target.value))
   }
-  const searchTitle = (value: string) => {
-    dispatch(setTitle(value)); 
-  }  
+  // const searchTitle = (value: string) => {
+  //   dispatch(setTitle(value)); 
+  // }  
+  // const searchField = (value: string) => {
+  //   dispatch(setSearchValue(value)); 
+  // }  
+
   const searchField = (value: string) => {
-    dispatch(setSearchValue(value)); 
-  }  
+      dispatch(setSearchValue(value));
+}  
 
   const setCardsWithImage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setOrderingByImage(event.target.value as CardsWithImage)); 
   }  
+    // useEffect(() => {
+    //     const timeoutId = 
+    //     setTimeout(() => 
+    //     {
+    //       console.log(`I can see you're not typing. I can use "${state.q}" now!`);
+    //     setSearchValue(state.q);
+    // }
+    //     , 3000);
+    //     return () => clearTimeout(timeoutId);
+    //   }, [state.q]);
 
   return (
     <div className="cards-filter-wrap">
@@ -44,8 +59,8 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
                   onChange={handleChangeLimit}
                 >
                       <option value={10}>10</option>
-                      <option value={20}>20</option>
                       <option value={30}>30</option>
+                      <option value={60}>60</option>
               </select>
           </div>
 
