@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-
             .favourite-cards{
                 display: flex;
                 flex-wrap: wrap;
@@ -22,13 +21,31 @@
                 position: fixed;
                 margin: 4% 2% 2% 2%;
 
+                @media (max-width: 1200px) {
+                    width: 8%;
+                    height: 8%;              
+                }
+                @media (max-width: 875px) {
+                    width: 9%;
+                    height: 9%;              
+                }
+
                     .back-arrow-icon{
                         path{
                             fill: var(--text-color);
                         }        
                         width: 35%;
                         height: 35%;
-                }
+
+                        @media (max-width: 1280px) {
+                            margin-right: 5%;
+                        }
+                        @media (max-width: 875px) {
+                            width: 27%;
+                            height: 27%;
+                        }
+
+                    }
             }
 
             .cards-loading-error{

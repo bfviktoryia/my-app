@@ -31,6 +31,7 @@ export const CardsFilterReduser = (state: CardsFilterType, action: CardsFilterAc
         case CardsFilterActionTypes.SET_SEARCH_TYPE: {
             return { 
                 ...state, 
+                page: 1, 
                 q: action.payload
                         }   
                 }

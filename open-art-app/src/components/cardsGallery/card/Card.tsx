@@ -45,25 +45,25 @@ const Card: React.FC<CardsType> = ({ data }) => {
             <h3 
                   className="card-elem title"
                   >
-                        {data.title}
+                  {data.title}
             </h3>
       </div>
       <div className="card-info-wrap">
             <div 
                   className="card-elem culture">
                   <span className="card-elem-name">Creation date:</span>
-                        <span className="card-elem-text">{data.creation_date}</span> 
+                  <span className="card-elem-text">{data.creation_date}</span> 
             </div>        
             
             <div 
                   className="card-elem culture">
                   <span className="card-elem-name">Culture:</span>
-                        <span className="card-elem-text">{data.culture}</span> 
+                  <span className="card-elem-text">{data.culture}</span> 
             </div>
             <div 
                   className="card-elem type">
                   <span className="card-elem-name">Type:</span>
-                        <span className="card-elem-text">{data.type}</span>
+                  <span className="card-elem-text">{data.type}</span>
             </div>
             <div 
                   className="card-elem technique">
@@ -73,7 +73,7 @@ const Card: React.FC<CardsType> = ({ data }) => {
             <div 
                   className="card-elem id"
             >
-                        <span className="card-elem-text"> {`id: ${data.id}`}</span>
+                  <span className="card-elem-text"> {`id: ${data.id}`}</span>
             </div>
       </div>
 
