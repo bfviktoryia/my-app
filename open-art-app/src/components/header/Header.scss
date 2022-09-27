@@ -26,10 +26,20 @@
             @media (max-width: 1110px) {
                 width: 40%;
                 height: 40%;
-            }       
+            }    
+            @media (max-width: 768px) {
+                // margin: auto;
+                position: relative;
+                top: 20%;  
+
+            }   
         }
         &-name{
             color: var(--primary-1000);
+
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
             @media (max-width: 1280px) {
@@ -44,11 +54,15 @@
             }
             @media (max-width: 1110px) {
                 width: 10%;
-                height: 150%;
             }
             @media (max-width: 915px) {
                 width: 12%;
                 height: 150%;
+            }
+            @media (max-width: 810px) {
+                width: 10%;
+                height: 60px; 
+                position: absolute;  
             }
     }
 
