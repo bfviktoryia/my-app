@@ -61,38 +61,42 @@ const CardPage: React.FC = () => {
             <div className="card"> 
                 <div className="card-main-info-wrap">
                         <Image src={response.data.images?.web.url}/>
-                        <h3 
-                            className="card-elem title"
-                            >
-                                {response.data.title}
-                        </h3>
-                        <div 
-                            className="card-elem culture">
-                                <span className="card-elem-name">Creation date:</span>
-                                <span className="card-elem-text"> {response.data.creation_date}</span>
+                        <div className="card-title-wrap">
+                                <h3 
+                                    className="card-elem title"
+                                    >
+                                        {response.data.title}
+                                </h3>
                         </div>
-                        <div 
-                            className="card-elem culture">
-                                <span className="card-elem-name">Culture:</span>
-                                <span className="card-elem-text"> {response.data.culture}</span>
-                        </div>
-                        <div 
-                            className="card-elem type">
-                                <span className="card-elem-name">Type:</span>
-                                <span className="card-elem-text">{response.data.type}</span>
-                        </div>
-                        <div 
-                            className="card-elem technique">
-                                <span className="card-elem-name">Technique:</span>
-                                <span className="card-elem-text"> {response.data.technique}</span>
-                        </div>
-                        <div 
-                            className="card-elem id"
-                        >
-                                <span className="card-elem-text">{`id: ${response.data.id}`}</span>
-                        </div>
+                        <div className="card-info-wrap">
+                                <div 
+                                    className="card-elem culture">
+                                        <span className="card-elem-name">Creation date:</span>
+                                        <span className="card-elem-text"> {response.data.creation_date}</span>
+                                </div>
+                                <div 
+                                    className="card-elem culture">
+                                        <span className="card-elem-name">Culture:</span>
+                                        <span className="card-elem-text"> {response.data.culture}</span>
+                                </div>
+                                <div 
+                                    className="card-elem type">
+                                        <span className="card-elem-name">Type:</span>
+                                        <span className="card-elem-text">{response.data.type}</span>
+                                </div>
+                                <div 
+                                    className="card-elem technique">
+                                        <span className="card-elem-name">Technique:</span>
+                                        <span className="card-elem-text"> {response.data.technique}</span>
+                                </div>
+                                <div 
+                                    className="card-elem id"
+                                >
+                                        <span className="card-elem-text">{`id: ${response.data.id}`}</span>
+                                </div>
                 </div>
 
+            </div>
 
                 <div className="card-additional-info_wrap">
                         <div 
@@ -109,8 +113,8 @@ const CardPage: React.FC = () => {
                         </div>
                 </div>
             </div> 
-            </div>
-        )
+        </div>
+    )
 }
 
 

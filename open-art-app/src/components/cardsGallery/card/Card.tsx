@@ -40,7 +40,7 @@ const Card: React.FC<CardsType> = ({ data }) => {
                     />
               </IconButton>
       </div>
-
+<div className="card-text-content">
       <div className="card-title-wrap">
             <h3 
                   className="card-elem title"
@@ -76,7 +76,7 @@ const Card: React.FC<CardsType> = ({ data }) => {
                   <span className="card-elem-text"> {`id: ${data.id}`}</span>
             </div>
       </div>
-
+      </div>
     </div>
 
 )};
