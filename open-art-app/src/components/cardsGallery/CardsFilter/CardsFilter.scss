@@ -8,10 +8,30 @@
     justify-content: flex-end;
     position: fixed;
     margin: -2.9% -1%;
-    // background-color: var(--secondary-100);
+    margin-top: -3%;
+    background-color: var(--secondary-100);
     // box-shadow: 0 5px 12px 0px var(--box-shadow-header);
-        background-color: green;
+        // background-color: green;
     border-bottom: 1px solid var(--secondary-60);
+
+    @media(max-width: 1280px){
+        margin: -3.3% -1%;
+    }
+    @media(max-width: 1110px){
+        margin: -3.7% -1.2%;
+    }
+    @media(max-width: 1024px){
+        margin: -4% -1.5%;
+    }
+    @media(max-width: 850px){
+        margin: -4.7% -1.8%;
+        height: 55px;
+
+    }
+    @media(max-width: 768px){
+        margin: -5.2% -2%;
+        height: 50px;
+    }
         
     .select-limit-wrap{
         display: flex;
@@ -22,11 +42,19 @@
         align-items: center;
         border-left: 1px solid var(--secondary-60);
         // border-right: 1px solid var(--secondary-60);
+        @media(max-width: 768px){
+            border-left: 1px solid transparent;
+        }
+
 
             label{
                 margin-right: 5%;
                 text-transform: uppercase;
                 font-size: 0.7rem;
+
+                @media(max-width: 768px){
+                    font-size: 0.65rem;
+                }
             }
 
             .select-limit{
@@ -38,6 +66,10 @@
                 outline: none;
                 border: 1px solid transparent;
                 color: var(--secondary-text-color);
+
+                @media(max-width: 768px){
+                    font-size: 0.8rem;
+                }
 
             }
 
@@ -56,6 +88,9 @@
                 margin-right: 3%;
                 text-transform: uppercase;
                 font-size: 0.7rem;
+                @media(max-width: 768px){
+                    font-size: 0.65rem;
+                }
             }
 
             .sort-image{
@@ -68,6 +103,10 @@
                 outline: none;
                 border: 1px solid transparent;
                 color: var(--secondary-text-color);
+
+                @media(max-width: 768px){
+                    font-size: 0.8rem;
+                }
             }
     }
 

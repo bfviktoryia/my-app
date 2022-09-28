@@ -15,7 +15,6 @@
                 &:hover{
                     box-shadow: 3px 5px 25px 3px var(--box-shadow-card);
                     transition: 0.3s;
-
                 } 
                 
                 @media (max-width: 975px) {
@@ -25,10 +24,7 @@
                     width: 45%;
                     line-height: 1.5;
                 }
-                @media (max-width: 655px) {
-                    width: 70%;
-                }
-                @media (max-width: 480px) {
+                @media (max-width: 425px) {
                     width: 80%;
                 }
 }

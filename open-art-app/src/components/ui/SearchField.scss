@@ -6,9 +6,20 @@
     align-items: center;
     // margin-right: 2%;
     margin-left: 1%;
-    // border-right: 1px solid var(--secondary-60);
+    border-right: 1px solid var(--secondary-60);
     border-left: 1px solid var(--secondary-60);
 
+    @media(max-width: 1024px){
+        width: 40%;
+    }
+    @media(max-width: 850px){
+        width: 46%;
+    }
+    @media(max-width: 768px){
+        width: 55%;
+        border-right: 1px solid transparent;
+
+    }
 
         input{
             background-color: var(--secondary-350);
@@ -20,10 +31,16 @@
             text-transform: uppercase;
             font-size: 0.7rem;
             color: var(--text-color);
+            @media(max-width: 768px){
+                font-size: 0.65rem;
+            }
 
         }
         ::-webkit-input-placeholder {
             color:    var(--secondary-400);
+            @media(max-width: 768px){
+                font-size: 0.8rem;
+            }
         }
     .search-field-input{
         font-size: 0.9rem;
@@ -34,6 +51,9 @@
         padding: 5px;
         outline: none;
         font-size: 1rem;
+        @media(max-width: 768px){
+            font-size: 0.8rem;
+        }
     }
 
 }
