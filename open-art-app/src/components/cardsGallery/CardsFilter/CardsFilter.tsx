@@ -37,7 +37,6 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
 
   return (
     <div className="cards-filter-wrap">
-
           <div className="select-limit-wrap">
               <label htmlFor="select-limit">{t("select.per.page")}</label>
               <select 
@@ -71,7 +70,6 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
               setValue={searchField}
               placeholder={t("search.any.word.placeholder")}
           /> 
-
     </div>
   );
 };

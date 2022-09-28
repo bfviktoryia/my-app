@@ -4,4 +4,7 @@
     path {
         fill: var(--text-color);
     }   
+    @media (max-width: 768px) {
+        height: 50%;
+    }
 }

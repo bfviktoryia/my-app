@@ -46,7 +46,13 @@ button {
                 }
                 @media (max-width: 1110px) {
                     font-size: 0.8rem;            
-            }
+                }
+                @media (max-width: 768px) {
+                    font-size: 0.7rem;  
+                    margin-right: 4%;
+
+                }
+
 
             }
             &._transparent-theme {
@@ -57,9 +63,15 @@ button {
                 text-transform: uppercase;
                 font-size: 0.85rem;
 
+
                 @media (max-width: 1110px) {
                     font-size: 0.8rem;            
-            }
+                }
+                @media (max-width: 768px) {
+                    font-size: 0.7rem; 
+                    margin-left: -2%;           
+
+                }
             }
             
             &._transparent {

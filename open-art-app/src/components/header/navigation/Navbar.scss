@@ -38,15 +38,22 @@
                         @media (max-width: 1110px) {
                             margin-right: 54%;
                         }
-                        @media (max-width: 1010px) {
+                        @media (max-width: 1024px) {
                             margin-right: 50%;
                         }
                         @media (max-width: 915px) {
                             margin-right: 45%;
                         }
                         @media (max-width: 810px) {
-                            margin-right: 38%;
+                            margin-right: 37%;
                         }
+                        @media (max-width: 690px) {
+                            margin-right: 27%;
+                        }
+                        @media (max-width: 655px) {
+                            margin-right: 5%;
+                        }
+
 
                 }
                 :nth-child(4n){
@@ -63,21 +70,22 @@
                         @media (max-width: 1280px) {
                             width: 13%;
                         }
-                        @media (max-width: 1010px) {
-                            width: 17%;
+                        @media (max-width: 1024px) {
+                            width: 15%;
                         }
                         @media (max-width: 915px) {
-                            width: 19%;
+                            width: 17%;
                         }
                         @media (max-width: 860px) {
                             width: 21%;
                         }
-                        @media (max-width: 860px) {
+                        @media (max-width: 768px) {
                             width: 19%;
                         }
-                        @media (max-width: 768px) {
-                            width: 24%;
+                        @media (max-width: 655px) {
+                            background-color: transparent;
                         }
+
                 }
                 
                 a{
@@ -96,8 +104,29 @@
                         &:hover {
                             border-bottom: 2px solid var(--primary-1000);
                         }
+                        @media (max-width: 768px) {
+                            font-size: 0.7rem;
+                        }
+                        @media (max-width: 655px) {
+                            font-size: 0.8rem;
+                            color: var(--text-color);
+                            &:hover {
+                                border-bottom: 2px solid var(--primary-800);
+                            }
+                        }
                     }
                 }
+                li:nth-child(3n){ 
+                    a {
+                        @media (max-width: 768px) {
+                            font-size: 0.7rem;
+                        }
+                        @media (max-width: 655px) {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+
 
             }
         
