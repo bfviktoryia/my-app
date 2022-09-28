@@ -41,13 +41,11 @@ const Card: React.FC<CardsType> = ({ data }) => {
               </IconButton>
       </div>
 <div className="card-text-content">
-      <div className="card-title-wrap">
             <h3 
                   className="card-elem title"
                   >
                   {data.title}
             </h3>
-      </div>
       <div className="card-info-wrap">
             <div 
                   className="card-elem culture">

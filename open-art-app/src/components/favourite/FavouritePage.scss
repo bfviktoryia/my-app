@@ -13,6 +13,9 @@
                     .card-wrap{
                         width: 24%;
                     }
+                    @media (max-width: 768px) {
+                        margin: auto;
+                    }
             }
 
             .cards-button-wrap{
@@ -28,6 +31,9 @@
                 @media (max-width: 875px) {
                     width: 9%;
                     height: 9%;              
+                }
+                @media (max-width: 768px) {
+                    display: none;
                 }
 
                     .back-arrow-icon{
