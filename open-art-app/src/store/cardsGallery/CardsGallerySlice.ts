@@ -11,7 +11,7 @@ export type StoreType = {
     info: ResponseInfoType
     loading: boolean,
     error: string | undefined,
-    theme?: string
+    theme?: string,
 }
 
 const initialState: StoreType = {
@@ -20,7 +20,7 @@ const initialState: StoreType = {
     info: {total: 0},
     loading: true,
     error: undefined,
-    theme: Storage.getFromStorage("theme", undefined)
+    theme: Storage.getFromStorage("theme", undefined),
 }
 
 const CardsGallerySlice = createSlice ({
@@ -41,7 +41,6 @@ const CardsGallerySlice = createSlice ({
         setPostsError: (state: { error: string | undefined; }, { payload }: PayloadAction<string | undefined>) => {
             state.error = payload;
         },
-
         
         favouriteCard: (state: { favourite: number[]; }, { payload: postId }: PayloadAction<number>) => {
             if (state.favourite.includes(postId)){

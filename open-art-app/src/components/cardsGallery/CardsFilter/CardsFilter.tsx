@@ -38,21 +38,21 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
   return (
     <div className="cards-filter-wrap">
           <div className="select-limit-wrap">
-              <label htmlFor="select-limit">{t("select.per.page")}</label>
+              {/* <label htmlFor="select-limit">{t("select.per.page")}</label> */}
               <select 
                   className="select-limit" 
                   id="select-limit"
                   value={state.limit.toString()}
                   onChange={handleChangeLimit}
                 >
-                      <option value={10}>10</option>
-                      <option value={30}>30</option>
-                      <option value={60}>60</option>
+                      <option value={10}>{t("select.per.page.10")}</option>
+                      <option value={30}>{t("select.per.page.30")}</option>
+                      <option value={60}>{t("select.per.page.60")}</option>
               </select>
           </div>
 
           <div className="sort-image-wrap">
-              <label htmlFor="sort-image">{t("select.by.image")}</label>
+              {/* <label htmlFor="sort-image">{t("select.by.image")}</label> */}
               <select 
                   className="sort-image" 
                   id="select-limit"

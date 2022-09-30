@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import SearchIcon from '@mui/icons-material/Search';
 
 import "./SearchField.scss";
 
@@ -29,6 +29,7 @@ const SearchField: React.FC<PropsType> = ({
             <label className="search-field-label" htmlFor="search-field-input">
                 {label}
             </label>
+            <SearchIcon className="search-icon"/>
             <input 
                 className="search-field-input"
                 placeholder={placeholder}

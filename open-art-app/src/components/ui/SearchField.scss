@@ -18,7 +18,9 @@
     @media(max-width: 768px){
         width: 55%;
         border-right: 1px solid transparent;
-
+    }
+    @media(max-width: 768px){
+        width: 50%;
     }
 
         input{
@@ -26,6 +28,16 @@
             font-family: 'DM Sans', sans-serif;
             color: var(--secondary-text-color);
         }
+        .search-icon{
+            display: none;
+            path {
+                fill: var(--secondary-400);
+            }  
+            @media(max-width: 657px){
+                display: block;
+            }
+        }
+
         label{
             margin-right: 3%;
             text-transform: uppercase;
@@ -34,7 +46,9 @@
             @media(max-width: 768px){
                 font-size: 0.65rem;
             }
-
+            @media(max-width: 657px){
+                display: none;
+            }
         }
         ::-webkit-input-placeholder {
             color:    var(--secondary-400);
