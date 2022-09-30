@@ -8,10 +8,12 @@
     @media (max-width: 810px) {
         margin-left: 12%;
     }
-
-
-
     :not(:last-child){margin-right: 5%;}
+
+    @media(max-width: 613px) {
+        :not(:last-child){margin-right: 0;}
+    }
+
 .menu-hamburger-wrap{
     position: absolute;
 
@@ -21,12 +23,12 @@
             position: absolute;
             right: 5%;
             top: 5%;
+
             @media(max-width: 613px) {
                 display: block;
             }
         }
     }
-
         .navigation-list{
             width: 100%;
             line-height: 58px;
@@ -40,9 +42,9 @@
                 &_responsive{
                     display: block;
                     height: fit-content;
-                    width: 30%;
+                    width: 100%;
                     // padding: 0 40%;
-                    // text-align: center;
+                    text-align: center;
                     text-transform: uppercase;
                     font-size: 0.7rem;
                     font-weight: 500;
@@ -56,6 +58,7 @@
                     @media (max-width: 613px) {
                         padding: 0 25%;
                     }
+
                 }
 
                 @media(max-width: 613px) {

@@ -24,11 +24,14 @@ const GalleryLinks = [
 const Navbar: React.FC<NavigationType> = () => {
 
     const { t } = useTranslate();
-    const [isNavExpanded, setIsNavExpanded] = useState(false);
+    const [isNavResponsive, setIsResponsive] = useState(false);
 
     const handleClick = () => {
-        setIsNavExpanded(!isNavExpanded);
+        setIsResponsive(!isNavResponsive);
     }
+    const hideNavResponsive = () => setIsResponsive(false);
+
+
 
         return (
             <div className="navigation-wrap">
@@ -41,11 +44,13 @@ const Navbar: React.FC<NavigationType> = () => {
                         </Button>
                     </div>
 
-                    <ul className = {isNavExpanded ? "navigation-list expanded_responsive" : "navigation-list expanded"}>
+                    <ul 
+                        className = {isNavResponsive ? "navigation-list expanded_responsive" : "navigation-list expanded"}
+                    >
                             {GalleryLinks.map(({ url, textId}) =>
                                 <li key={url}>
                                     <NavLink to={url} 
-                                    onClick={handleClick}
+                                    onClick={hideNavResponsive}
                                     className={({ isActive }) => (`gallery-navigation-link ${isActive ? "active-gallery" : ""}`)}>
                                         {t(textId)}
                                     </NavLink>
