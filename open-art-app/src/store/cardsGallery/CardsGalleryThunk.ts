@@ -21,13 +21,27 @@ export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { 
         if (title) {
             url += `&title=${title}`;
         }
-        try {
+        // try {
+        //     const response = await api.get(url);
+        //         return {
+        //             data: response.data.data as CardType[],
+        //             info: response.data.info as ResponseInfoType,
+        //         }
+        // } 
+       try {
             const response = await api.get(url);
-            return {
-                data: response.data.data as CardType[],
-                info: response.data.info as ResponseInfoType,
-            }
-        } catch {
+            // const delay = () => {
+            //     return new Promise(resolve => setTimeout(resolve, 3000));
+            //   };
+            //   console.log(delay)
+            //   await delay();
+                return {
+                    data: response.data.data as CardType[],
+                    info: response.data.info as ResponseInfoType,
+                }
+        } 
+
+        catch {
             return thunkApi.rejectWithValue("Server response error");
         }
     }
@@ -38,7 +52,7 @@ export const fetchFavourites = createAsyncThunk<DataResponseType, undefined, { r
     "cards/fetchFavourites",
     async (_,  thunkApi) => {
         
-        let url = `?limit=${50}`;
+        let url = `?limit=${100}`;
 
         try {
             const response = await api.get(url);

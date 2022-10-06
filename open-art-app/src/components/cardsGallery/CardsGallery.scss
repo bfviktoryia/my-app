@@ -5,6 +5,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        
+        @media (max-width: 768px) {
+            justify-content: space-evenly;
+        }
+        @media (max-width: 575px) {
+            margin: 25px auto;
+        }
+
 }
 
 

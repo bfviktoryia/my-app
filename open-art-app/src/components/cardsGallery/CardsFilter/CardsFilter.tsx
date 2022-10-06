@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import ResponseInfoType from '../../types/ResponseInfoType';
 import { setLimit, setOrderingByImage, setSearchValue } from './CardsFilterActionCreators';
 import CardsFilterType from './GalleryFilterType';
 import { CardsWithImage } from '../../../enums/CardsWithImage';
 import SearchField from '../../ui/SearchField';
 import useTranslate from '../../hooks/useTranslate';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import Button from '../../ui/Button';
+
 
 import "./CardsFilter.scss"
-import store from '../../../store/store';
 
 type CardType = {
     info: ResponseInfoType,
@@ -19,8 +21,15 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
 
   const { t } = useTranslate();
 
+  const [isFilterResponsive, setIsResponsive] = useState(false);
+  const handleClick = () => {
+      setIsResponsive(!isFilterResponsive);
+  }
+  const hideFilterResponsive = () => setIsResponsive(false);
+
   const handleChangeLimit = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(setLimit(+event.target.value))
+    dispatch(setLimit(+event.target.value));
+    hideFilterResponsive();
   }
   // const searchTitle = (value: string) => {
   //   dispatch(setTitle(value)); 
@@ -32,40 +41,42 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
   const searchField = (value: string) => {
       dispatch(setSearchValue(value));
 }  
-
   const setCardsWithImage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setOrderingByImage(event.target.value as CardsWithImage)); 
+    hideFilterResponsive();
   }  
-    // useEffect(() => {
-    //     const timeoutId = 
-    //     setTimeout(() => 
-    //     {
-    //       console.log(`I can see you're not typing. I can use "${state.q}" now!`);
-    //     setSearchValue(state.q);
-    // }
-    //     , 3000);
-    //     return () => clearTimeout(timeoutId);
-    //   }, [state.q]);
+
 
   return (
     <div className="cards-filter-wrap">
-
+           <div className="filter-icon-wrap">
+                        <Button 
+                                style="transparent-lang"
+                                onClick={handleClick}
+                                >
+                            <span className="filter-name">filters</span>
+                            <FilterAltIcon className="filter-icon"/>
+                        </Button>
+          </div>
+                 
+      <div  className = {isFilterResponsive ? "cards-filter-list expanded_responsive" : "cards-filter-list expanded"}
+        >
           <div className="select-limit-wrap">
-              <label htmlFor="select-limit">{t("select.per.page")}</label>
+              {/* <label htmlFor="select-limit">{t("select.per.page")}</label> */}
               <select 
                   className="select-limit" 
                   id="select-limit"
                   value={state.limit.toString()}
                   onChange={handleChangeLimit}
                 >
-                      <option value={10}>10</option>
-                      <option value={30}>30</option>
-                      <option value={60}>60</option>
+                      <option value={10}>{t("select.per.page.10")}</option>
+                      <option value={30}>{t("select.per.page.30")}</option>
+                      <option value={60}>{t("select.per.page.60")}</option>
               </select>
           </div>
 
           <div className="sort-image-wrap">
-              <label htmlFor="sort-image">{t("select.by.image")}</label>
+              {/* <label htmlFor="sort-image">{t("select.by.image")}</label> */}
               <select 
                   className="sort-image" 
                   id="select-limit"
@@ -83,7 +94,7 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
               setValue={searchField}
               placeholder={t("search.any.word.placeholder")}
           /> 
-
+      </div>   
     </div>
   );
 };

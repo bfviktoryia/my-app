@@ -35,7 +35,8 @@ body[data-theme="dark"] {
   --secondary-10:rgba(13, 13, 14, 0);
   --secondary-50: rgba(13, 13, 14, 0.173);
   --secondary-60:rgba(206, 205, 205, 0);
-  --secondary-100: rgba(206, 205, 205, 0);
+  /* --secondary-100: rgba(206, 205, 205, 0); */
+  --secondary-100: rgba(25, 25, 25, 0.886);
   --secondary-200: rgb(223, 222, 222);
   --secondary-300: rgba(228, 228, 232, 0.694);
   --secondary-350: rgba(124, 126, 131, 0.909);

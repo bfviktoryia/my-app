@@ -21,9 +21,14 @@ const CardsGallery: React.FC<PropsType> = () => {
     const loading = useSelector((state: any)  => state.cards.loading);
     const error = useSelector((state: any)  => state.cards.error);
   
-    useEffect(() => {
+    // useEffect(() => {
+    //     fetchCards(state)
+    // }, [state])
+
+        useEffect(() => {
         fetchCards(state)
     }, [state])
+
 
 
     return (

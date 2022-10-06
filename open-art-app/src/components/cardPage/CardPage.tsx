@@ -50,67 +50,70 @@ const CardPage: React.FC = () => {
     
         return (
         <div className='card-page-content'>
-                           <div className="card-button-wrap">
-                                <Button style="transparent"
-                                        onClick={handleClick}
-                                >
-                                        <BackToGalleryIcon className="back-arrow-icon"/>
-                                        {t("back.to.previous.page")}
-                                </Button>
-                            </div>
+            <div className="card-button-wrap">
+                        <Button style="transparent"
+                                onClick={handleClick}
+                            >
+                            <BackToGalleryIcon className="back-arrow-icon"/>
+                                {t("back.to.previous.page")}
+                        </Button>
+            </div>
             <div className="card"> 
                 <div className="card-main-info-wrap">
-                        <Image src={response.data.images?.web.url}/>
-                        <h3 
-                            className="card-elem title"
+                    <Image src={response.data.images?.web.url}/>
+                    <div className="card-text-content">
+                            <h3 
+                                className="card-elem title"
                             >
                                 {response.data.title}
-                        </h3>
-                        <div 
-                            className="card-elem culture">
-                                <span className="card-elem-name">Creation date:</span>
-                                <span className="card-elem-text"> {response.data.creation_date}</span>
-                        </div>
-                        <div 
-                            className="card-elem culture">
-                                <span className="card-elem-name">Culture:</span>
-                                <span className="card-elem-text"> {response.data.culture}</span>
-                        </div>
-                        <div 
-                            className="card-elem type">
-                                <span className="card-elem-name">Type:</span>
-                                <span className="card-elem-text">{response.data.type}</span>
-                        </div>
-                        <div 
-                            className="card-elem technique">
-                                <span className="card-elem-name">Technique:</span>
-                                <span className="card-elem-text"> {response.data.technique}</span>
-                        </div>
-                        <div 
-                            className="card-elem id"
-                        >
-                                <span className="card-elem-text">{`id: ${response.data.id}`}</span>
-                        </div>
+                            </h3>
+                            <div className="card-info-wrap">
+                                    <div 
+                                            className="card-elem culture">
+                                        <span className="card-elem-name">Creation date:</span>
+                                        <span className="card-elem-text"> {response.data.creation_date}</span>
+                                    </div>
+                                    <div 
+                                            className="card-elem culture">
+                                        <span className="card-elem-name">Culture:</span>
+                                        <span className="card-elem-text"> {response.data.culture}</span>
+                                    </div>
+                                    <div 
+                                            className="card-elem type">
+                                        <span className="card-elem-name">Type:</span>
+                                        <span className="card-elem-text">{response.data.type}</span>
+                                    </div>
+                                    <div 
+                                            className="card-elem technique">
+                                        <span className="card-elem-name">Technique:</span>
+                                        <span className="card-elem-text"> {response.data.technique}</span>
+                                    </div>
+                                    <div 
+                                            className="card-elem id"
+                                    >
+                                        <span className="card-elem-text">{`id: ${response.data.id}`}</span>
+                                    </div>
+                            </div>
+                    </div>
                 </div>
-
 
                 <div className="card-additional-info_wrap">
-                        <div 
-                            className="card-additional-info fun-fact"
-                        >
-                                <span className="card-elem-name">Fun fact:</span>
-                                <span className="card-elem-text">{response.data.fun_fact}</span>
-                        </div>
-                        <div 
-                            className="card-additional-info description"
-                        >
-                                <span className="card-elem-name">Description:</span>
-                                <span className="card-elem-text">{response.data.wall_description}</span>
-                        </div>
+                    <div 
+                        className="card-additional-info fun-fact"
+                    >
+                            <span className="card-elem-name">Fun fact:</span>
+                            <span className="card-elem-text">{response.data.fun_fact}</span>
+                    </div>
+                    <div 
+                        className="card-additional-info description"
+                    >
+                            <span className="card-elem-name">Description:</span>
+                            <span className="card-elem-text">{response.data.wall_description}</span>
+                    </div>
                 </div>
             </div> 
-            </div>
-        )
+        </div>
+    )
 }
 
 

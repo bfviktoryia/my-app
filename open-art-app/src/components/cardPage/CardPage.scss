@@ -1,11 +1,17 @@
 .card-page-content{
     max-width: 1440px;
 
+
         .card-button-wrap{
                 width: 7%;
                 height: 7%;
                 position: fixed;
                 margin: 4% 2% 2% 2%;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+
 
                     .back-arrow-icon{
                         path{
@@ -13,12 +19,26 @@
                         }        
                         width: 35%;
                         height: 35%;
+
+                        @media (max-width: 1110px) {
+                            width: 25%;
+                            height: 25%;
+                        }
+                        @media (max-width: 1024px) {
+                            width: 22%;
+                            height: 22%;
+                            margin-right: 3%;
+                        }
                     }
         }
 
         .card{
-            width: 97%;
+            width: 95%;
             margin: auto;
+            @media (max-width: 575px){
+                flex-direction: column;
+        
+            }
 
             .card-main-info-wrap{
                  width:40%;    
@@ -26,12 +46,19 @@
                     &:hover{
                         box-shadow: none; 
                     }    
+
+                    @media (max-width: 575px){
+                        width:80%;    
+                        margin-right: 0;   
+                    }
+                    @media (max-width: 375px){
+                        width: 95%;    
+                    }
             }
 
             .card-additional-info_wrap {
                 font-family: 'Poppins', sans-serif;
-                    .card-elem{
-                        font-family: 'Poppins', sans-serif;
+
                         .card-elem-name{
                             color: var(--text-black);
                             font-weight: 400;
@@ -43,8 +70,19 @@
                             font-weight: 300;
                             font-size: 0.9rem;
                             margin-right: 5px;
+
                         }
-                    }
+
+                        @media (max-width: 768px) {
+                            line-height: 1.5;
+                        }
+
+                        @media (max-width: 575px){
+                            width:80%;    
+                        }
+                        @media (max-width: 375px){
+                            width: 95%;    
+                        }
             }
 
         }
