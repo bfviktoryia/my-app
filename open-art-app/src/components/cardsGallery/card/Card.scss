@@ -27,6 +27,9 @@
                 @media (max-width: 425px) {
                     width: 80%;
                 }
+                @media (max-width: 375px) {
+                    width: 90%;
+                }
 }
 
 .card-text-content{
@@ -68,6 +71,9 @@
                     @media (max-width: 768px) {
                         font-size: 0.95rem;
                     }
+                    @media (max-width: 768px) {
+                        font-size: 0.85rem;
+                    }
 
                  }
                  .card-elem-text{
@@ -81,6 +87,9 @@
                     }
                     @media (max-width: 768px) {
                         font-size: 0.95rem;
+                    }
+                    @media (max-width: 575px) {
+                        font-size: 0.85rem;
                     }
                  }
                 }

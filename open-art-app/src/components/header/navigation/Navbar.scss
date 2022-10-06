@@ -15,19 +15,17 @@
     }
 
 .menu-hamburger-wrap{
-    position: absolute;
-
+    // position: absolute;
+    display: none;
         .menu-hamburger{
-            display: none;
             cursor: pointer;
             position: absolute;
             right: 5%;
             top: 5%;
-
+        }
             @media(max-width: 613px) {
                 display: block;
             }
-        }
     }
         .navigation-list{
             width: 100%;

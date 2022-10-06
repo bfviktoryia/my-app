@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ResponseInfoType from '../../types/ResponseInfoType';
 import { setLimit, setOrderingByImage, setSearchValue } from './CardsFilterActionCreators';
 import CardsFilterType from './GalleryFilterType';
 import { CardsWithImage } from '../../../enums/CardsWithImage';
 import SearchField from '../../ui/SearchField';
 import useTranslate from '../../hooks/useTranslate';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import Button from '../../ui/Button';
+
 
 import "./CardsFilter.scss"
 
@@ -18,8 +21,15 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
 
   const { t } = useTranslate();
 
+  const [isFilterResponsive, setIsResponsive] = useState(false);
+  const handleClick = () => {
+      setIsResponsive(!isFilterResponsive);
+  }
+  const hideFilterResponsive = () => setIsResponsive(false);
+
   const handleChangeLimit = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch(setLimit(+event.target.value))
+    dispatch(setLimit(+event.target.value));
+    hideFilterResponsive();
   }
   // const searchTitle = (value: string) => {
   //   dispatch(setTitle(value)); 
@@ -33,10 +43,24 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
 }  
   const setCardsWithImage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setOrderingByImage(event.target.value as CardsWithImage)); 
+    hideFilterResponsive();
   }  
+
 
   return (
     <div className="cards-filter-wrap">
+           <div className="filter-icon-wrap">
+                        <Button 
+                                style="transparent-lang"
+                                onClick={handleClick}
+                                >
+                            <span className="filter-name">filters</span>
+                            <FilterAltIcon className="filter-icon"/>
+                        </Button>
+          </div>
+                 
+      <div  className = {isFilterResponsive ? "cards-filter-list expanded_responsive" : "cards-filter-list expanded"}
+        >
           <div className="select-limit-wrap">
               {/* <label htmlFor="select-limit">{t("select.per.page")}</label> */}
               <select 
@@ -70,6 +94,7 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
               setValue={searchField}
               placeholder={t("search.any.word.placeholder")}
           /> 
+      </div>   
     </div>
   );
 };
