@@ -37,8 +37,7 @@ const Navbar: React.FC<NavigationType> = () => {
                             <MenuIcon className="menu-hamburger"/>
                         </Button>
                     </div>
-
-                    <ul 
+                    <ul
                         className = {isNavResponsive ? "navigation-list expanded_responsive" : "navigation-list expanded"}
                     >
                             {GalleryLinks.map(({ url, textId}) =>
@@ -51,16 +50,6 @@ const Navbar: React.FC<NavigationType> = () => {
                                 </li>
                         )}
                     </ul> 
-
-                    {/* <ul className="navigation-list auth">
-                                {AuthLinks.map(({ url, textId}) =>
-                                    <li key={url}>
-                                    <NavLink to={url} className={({ isActive }) => (`auth-navigation-link ${isActive ? "active-auth" : ""}`)}>
-                                        {t(textId)}
-                                    </NavLink>
-                                </li>
-                        )}
-                    </ul>  */}
             </div>
 )
 }

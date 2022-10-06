@@ -31,12 +31,6 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
     dispatch(setLimit(+event.target.value));
     hideFilterResponsive();
   }
-  // const searchTitle = (value: string) => {
-  //   dispatch(setTitle(value)); 
-  // }  
-  // const searchField = (value: string) => {
-  //   dispatch(setSearchValue(value)); 
-  // }  
 
   const searchField = (value: string) => {
       dispatch(setSearchValue(value));
@@ -60,7 +54,8 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
         </div>  
              
         <div  className = {isFilterResponsive ? "cards-filter-list expanded_responsive" : "cards-filter-list expanded"}
-         >
+              onBlur={hideFilterResponsive}
+        >
           <div className="select-limit-wrap">
               <select 
                   className="select-limit" 
