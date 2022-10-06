@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from '../../image/Image';
 import CardType from '../../types/CardType';
-// import BookmarkIcon from '@mui/icons-material/Bookmark';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { IconButton } from '@mui/material';
-// import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import { useActions } from '../../hooks/useActions';
 import { useSelector } from 'react-redux';
 
@@ -30,50 +28,49 @@ const Card: React.FC<CardsType> = ({ data }) => {
             <Image src={data.images?.web.url}/>
 
       </Link>
-
       <div className="bookmarks-wrap">
             <IconButton className="icon-button"
-                      onClick={handleClickFavourite}
-                >
-                      <FavoriteBorderIcon
-                          className={`icon-favourite ${isFavourite ? "marked" : ""}`}
-                    />
+                        onClick={handleClickFavourite}
+            >
+                  <FavoriteBorderIcon
+                        className={`icon-favourite ${isFavourite ? "marked" : ""}`}
+                  />
               </IconButton>
       </div>
-<div className="card-text-content">
+      <div className="card-text-content">
             <h3 
                   className="card-elem title"
                   >
                   {data.title}
             </h3>
-      <div className="card-info-wrap">
-            <div 
-                  className="card-elem culture">
-                  <span className="card-elem-name">Creation date:</span>
-                  <span className="card-elem-text">{data.creation_date}</span> 
-            </div>        
-            
-            <div 
-                  className="card-elem culture">
-                  <span className="card-elem-name">Culture:</span>
-                  <span className="card-elem-text">{data.culture}</span> 
+            <div className="card-info-wrap">
+                  <div 
+                        className="card-elem culture">
+                        <span className="card-elem-name">Creation date:</span>
+                        <span className="card-elem-text">{data.creation_date}</span> 
+                  </div>        
+                  
+                  <div 
+                        className="card-elem culture">
+                        <span className="card-elem-name">Culture:</span>
+                        <span className="card-elem-text">{data.culture}</span> 
+                  </div>
+                  <div 
+                        className="card-elem type">
+                        <span className="card-elem-name">Type:</span>
+                        <span className="card-elem-text">{data.type}</span>
+                  </div>
+                  <div 
+                        className="card-elem technique">
+                        <span className="card-elem-name">Technique:</span>
+                              <span className="card-elem-text">{data.technique}</span>
+                  </div>
+                  <div 
+                        className="card-elem id"
+                  >
+                        <span className="card-elem-text"> {`id: ${data.id}`}</span>
+                  </div>
             </div>
-            <div 
-                  className="card-elem type">
-                  <span className="card-elem-name">Type:</span>
-                  <span className="card-elem-text">{data.type}</span>
-            </div>
-            <div 
-                  className="card-elem technique">
-                  <span className="card-elem-name">Technique:</span>
-                        <span className="card-elem-text">{data.technique}</span>
-            </div>
-            <div 
-                  className="card-elem id"
-            >
-                  <span className="card-elem-text"> {`id: ${data.id}`}</span>
-            </div>
-      </div>
       </div>
     </div>
 

@@ -20,20 +20,8 @@ export const fetchCards = createAsyncThunk<DataResponseType, CardsFilterType, { 
         if (title) {
             url += `&title=${title}`;
         }
-        // try {
-        //     const response = await api.get(url);
-        //         return {
-        //             data: response.data.data as CardType[],
-        //             info: response.data.info as ResponseInfoType,
-        //         }
-        // } 
        try {
             const response = await api.get(url);
-            // const delay = () => {
-            //     return new Promise(resolve => setTimeout(resolve, 3000));
-            //   };
-            //   console.log(delay)
-            //   await delay();
                 return {
                     data: response.data.data as CardType[],
                     info: response.data.info as ResponseInfoType,

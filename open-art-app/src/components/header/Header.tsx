@@ -36,7 +36,7 @@ const Header = ({
               </Button>
           }
         <Theme/>
-      </header>
+    </header>
   );
 };
 

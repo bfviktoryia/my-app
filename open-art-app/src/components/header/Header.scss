@@ -5,15 +5,8 @@
     position: fixed;
     display: flex;
     background-color: var(--secondary-100);
-    // font-size: 1.1rem;
-    // font-weight: 400;
-    // padding: 5px 15px;
     padding: 0.2% 1%;
     border-bottom: 1px solid var(--secondary-60);
-
-    // @media (max-width: 575px){
-    //     border-bottom: 1px solid var(--text-color);
-    // }
     
     .logo-wrap{
         display: block;
@@ -66,12 +59,4 @@
                 position: absolute;  
             }
     }
-    .logout-icon{
-        path {
-            fill: var(--primary-1000);
-        }
-        width: 18px;
-        margin-left: -50%;
-        cursor: pointer;
-    }  
 }

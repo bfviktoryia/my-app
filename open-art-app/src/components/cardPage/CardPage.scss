@@ -1,17 +1,15 @@
 .card-page-content{
     max-width: 1440px;
 
-
         .card-button-wrap{
                 width: 7%;
                 height: 7%;
                 position: fixed;
                 margin: 4% 2% 2% 2%;
-
+                
                 @media (max-width: 768px) {
                     display: none;
                 }
-
 
                     .back-arrow-icon{
                         path{
@@ -33,57 +31,66 @@
         }
 
         .card{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
             width: 95%;
             margin: auto;
+
             @media (max-width: 575px){
                 flex-direction: column;
-        
             }
 
-            .card-main-info-wrap{
-                 width:40%;    
-                 margin-right: -5%;   
+                .card-main-info-wrap{
+                    width:40%;    
+                    margin-right: -5%;   
                     &:hover{
                         box-shadow: none; 
                     }    
 
                     @media (max-width: 575px){
                         width:80%;    
-                        margin-right: 0;   
+                         margin-right: 0;   
                     }
                     @media (max-width: 375px){
                         width: 95%;    
                     }
-            }
+                }
 
-            .card-additional-info_wrap {
-                font-family: 'Poppins', sans-serif;
+                .card-additional-info_wrap {
+                    font-family: 'Poppins', sans-serif;
+                    width: 40%;
 
-                        .card-elem-name{
-                            color: var(--text-black);
-                            font-weight: 400;
-                            font-size: 0.9rem;
-                            margin-right: 5px;
-                        }
-                        .card-elem-text{
-                            color: var(--text-black);
-                            font-weight: 300;
-                            font-size: 0.9rem;
-                            margin-right: 5px;
+                            .card-elem-name{
+                                color: var(--text-black);
+                                font-weight: 400;
+                                font-size: 0.9rem;
+                                margin-right: 5px;
+                            }
+                            .card-elem-text{
+                                color: var(--text-black);
+                                font-weight: 300;
+                                font-size: 0.9rem;
+                                margin-right: 5px;
+                            }
 
-                        }
+                            @media (max-width: 768px) {
+                                line-height: 1.5;
+                            }
+                            @media (max-width: 575px){
+                                width:80%;    
+                            }
+                            @media (max-width: 375px){
+                                width: 95%;    
+                            }
 
-                        @media (max-width: 768px) {
-                            line-height: 1.5;
-                        }
-
-                        @media (max-width: 575px){
-                            width:80%;    
-                        }
-                        @media (max-width: 375px){
-                            width: 95%;    
-                        }
-            }
+                            .card-additional-info {
+                                &.fun-fact{
+                                    margin-bottom: 20px;
+                                }
+                            }
+                }
 
         }
        

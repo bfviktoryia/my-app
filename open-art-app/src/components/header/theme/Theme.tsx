@@ -5,13 +5,13 @@ import Storage  from "../../../helpers/storage"
 import { useActions } from "../../hooks/useActions";
 import Button from "../../ui/Button";
 
-// import "../navigation/Navbar.scss";
 import "../theme/Theme.scss";
 
 
 const Theme: React.FC = () => {
 
     const [_, setTheme] = useState<string>();
+    
     useEffect(() => {
         const storageTheme = Storage.getFromStorage<string | undefined>("theme", undefined);
         if(storageTheme){

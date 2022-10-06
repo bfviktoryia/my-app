@@ -16,8 +16,6 @@ type PropsType = {
         const navigate = useNavigate();
 
         const handleClick = () => {
-            // console.log("clicked back to gallery");
-            // navigate(-1);
             navigate("/gallery");
         }
 

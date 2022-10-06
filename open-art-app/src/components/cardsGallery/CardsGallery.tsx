@@ -20,10 +20,6 @@ const CardsGallery: React.FC<PropsType> = () => {
     const total = useSelector((state: any)  => state.cards.info.total);
     const loading = useSelector((state: any)  => state.cards.loading);
     const error = useSelector((state: any)  => state.cards.error);
-  
-    // useEffect(() => {
-    //     fetchCards(state)
-    // }, [state])
 
         useEffect(() => {
         fetchCards(state)
@@ -32,26 +28,26 @@ const CardsGallery: React.FC<PropsType> = () => {
 
 
     return (
-    <React.Fragment>
-        <CardsFilter
-                info={total}
-                state={state}
-                dispatch={dispatch}
-            />
-        <div className="cards-container">
-                    <div className="cards-loading-error">
-                                {loading && <div className="loader"></div>}
-                                {error && 'Error '}
-                    </div>
-                {data.map((item: any) => (<Card key={item.id} data={item}/>))}
-
-        </div>
-        <GalleryPagination 
-                        info={total} 
-                        dispatch={dispatch} 
+            <React.Fragment>
+                <CardsFilter
+                        info={total}
                         state={state}
-            />
-    </React.Fragment>
+                        dispatch={dispatch}
+                />
+                <div className="cards-container">
+                            <div className="cards-loading-error">
+                                        {loading && <div className="loader"></div>}
+                                        {error && 'Error '}
+                            </div>
+                        {data.map((item: any) => (<Card key={item.id} data={item}/>))}
+
+                </div>
+                <GalleryPagination 
+                                info={total} 
+                                dispatch={dispatch} 
+                                state={state}
+                />
+            </React.Fragment>
     )
     }
 

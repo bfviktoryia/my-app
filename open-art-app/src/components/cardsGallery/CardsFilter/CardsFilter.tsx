@@ -49,7 +49,7 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
 
   return (
     <div className="cards-filter-wrap">
-           <div className="filter-icon-wrap">
+        <div className="filter-icon-wrap">
                         <Button 
                                 style="transparent-lang"
                                 onClick={handleClick}
@@ -57,12 +57,11 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
                             <span className="filter-name">filters</span>
                             <FilterAltIcon className="filter-icon"/>
                         </Button>
-          </div>
-                 
-      <div  className = {isFilterResponsive ? "cards-filter-list expanded_responsive" : "cards-filter-list expanded"}
-        >
+        </div>  
+             
+        <div  className = {isFilterResponsive ? "cards-filter-list expanded_responsive" : "cards-filter-list expanded"}
+         >
           <div className="select-limit-wrap">
-              {/* <label htmlFor="select-limit">{t("select.per.page")}</label> */}
               <select 
                   className="select-limit" 
                   id="select-limit"
@@ -76,7 +75,6 @@ const CardsFilter: React.FC<CardType> = ({ state, dispatch}) => {
           </div>
 
           <div className="sort-image-wrap">
-              {/* <label htmlFor="sort-image">{t("select.by.image")}</label> */}
               <select 
                   className="sort-image" 
                   id="select-limit"

@@ -10,8 +10,6 @@
     margin: -2.9% -1%;
     margin-top: -3%;
     background-color: var(--secondary-100);
-    // box-shadow: 0 5px 12px 0px var(--box-shadow-header);
-        // background-color: green;
     border-bottom: 1px solid var(--secondary-60);
 
     @media(max-width: 1280px){
@@ -38,15 +36,12 @@
         margin: -7% -2.2%;
         justify-content: flex-start;
         border-bottom: 1px solid transparent;
-
     }
     @media (max-width: 425px) {
         margin: -10% -2.2%;
-
     }
     @media (max-width: 375px) {
         margin: -11% -2.2%;
-
     }
 
     .filter-icon-wrap{
@@ -74,16 +69,12 @@
     }
 
     .cards-filter-list{
-        // width: 90%;
-        // display: flex;
-        // justify-content: flex-end;
  
         &.expanded{
             display: flex;
             width: 90%;
             justify-content: flex-end;
             transition: 0.2s;
-            // position: relative;
 
             @media (max-width: 575px) {
                 display: none;
@@ -101,27 +92,22 @@
                 left: 18%;
                 transition: 0.2s;
 
-
                 @media(max-width: 575px){
                     top: 10px;
-
                 }
                 @media(max-width: 485px){
                     left: 20%;
                     width: 78%;
-
                 }
                 @media(max-width: 425px){
                     top: 45px;
                     left: -5px;
                     width: 100%;
-
                 }
                 @media(max-width: 375px){
                     top: 45px;
                     left: -7.5px;
                     width: 100%;
-
                 }
 
             }
@@ -136,26 +122,10 @@
         padding: 5px;
         align-items: center;
         border-left: 1px solid var(--secondary-60);
-        // border-right: 1px solid var(--secondary-60);
 
         @media(max-width: 768px){
             border-left: 1px solid transparent;
         }
-
-
-            // label{
-            //     margin-right: 5%;
-            //     text-transform: uppercase;
-            //     font-size: 0.7rem;
-
-            //     @media(max-width: 768px){
-            //         font-size: 0.65rem;
-            //     }
-            //     // @media(max-width: 768px){
-            //     //     display: none;
-            //     // }
-            // }
-
             .select-limit{
                 background-color: var(--secondary-350);
                 border-radius: 0.2rem;
@@ -181,29 +151,14 @@
         padding: 5px;
         align-items: center;
         margin-right: -1%;
-        // border-right: 1px solid var(--secondary-60);
         border-left: 1px solid var(--secondary-60);
 
         @media(max-width: 768px){
             border-left: 1px solid transparent;
         }
-
-            // label{
-            //     margin-right: 3%;
-            //     text-transform: uppercase;
-            //     font-size: 0.7rem;
-            //     @media(max-width: 768px){
-            //         font-size: 0.65rem;
-            //     }
-            //     @media(max-width: 768px){
-            //         display: none;
-            //     }
-            // }
-
             .sort-image{
                 background-color: var(--secondary-350);
                 border-radius: 0.2rem;
-                // height: 36px;
                 height: 100%;
                 padding: 5px;
                 font-size: 0.7rem;

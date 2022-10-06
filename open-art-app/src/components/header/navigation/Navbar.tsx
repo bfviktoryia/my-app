@@ -7,8 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import "../navigation/Navbar.scss"
 import Button from "../../ui/Button";
 
-type NavigationType = {
-}
+type NavigationType = {}
 
 const GalleryLinks = [
     {url: "gallery", textId: "navbar.gallery"},
@@ -16,10 +15,6 @@ const GalleryLinks = [
     {url: "login", textId: "navbar.login"},
     {url: "registration", textId: "navbar.registration"},
 ]
-// const AuthLinks = [
-//     {url: "registration", textId: "navbar.registration"},
-//     {url: "login", textId: "navbar.login"},
-// ]
 
 const Navbar: React.FC<NavigationType> = () => {
 
@@ -30,7 +25,6 @@ const Navbar: React.FC<NavigationType> = () => {
         setIsResponsive(!isNavResponsive);
     }
     const hideNavResponsive = () => setIsResponsive(false);
-
 
 
         return (

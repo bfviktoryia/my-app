@@ -4,20 +4,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-            .favourite-cards{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                margin: 2% auto 0 11%;
-
-                    .card-wrap{
-                        width: 24%;
-                    }
-                    @media (max-width: 768px) {
-                        margin: auto;
-                    }
-            }
-
             .cards-button-wrap{
                 width: 7%;
                 height: 7%;
@@ -54,6 +40,20 @@
                             margin-right: 6%;
                         }
 
+                    }
+            }
+
+            .favourite-cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 2% auto 0 11%;
+
+                    .card-wrap{
+                        width: 24%;
+                    }
+                    @media (max-width: 768px) {
+                        margin: auto;
                     }
             }
 

@@ -8,10 +8,10 @@
             margin-bottom: 15px;
             color: var(--secondary-text-color);
             background: var(--secondary-50);
+            transition: 0.3s;
                 :not(:last-child){
                     margin-bottom: 2px;
                 }
-            transition: 0.3s;
                 &:hover{
                     box-shadow: 3px 5px 25px 3px var(--box-shadow-card);
                     transition: 0.3s;
@@ -42,7 +42,6 @@
                     color: var(--text-color);
                     width: 100%;
                     margin-bottom: 15px;
-                    // border-bottom: 1px solid;
                     border-color: var(--text-black);
                     position: relative;
 
@@ -93,34 +92,18 @@
                     }
                  }
                 }
-        .bookmarks-wrap {  
-            position: absolute;
-                .icon-favourite {
-                    font-size: 1.5rem;
-                    transition: 0.3s;
-                    path {fill : var(--primary-1000)};
-                    &:hover{
-                         transform: scale(1.1);;
-                        }
-                    &.marked{
-                        path {fill : var(--primary-850)};
-
-                      }
-                    }               
-              }
-
-        .card-additional-info_wrap{
-            width: 40%;
-        }
-
-        .card{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-            .card-additional-info {
-                &.fun-fact{
-                    margin-bottom: 20px;
+.bookmarks-wrap {  
+    position: absolute;
+            .icon-favourite {
+                font-size: 1.5rem;
+                transition: 0.3s;
+                path {fill : var(--primary-1000)};
+                &:hover{
+                    transform: scale(1.1);;
                 }
-            }
-        }
+                &.marked{
+                    path {fill : var(--primary-850)};
+                }
+            }               
+}
+
