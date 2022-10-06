@@ -1,6 +1,7 @@
 .card-page-content{
     max-width: 1440px;
 
+
         .card-button-wrap{
                 width: 7%;
                 height: 7%;
@@ -34,6 +35,10 @@
         .card{
             width: 95%;
             margin: auto;
+            @media (max-width: 575px){
+                flex-direction: column;
+        
+            }
 
             .card-main-info-wrap{
                  width:40%;    
@@ -41,6 +46,14 @@
                     &:hover{
                         box-shadow: none; 
                     }    
+
+                    @media (max-width: 575px){
+                        width:80%;    
+                        margin-right: 0;   
+                    }
+                    @media (max-width: 375px){
+                        width: 95%;    
+                    }
             }
 
             .card-additional-info_wrap {
@@ -62,7 +75,13 @@
 
                         @media (max-width: 768px) {
                             line-height: 1.5;
-        
+                        }
+
+                        @media (max-width: 575px){
+                            width:80%;    
+                        }
+                        @media (max-width: 375px){
+                            width: 95%;    
                         }
             }
 
