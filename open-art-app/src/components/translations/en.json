@@ -1,0 +1,30 @@
+{
+    "login.header": "Sign in",
+    "login.email": "Email",
+    "login.password": "Password",
+    "login.submit": "Login",
+    "registration.header": "Registration",
+    "registration.name": "Name",
+    "registration.email": "Email",
+    "registration.password": "Password",
+    "registration.confirm.password": "Confirm password",
+    "registration.submit": "Register",
+    "navbar.gallery": "Gallery",
+    "navbar.favourites": "Favourites",
+    "navbar.registration": "Join us now",
+    "navbar.login": "Login",
+    "select.per.page.10": "10 per page",
+    "select.per.page.30": "30 per page",
+    "select.per.page.60": "60 per page",
+    "search.title": "Search by Title",
+    "search.any.word": "Search",
+    "search.title.placeholder": "Type your search title",
+    "search.any.word.placeholder": "Type your search",
+    "select.by.image": "Filter",
+    "select.items.with.image": "With image",
+    "select.all.items": "All",
+    "back.to.gallery": "back to gallery",
+    "back.to.previous.page": "back"
+
+
+}

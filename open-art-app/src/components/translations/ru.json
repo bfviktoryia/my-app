@@ -1,0 +1,31 @@
+{
+    "login.header": "Вход",
+    "login.email": "Email",
+    "login.password": "Пароль",
+    "login.submit": "Войти",
+    "registration.header": "Регистрация",
+    "registration.name": "Имя",
+    "registration.email": "Email",
+    "registration.password": "Пароль",
+    "registration.confirm.password": "Подтвердите пароль",
+    "registration.submit": "Зарегистрироваться",
+    "navbar.gallery": "Галерея",
+    "navbar.favourites": "Избранное",
+    "navbar.registration": "Регистрация",
+    "navbar.login": "Вход",
+    "select.per.page.10": "10 на странице",
+    "select.per.page.30": "30 на странице",
+    "select.per.page.60": "60 на странице",
+    "search.title": "Поиск по названию",
+    "search.any.word": "Поиск",
+    "search.title.placeholder": "Введите название",
+    "search.any.word.placeholder": "Начните поиск",
+    "select.by.image": "Фильтр",
+    "select.items.with.image": "С изображением",
+    "select.all.items": "Все",
+    "back.to.gallery": "назад в галерею",
+    "back.to.previous.page": "назад"
+
+    
+
+}

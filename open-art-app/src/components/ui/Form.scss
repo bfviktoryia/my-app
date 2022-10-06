@@ -1,0 +1,36 @@
+.form-wrap{
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--secondary-50);
+
+    @media (max-width: 768px) {
+        width: 60%;
+    }
+    @media (max-width: 655px) {
+        width: 80%;
+    }
+    @media (max-width: 613px) {
+        width: 90%;
+    }
+
+}
+
+.form-error{
+    margin: 20px 20px;
+    color: var(--primary-800);
+}
+.form-header{
+    font-size: 1.3rem;
+
+    @media (max-width: 1110px) {
+        font-size: 1.2rem;
+    }
+    @media (max-width: 915px) {
+        font-size: 1.1rem;
+    }
+}

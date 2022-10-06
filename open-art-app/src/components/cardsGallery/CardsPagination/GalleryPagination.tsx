@@ -1,4 +1,5 @@
-import { Pagination } from "@mui/material";
+import { colors, makeStyles, Pagination } from "@mui/material";
+import { useSelector } from "react-redux";
 import ResponseInfoType from "../../types/ResponseInfoType";
 import { SetPage } from "../CardsFilter/CardsFilterActionCreators";
 import CardsFilterType from "../CardsFilter/GalleryFilterType";
@@ -12,11 +13,14 @@ type CardType = {
 };
 const GalleryPagination: React.FC<CardType> = ({info, state, dispatch}) => {
 
+    const total = useSelector((state: any)  => state.cards.info.total);
+
     const handleChangePage = (event: React.ChangeEvent<unknown>, value: number) => {
       dispatch(SetPage(value))
     }
+    
 
-    return (
+    return ( 
       <div className="cards-pagination-wrap">
             <Pagination 
                 className="pagination"
@@ -24,8 +28,7 @@ const GalleryPagination: React.FC<CardType> = ({info, state, dispatch}) => {
                 shape="rounded"
                 showFirstButton 
                 showLastButton
-                // count={Math.ceil(info.total / state.limit)}
-                count={Math.ceil(200/ state.limit)}
+                count={Math.ceil(total / state.limit)}
                 page={state.page}
                 onChange={handleChangePage}
             /> 

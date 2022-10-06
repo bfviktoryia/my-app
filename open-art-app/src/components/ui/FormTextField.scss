@@ -4,6 +4,10 @@
     flex-direction: column; 
     width: 100%;
 
+    input{
+        background-color: var(--secondary-350);
+    }
+
     .input-field{
         font-size: 1rem;
         color: var(--secondary-1000);
@@ -14,12 +18,12 @@
         &:not(last-child) {
             margin-bottom: 15px; 
         }
-
         &:hover {
             border: 1px solid var(--secondary-400);
         }
         &:active {
-            outline: 1px solid rgba(34, 28, 30, 0.801);
+            border: 1px solid var(--secondary-400);
+            
         }
     }
 

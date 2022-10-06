@@ -1,10 +1,11 @@
 import { CardsGalleryReducer } from "./cardsGallery/CardsGallerySlice";
-import { CardReducer } from "./cardPage/CardSlice";
+import { cardReducer } from "./cardPage/reducer";
+
 
 
 const reducer = {
         cards: CardsGalleryReducer,
-        card: CardReducer,
+        card: cardReducer,
 };
 
 export default reducer;

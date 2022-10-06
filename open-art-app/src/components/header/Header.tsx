@@ -1,5 +1,8 @@
-import React from 'react';// import useTranslate from "../hooks/useTranslate";
+import React from 'react';
 import { ReactComponent as LogoIcon} from "../../assets/logo.svg";
+import useTranslate from '../hooks/useTranslate';
+import Theme from './theme/Theme';
+import Button from '../ui/Button';
 
 import './Header.scss';
 
@@ -11,6 +14,7 @@ const Header = ({
      children 
     }: HeaderType) => {
 
+      const { lang, setLang } = useTranslate();
 
   return (
     <header className="header_style">
@@ -21,7 +25,18 @@ const Header = ({
             </div>
         </div>
         {children}
-    </header>
+        {lang === "en" 
+                ?
+                <Button style="transparent-lang" onClick={() => setLang("ru")}>
+                     ru        
+                </Button> 
+                :
+                <Button style="transparent-lang" onClick={() => setLang("en")}>
+                      en      
+              </Button>
+          }
+        <Theme/>
+      </header>
   );
 };
 

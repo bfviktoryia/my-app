@@ -18,7 +18,7 @@ const Image: React.FC<PropsType> = ({ src }) => {
 
 
 return ( 
-         <div>
+         <div className="card-image-content">
             {!!src && !error 
             ? 
             <div className="image-wrap">

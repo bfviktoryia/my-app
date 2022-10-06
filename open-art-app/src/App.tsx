@@ -5,15 +5,12 @@ import Navbar from './components/header/navigation/Navbar';
 import CardsGallery from './components/cardsGallery/CardsGallery';
 import CardPage from './components/cardPage/CardPage';
 import Login from './components/login/Login';
+import Registration from './components/registration/Registration';
+import Favourite from './components/favourite/FavouritePage';
 
 import './App.css';
-import Registration from './components/registration/Registration';
-import { useSelector } from 'react-redux';
-
 
 function App() {
-
-  const logged = useSelector((state: any) => state.auth.logged);
   return (
       <BrowserRouter>
         <div className="app">
@@ -26,6 +23,7 @@ function App() {
                         <Route index element={<CardsGallery/>} />
                         <Route path=":id" element={<CardPage/>} />
                   </Route>  
+                  <Route path="/favourite" element={<Favourite/>}/> 
                   <Route path="/login" element={<Login/>}/>
                   <Route path="/registration" element={<Registration/>}/>
                   <Route path="*" element={<Navigate to={"/gallery"}/>} />    

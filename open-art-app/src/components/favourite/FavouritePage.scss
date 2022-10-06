@@ -1,0 +1,69 @@
+.favourite-container {
+    max-width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+            .favourite-cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 2% auto 0 11%;
+
+                    .card-wrap{
+                        width: 24%;
+                    }
+                    @media (max-width: 768px) {
+                        margin: auto;
+                    }
+            }
+
+            .cards-button-wrap{
+                width: 7%;
+                height: 7%;
+                position: fixed;
+                margin: 4% 2% 2% 2%;
+
+                @media (max-width: 1200px) {
+                    width: 8%;
+                    height: 8%;              
+                }
+                @media (max-width: 875px) {
+                    width: 9%;
+                    height: 9%;              
+                }
+                @media (max-width: 768px) {
+                    display: none;
+                }
+
+                    .back-arrow-icon{
+                        path{
+                            fill: var(--text-color);
+                        }        
+                        width: 30%;
+                        height: 30%;
+
+                        @media (max-width: 875px) {
+                            width: 27%;
+                            height: 27%;
+                        }
+
+                        @media (max-width: 768px) {
+                            width: 30%;
+                            height: 30%;
+                            margin-right: 6%;
+                        }
+
+                    }
+            }
+
+            .cards-loading-error{
+                margin-left: 50%;
+                margin-top: 1%;
+                
+            }
+}
+    
+
+    
+    

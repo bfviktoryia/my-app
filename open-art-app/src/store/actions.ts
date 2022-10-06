@@ -1,11 +1,9 @@
 import { CardsGalleryActions } from "./cardsGallery/CardsGallerySlice";
-import { CardActions } from "./cardPage/CardSlice";
-
+import * as cardActions from "./cardPage/actionCreators";
 
 const actions = {
 ...CardsGalleryActions,
-...CardActions,
-
+...cardActions,
 }
 
 export default actions;

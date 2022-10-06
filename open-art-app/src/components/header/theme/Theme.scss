@@ -1,0 +1,10 @@
+.toggle-theme-icon{
+    height: 60%;
+    margin-left: 3%;
+    path {
+        fill: var(--text-color);
+    }   
+    @media (max-width: 768px) {
+        height: 50%;
+    }
+}
