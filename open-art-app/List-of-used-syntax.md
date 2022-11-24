@@ -1,27 +1,27 @@
-Использованные технологии/синтаксис:
+Used thechnologies/syntax:
 
-scss	
-async/await	
+scss,	
+async/await,	
 react-hooks	
 
-Работа с данными:	
+Data:	
 
-localStorage	
-react-redux	
-@reduxjs/toolkit - createAction и createReducer	(часть компонентов)
-@reduxjs/toolkit - createSlice (часть компонентов)
+localStorage,	
+react-redux,	
+@reduxjs/toolkit - createAction и createReducer,
+@reduxjs/toolkit - createSlice,
 react-thunk	
 
-Функционал:
+Functionality:
 
-пагинация	
-сортировка	
-фильтр	
+pagination,	
+sort,	
+filter	
 
-Дополнительно:	
+Additionally:	
 
-Темы (светлая\темная)	
-Локализация	
-Авторизация	(часть: верстка/стили и валидация)
+Theme (bright\dark),	
+Localization,	
+Authorization (html/scss, validation)
 
-Адаптивность
+Adaptive layout
